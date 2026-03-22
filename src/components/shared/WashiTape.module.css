@@ -1,0 +1,15 @@
+.tape {
+  display: inline-block;
+  background-color: color-mix(in srgb, var(--tape-color) 30%, transparent);
+  height: 22px;
+  min-width: 60px;
+  width: 100%;
+  transform: rotate(var(--tape-rotation, -2deg));
+  position: absolute;
+  top: -10px;
+  left: -4px;
+  right: -4px;
+  pointer-events: none;
+  border-left: 1px solid color-mix(in srgb, var(--tape-color) 20%, transparent);
+  border-right: 1px solid color-mix(in srgb, var(--tape-color) 20%, transparent);
+}

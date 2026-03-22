@@ -1,0 +1,101 @@
+.hero {
+  padding-top: calc(80px + var(--space-xl));
+  padding-bottom: 3.42rem;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  width: 100%;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.textCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--color-graphite);
+}
+
+.tagline {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-graphite-soft);
+  letter-spacing: 0.02em;
+  font-weight: 300;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: 560px;
+}
+
+.bio p {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-graphite);
+}
+
+.marginNote {
+  margin-top: var(--space-sm);
+}
+
+.photoCol {
+  display: flex;
+  justify-content: center;
+}
+
+.photoWrapper {
+  width: 100%;
+  max-width: 320px;
+}
+
+.photoFrame {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: calc(70px + var(--space-lg));
+    min-height: auto;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .photoCol {
+    order: -1;
+  }
+
+  .photoWrapper {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .container {
+    padding: 0 var(--space-md);
+  }
+}

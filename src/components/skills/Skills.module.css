@@ -1,0 +1,128 @@
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  color: var(--color-graphite);
+}
+
+.block {
+  margin-bottom: var(--space-md);
+}
+
+.blockTitle {
+  font-family: var(--font-serif);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-graphite-faint);
+  margin-bottom: var(--space-md);
+}
+
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.skillTag {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--color-graphite);
+  background-color: var(--color-paper-warm);
+  border: var(--border-sketch-width) solid var(--color-paper-lines);
+  padding: var(--space-xs) var(--space-md);
+  filter: url(#sketchy);
+}
+
+.toolsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-md);
+}
+
+.toolCard {
+  position: relative;
+  border: var(--border-sketch-width) solid var(--color-paper-lines);
+  padding: var(--space-md);
+  text-align: center;
+  background-color: var(--color-paper);
+  cursor: default;
+  transition: transform var(--duration-fast) var(--ease-soft);
+  filter: url(#sketchy);
+}
+
+.toolCard:hover {
+  transform: rotate(-1deg);
+  background-color: var(--color-paper-warm);
+}
+
+.toolInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+}
+
+.toolIcon {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--color-graphite-soft);
+  flex-shrink: 0;
+}
+
+.toolName {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  color: var(--color-graphite-soft);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + var(--space-sm));
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-paper-warm);
+  border: var(--border-sketch-width) solid var(--color-paper-lines);
+  padding: var(--space-xs) var(--space-sm);
+  white-space: nowrap;
+  font-family: var(--font-handwritten);
+  font-size: 0.875rem;
+  color: var(--color-graphite-soft);
+  z-index: 10;
+  pointer-events: none;
+  box-shadow: 2px 2px 6px var(--color-shadow-paper);
+}
+
+.learningBlock {
+  background-color: var(--color-paper-warm);
+  padding: var(--space-lg);
+  border: var(--border-sketch-width) solid var(--color-paper-lines);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 27px,
+    var(--color-pencil-line) 27px,
+    var(--color-pencil-line) 28px
+  );
+  filter: url(#sketchy);
+}
+
+.learningList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.learningItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  color: var(--color-graphite);
+}

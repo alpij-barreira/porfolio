@@ -1,0 +1,53 @@
+/* ══════════════════════════════════════════════════
+   DESIGN TOKENS — Craft Journal Portfolio
+   Sistema de variables centralizado.
+   Todos los valores visuales parten de aquí.
+   ══════════════════════════════════════════════════ */
+
+:root {
+  /* ── Papel ── */
+  --color-paper: #FAF8F5;
+  --color-paper-warm: #F5F0E8;
+  --color-paper-lines: #E8E4DC;
+
+  /* ── Grafito (jerarquía de texto) ── */
+  --color-graphite: #2D2B28;
+  --color-graphite-soft: #5C5955;
+  --color-graphite-faint: #9E9A94;
+
+  /* ── Tintas de papelería (acentos de color) ── */
+  --color-ink-red: #C4554D;
+  --color-ink-blue: #4A7B9D;
+  --color-ink-green: #6B8F71;
+  --color-ink-amber: #C49A4D;
+
+  /* ── Sombras y overlays ── */
+  --color-shadow-paper: rgba(45, 43, 40, 0.06);
+  --color-shadow-paper-hover: rgba(45, 43, 40, 0.12);
+  --color-overlay: rgba(45, 43, 40, 0.55);
+
+  /* ── Pauta de libreta ── */
+  --color-pencil-line: rgba(45, 43, 40, 0.08);
+
+  /* ── Tipografías ── */
+  --font-serif: 'Crimson Pro', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, sans-serif;
+  --font-handwritten: 'Caveat', cursive;
+
+  /* ── Espaciado (grid de 8px) ── */
+  --space-xs: 0.25rem;   /* 4px */
+  --space-sm: 0.5rem;    /* 8px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 2rem;      /* 32px */
+  --space-xl: 4rem;      /* 64px */
+  --space-2xl: 8rem;     /* 128px */
+
+  /* ── Transiciones ── */
+  --ease-soft: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+
+  /* ── Bordes sketchy ── */
+  --border-sketch-width: 1.5px;
+}

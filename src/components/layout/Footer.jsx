@@ -1,0 +1,56 @@
+// Footer — Contacto, firma y copyright
+// Sin dependencias de Framer
+import { FaLinkedin } from 'react-icons/fa';
+import { TbFileText } from 'react-icons/tb';
+import { content } from '../../data/content';
+import styles from './Footer.module.css';
+
+const FooterLink = ({ href, download, children }) => (
+  <a
+    href={href}
+    className={styles.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    download={download || undefined}
+  >
+    {children}
+    <span className={styles.underline} />
+  </a>
+);
+
+const Footer = () => {
+  const year = new Date().getFullYear();
+  const { contact } = content.personal;
+
+  return (
+    <footer id="contacto" className={styles.footer}>
+      <div className={styles.inner}>
+        <div className={styles.links}>
+          <FooterLink href={`mailto:${contact.email}`}>
+            {contact.email}
+          </FooterLink>
+          <FooterLink href={`tel:${contact.phone.replace(/\s/g, '')}`}>
+            {contact.phone}
+          </FooterLink>
+          <FooterLink href={contact.linkedin}>
+            <span className={styles.linkInner}>
+              <FaLinkedin />
+              LinkedIn
+            </span>
+          </FooterLink>
+          <FooterLink href={contact.cv} download="JavierPineda_CV2026.pdf">
+            <span className={styles.linkInner}>
+              <TbFileText />
+              Consulta mi CV
+            </span>
+          </FooterLink>
+        </div>
+
+        <p className={styles.signature}>{content.footer.signature}</p>
+        <p className={styles.copyright}>© {year} {content.personal.name}</p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

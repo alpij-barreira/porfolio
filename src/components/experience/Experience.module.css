@@ -1,0 +1,69 @@
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  color: var(--color-graphite);
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.timelineLine {
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  bottom: 8px;
+  width: 1.5px;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--color-graphite-faint) 0px,
+    var(--color-graphite-faint) 6px,
+    transparent 6px,
+    transparent 10px
+  );
+  opacity: 0.5;
+  filter: url(#sketchy);
+}
+
+.timelineItem {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+}
+
+.timelineNode {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-paper);
+  border: 1.5px solid var(--color-graphite-faint);
+  flex-shrink: 0;
+  margin-top: var(--space-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.timelineItem:first-child .timelineNode {
+  background-color: var(--color-graphite-soft);
+  border-color: var(--color-graphite-soft);
+}
+
+.cardWrapper {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .timelineLine {
+    display: none;
+  }
+
+  .timelineItem {
+    gap: var(--space-md);
+  }
+}

@@ -1,0 +1,28 @@
+// Experience — Timeline de experiencia laboral
+// Sin dependencias de Framer directas (las animaciones están en ExperienceCard)
+import { content } from '../../data/content';
+import Section from '../layout/Section';
+import ExperienceCard from './ExperienceCard';
+import styles from './Experience.module.css';
+
+const Experience = () => {
+  return (
+    <Section id="experiencia">
+      <h2 className={styles.sectionTitle}>Experiencia laboral</h2>
+
+      <div className={styles.timeline}>
+        <div className={styles.timelineLine} />
+        {content.experience.map((exp, i) => (
+          <div key={i} className={styles.timelineItem}>
+            <div className={styles.timelineNode} />
+            <div className={styles.cardWrapper}>
+              <ExperienceCard exp={exp} />
+            </div>
+          </div>
+        ))}
+      </div>
+    </Section>
+  );
+};
+
+export default Experience;

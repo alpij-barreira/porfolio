@@ -1,0 +1,14 @@
+.note {
+  position: relative;
+  display: inline-block;
+  transform: rotate(var(--note-rotation, -2deg));
+  padding: var(--space-xs) var(--space-sm);
+  padding-top: var(--space-md);
+}
+
+.text {
+  font-family: var(--font-handwritten);
+  font-size: 1rem;
+  color: var(--color-graphite-soft);
+  line-height: 1.4;
+}

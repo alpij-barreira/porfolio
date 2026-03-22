@@ -1,0 +1,37 @@
+.cota {
+  display: flex;
+  align-items: center;
+  margin: var(--space-md) 0;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  width: 100%;
+  color: var(--color-graphite-faint);
+}
+
+.line::before,
+.line::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-graphite-faint);
+}
+
+.tick {
+  width: 1px;
+  height: 10px;
+  background-color: var(--color-graphite-faint);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.label {
+  font-family: var(--font-handwritten);
+  font-size: 0.875rem;
+  color: var(--color-graphite-faint);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
