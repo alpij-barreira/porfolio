@@ -60,6 +60,25 @@
   margin-top: var(--space-sm);
 }
 
+.handwriteReveal {
+  clip-path: inset(-20px 0% -20px -20px);
+  animation: handwrite-reveal 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1s both;
+}
+
+@keyframes handwrite-reveal {
+  from {
+    clip-path: inset(-20px 100% -20px -20px);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  to {
+    clip-path: inset(-20px 0% -20px -20px);
+    opacity: 1;
+  }
+}
+
 .photoCol {
   display: flex;
   justify-content: center;

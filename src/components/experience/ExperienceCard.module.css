@@ -2,7 +2,6 @@
   border: var(--border-sketch-width) solid var(--color-paper-lines);
   background-color: var(--color-paper);
   overflow: hidden;
-  filter: url(#sketchy);
 }
 
 .header {

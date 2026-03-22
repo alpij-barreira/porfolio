@@ -1,5 +1,7 @@
 // Footer — Contacto, firma y copyright
-// Sin dependencias de Framer
+// Framer: useInView (animación de escritura en firma)
+import { useRef } from 'react';
+import { useInView } from 'framer-motion';
 import { TbFileText } from 'react-icons/tb';
 import { content } from '../../data/content';
 import styles from './Footer.module.css';
@@ -20,6 +22,8 @@ const FooterLink = ({ href, download, children }) => (
 const Footer = () => {
   const year = new Date().getFullYear();
   const { contact } = content.personal;
+  const signatureRef = useRef(null);
+  const isInView = useInView(signatureRef, { once: true, amount: 0.5 });
 
   return (
     <footer id="contacto" className={styles.footer}>
@@ -39,7 +43,12 @@ const Footer = () => {
           </FooterLink>
         </div>
 
-        <p className={styles.signature}>{content.footer.signature}</p>
+        <p
+          ref={signatureRef}
+          className={`${styles.signature} ${isInView ? styles.signatureVisible : ''}`}
+        >
+          {content.footer.signature}
+        </p>
         <p className={styles.copyright}>© {year} {content.personal.name}</p>
       </div>
     </footer>

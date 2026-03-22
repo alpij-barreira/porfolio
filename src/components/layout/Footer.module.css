@@ -2,7 +2,6 @@
   background-color: var(--color-paper-warm);
   border-top: 1.5px solid var(--color-paper-lines);
   padding: var(--space-xl) 0;
-  filter: url(#sketchy);
 }
 
 .inner {
@@ -51,7 +50,6 @@
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--duration-normal) var(--ease-soft);
-  filter: url(#sketchy);
 }
 
 .link:hover .underline {
@@ -71,6 +69,29 @@
   color: var(--color-graphite-soft);
   font-weight: 400;
   transform: rotate(-1deg);
+  overflow: hidden;
+  max-width: 0;
+  opacity: 0;
+  white-space: nowrap;
+  transition: none;
+}
+
+.signatureVisible {
+  animation: handwrite-footer 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.2s both;
+}
+
+@keyframes handwrite-footer {
+  from {
+    max-width: 0;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  to {
+    max-width: 500px;
+    opacity: 1;
+  }
 }
 
 .copyright {

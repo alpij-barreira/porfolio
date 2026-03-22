@@ -42,7 +42,6 @@
     transparent 10px
   );
   opacity: 0.5;
-  filter: url(#sketchy);
 }
 
 .timelineNode {
@@ -72,7 +71,6 @@
     transparent 10px
   );
   opacity: 0.5;
-  filter: url(#sketchy);
 }
 
 .card {

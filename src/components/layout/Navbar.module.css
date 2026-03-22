@@ -65,7 +65,6 @@
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--duration-normal) var(--ease-soft);
-  filter: url(#sketchy);
 }
 
 .navLink:hover .underline {

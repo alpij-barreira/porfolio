@@ -37,7 +37,6 @@
     transparent 10px
   );
   opacity: 0.5;
-  filter: url(#sketchy);
 }
 
 .timelineItem:first-child .timelineMarker {
@@ -71,7 +70,6 @@
     transparent 10px
   );
   opacity: 0.5;
-  filter: url(#sketchy);
 }
 
 .cardWrapper {

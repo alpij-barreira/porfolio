@@ -51,10 +51,17 @@ const Hero = () => {
               ))}
             </motion.div>
 
-            <motion.div variants={itemVariants} className={styles.marginNote}>
-              <HandwrittenNote rotation={-2} withTape tapeColor="amber">
-                {personal.marginNote}
-              </HandwrittenNote>
+            <motion.div
+              className={styles.marginNote}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0, delay: 0.8 }}
+            >
+              <div className={styles.handwriteReveal}>
+                <HandwrittenNote rotation={-2} withTape tapeColor="amber">
+                  {personal.marginNote}
+                </HandwrittenNote>
+              </div>
             </motion.div>
           </div>
 
