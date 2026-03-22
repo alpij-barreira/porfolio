@@ -1,0 +1,114 @@
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  color: var(--color-graphite);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timelineItem {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: stretch;
+}
+
+.timelineMarker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 24px;
+  padding-top: 6px;
+}
+
+.timelineNode {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-paper);
+  border: 1.5px solid var(--color-graphite-faint);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.timelineNodeActive {
+  background-color: var(--color-graphite-soft);
+  border-color: var(--color-graphite-soft);
+}
+
+.timelineConnector {
+  flex: 1;
+  width: 1.5px;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--color-graphite-faint) 0px,
+    var(--color-graphite-faint) 6px,
+    transparent 6px,
+    transparent 10px
+  );
+  opacity: 0.5;
+  filter: url(#sketchy);
+}
+
+.card {
+  flex: 1;
+  min-width: 0;
+  padding-bottom: var(--space-lg);
+}
+
+.period {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-graphite-soft);
+  letter-spacing: 0.03em;
+}
+
+.institution {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-graphite);
+  margin-top: 4px;
+}
+
+.degree {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-graphite-soft);
+  display: block;
+  margin-top: 2px;
+}
+
+.description {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-graphite);
+  margin-top: var(--space-sm);
+}
+
+@media (max-width: 768px) {
+  .timelineMarker {
+    display: none;
+  }
+
+  .timelineItem {
+    gap: 0;
+  }
+
+  .card {
+    padding-bottom: var(--space-md);
+    border-bottom: 1px dashed var(--color-graphite-faint);
+  }
+
+  .timelineItem:last-child .card {
+    border-bottom: none;
+  }
+}

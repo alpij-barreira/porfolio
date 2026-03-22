@@ -1,6 +1,5 @@
 // Footer — Contacto, firma y copyright
 // Sin dependencias de Framer
-import { FaLinkedin } from 'react-icons/fa';
 import { TbFileText } from 'react-icons/tb';
 import { content } from '../../data/content';
 import styles from './Footer.module.css';
@@ -31,12 +30,6 @@ const Footer = () => {
           </FooterLink>
           <FooterLink href={`tel:${contact.phone.replace(/\s/g, '')}`}>
             {contact.phone}
-          </FooterLink>
-          <FooterLink href={contact.linkedin}>
-            <span className={styles.linkInner}>
-              <FaLinkedin />
-              LinkedIn
-            </span>
           </FooterLink>
           <FooterLink href={contact.cv} download="JavierPineda_CV2026.pdf">
             <span className={styles.linkInner}>

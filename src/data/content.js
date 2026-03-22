@@ -4,9 +4,8 @@ export const content = {
     role: "Product Designer",
     tagline: "Diseño de producto · UX/UI · Ingeniero Informático",
     bio: [
-      "Vengo de la informática, pero fue al tocar el diseño de interfaces cuando todo encajó. Lo que me motiva no es tanto resolver problemas técnicos como construir experiencias que la gente disfrute usar.",
-      "Cada decisión de diseño la paso por el mismo filtro: ¿esto le facilita la vida al usuario? Entender a la persona que está al otro lado de la pantalla es lo que define mi forma de trabajar.",
-      "Me interesa lo que viene. Las nuevas tecnologías no son un fin, pero sí herramientas que permiten diseñar mejor, y siempre ando buscando cómo integrarlas en lo que hago."
+      "Finalizados mis estudios como ingeniero informático, descubrí mi pasión por el diseño de interfaces. Desde entonces, he ido estudiando y evolucionando mi perfil con el objetivo de diseñar productos digitales pensando siempre en la experiencia del usuario.",
+      "Me encantaría trabajar en un entorno donde pueda participar en proyectos diversos y creativos, donde poder sumergirme en contextos diversos aportando soluciones creativas. Actualmente me encuentro aprendiendo e integrando nuevas tecnologías de IA en mi flujo de trabajo."
     ],
     photo: "/profile.jpg",
     marginNote: "← estos párrafos cambian tanto como este sector",
@@ -38,9 +37,9 @@ export const content = {
       { name: "Suite de Adobe", icon: "adobe", note: "Para profundizar en diseño" }
     ],
     learning: [
-      "Cursando el Máster en Diseño UX/UI & AI-Native de Diseño de Producto: Digital Minds de la escuela Barreira Arte + Diseño",
-      "Aprendiendo e integrando en mi metodología de trabajo una colección de herramientas de IA que incluye Claude Code, Figma Make o Framer",
-      "Estudiando actualmente mi nivel de inglés B2 a un C1 certificado con examen Cambridge"
+      "Cursando el Máster en Diseño UX/UI & AI Native de Diseño de Producto en la escuela Barreira de Arte + Diseño.",
+      "Aprendiendo acerca de las nuevas herramientas del sector, como Figma Make, Claude Code o Framer.",
+      "Estudiando para presentarme al examen Cambridge de C1 para mejorar mi nivel actual de B2 en inglés."
     ]
   },
 
@@ -207,6 +206,21 @@ export const content = {
           content: "Con el análisis completado, creamos un perfil de usuario para asegurarnos de que la solución abordara problemas reales. Desarrollé la propuesta en solitario: primero un wireframe en Whimsical con nuevos sistemas de reserva y filtrado, más ágiles e intuitivos, y una jerarquía visual más clara. El diseño final lo construí en Figma con diseño atómico, desarrollando las diferentes vistas del calendario."
         }
       ]
+    }
+  ],
+
+  education: [
+    {
+      institution: "CEI: Centro de Estudios de Innovación",
+      degree: "Doble módulo de UX/UI y Diseño Gráfico",
+      period: "2023 — 2024",
+      description: "Formación intensiva donde adquirí las bases del diseño de experiencia de usuario y diseño gráfico. Aquí desarrollé mis primeros proyectos reales con metodologías como Design Thinking y Design Sprint, aprendiendo a investigar, prototipar y validar soluciones digitales."
+    },
+    {
+      institution: "Universidad Politécnica de Valencia",
+      degree: "Ingeniería Informática",
+      period: "2018 — 2023",
+      description: "Base técnica sólida en programación, arquitectura de software y sistemas. Esta formación me permite entender las posibilidades y limitaciones técnicas de cada proyecto, facilitando la comunicación con equipos de desarrollo y tomando decisiones de diseño más informadas."
     }
   ],
 
