@@ -7,17 +7,61 @@
 }
 
 .timeline {
-  position: relative;
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);
+  gap: 0;
 }
 
-.timelineLine {
-  position: absolute;
-  left: 11px;
-  top: 8px;
-  bottom: 8px;
+.timelineItem {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: stretch;
+}
+
+.timelineMarker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 24px;
+}
+
+.timelineConnectorTop {
+  width: 1.5px;
+  height: var(--space-lg);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--color-graphite-faint) 0px,
+    var(--color-graphite-faint) 6px,
+    transparent 6px,
+    transparent 10px
+  );
+  opacity: 0.5;
+  filter: url(#sketchy);
+}
+
+.timelineItem:first-child .timelineMarker {
+  padding-top: var(--space-lg);
+}
+
+.timelineNode {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-paper);
+  border: 1.5px solid var(--color-graphite-faint);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.timelineNodeActive {
+  background-color: var(--color-graphite-soft);
+  border-color: var(--color-graphite-soft);
+}
+
+.timelineConnectorBottom {
+  flex: 1;
   width: 1.5px;
   background-image: repeating-linear-gradient(
     to bottom,
@@ -30,40 +74,17 @@
   filter: url(#sketchy);
 }
 
-.timelineItem {
-  display: flex;
-  gap: var(--space-lg);
-  align-items: flex-start;
-}
-
-.timelineNode {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--color-paper);
-  border: 1.5px solid var(--color-graphite-faint);
-  flex-shrink: 0;
-  margin-top: var(--space-lg);
-  position: relative;
-  z-index: 1;
-}
-
-.timelineItem:first-child .timelineNode {
-  background-color: var(--color-graphite-soft);
-  border-color: var(--color-graphite-soft);
-}
-
 .cardWrapper {
   flex: 1;
   min-width: 0;
 }
 
 @media (max-width: 768px) {
-  .timelineLine {
+  .timelineMarker {
     display: none;
   }
 
   .timelineItem {
-    gap: var(--space-md);
+    gap: 0;
   }
 }

@@ -30,8 +30,9 @@ const Education = () => {
         {content.education.map((edu, i) => (
           <motion.div key={i} className={styles.timelineItem} variants={itemVariants}>
             <div className={styles.timelineMarker}>
+              {i > 0 && <div className={styles.timelineConnectorTop} />}
               <div className={`${styles.timelineNode} ${i === 0 ? styles.timelineNodeActive : ''}`} />
-              {i < content.education.length - 1 && <div className={styles.timelineConnector} />}
+              {i < content.education.length - 1 && <div className={styles.timelineConnectorBottom} />}
             </div>
             <div className={styles.card}>
               <span className={styles.period}>{edu.period}</span>

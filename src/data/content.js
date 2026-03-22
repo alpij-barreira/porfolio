@@ -5,7 +5,7 @@ export const content = {
     tagline: "Diseño de producto · UX/UI · Ingeniero Informático",
     bio: [
       "Finalizados mis estudios como ingeniero informático, descubrí mi pasión por el diseño de interfaces. Desde entonces, he ido estudiando y evolucionando mi perfil con el objetivo de diseñar productos digitales pensando siempre en la experiencia del usuario.",
-      "Me encantaría trabajar en un entorno donde pueda participar en proyectos diversos y creativos, donde poder sumergirme en contextos diversos aportando soluciones creativas. Actualmente me encuentro aprendiendo e integrando nuevas tecnologías de IA en mi flujo de trabajo."
+      "Me encantaría trabajar en un entorno donde pueda participar en proyectos diversos y creativos, donde poder sumergirme en cualquier contexto aportando soluciones innovadoras. Actualmente me encuentro aprendiendo e integrando nuevas tecnologías de IA en mi flujo de trabajo."
     ],
     photo: "/profile.jpg",
     marginNote: "← estos párrafos cambian tanto como este sector",
@@ -219,8 +219,8 @@ export const content = {
     {
       institution: "Universidad Politécnica de Valencia",
       degree: "Ingeniería Informática",
-      period: "2018 — 2023",
-      description: "Base técnica sólida en programación, arquitectura de software y sistemas. Esta formación me permite entender las posibilidades y limitaciones técnicas de cada proyecto, facilitando la comunicación con equipos de desarrollo y tomando decisiones de diseño más informadas."
+      period: "2017 — 2023",
+      description: "Base técnica sólida en programación, bases de datos y sistemas de redes. Mi contexto como informático me permite entender las posibilidades y limitaciones técnicas de cada proyecto, facilitando la comunicación con equipos de desarrollo y tomando decisiones de diseño más informadas."
     }
   ],
 

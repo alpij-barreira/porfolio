@@ -24,7 +24,25 @@
   align-items: center;
   flex-shrink: 0;
   width: 24px;
+}
+
+.timelineItem:first-child .timelineMarker {
   padding-top: 6px;
+}
+
+.timelineConnectorTop {
+  width: 1.5px;
+  flex: 0 0 auto;
+  min-height: var(--space-lg);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--color-graphite-faint) 0px,
+    var(--color-graphite-faint) 6px,
+    transparent 6px,
+    transparent 10px
+  );
+  opacity: 0.5;
+  filter: url(#sketchy);
 }
 
 .timelineNode {
@@ -43,7 +61,7 @@
   border-color: var(--color-graphite-soft);
 }
 
-.timelineConnector {
+.timelineConnectorBottom {
   flex: 1;
   width: 1.5px;
   background-image: repeating-linear-gradient(
@@ -104,7 +122,7 @@
   }
 
   .card {
-    padding-bottom: var(--space-md);
+    padding-bottom: calc(var(--space-md) * 1.2);
     border-bottom: 1px dashed var(--color-graphite-faint);
   }
 

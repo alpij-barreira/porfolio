@@ -11,10 +11,13 @@ const Experience = () => {
       <h2 className={styles.sectionTitle}>Experiencia laboral</h2>
 
       <div className={styles.timeline}>
-        <div className={styles.timelineLine} />
         {content.experience.map((exp, i) => (
           <div key={i} className={styles.timelineItem}>
-            <div className={styles.timelineNode} />
+            <div className={styles.timelineMarker}>
+              {i > 0 && <div className={styles.timelineConnectorTop} />}
+              <div className={`${styles.timelineNode} ${i === 0 ? styles.timelineNodeActive : ''}`} />
+              {i < content.experience.length - 1 && <div className={styles.timelineConnectorBottom} />}
+            </div>
             <div className={styles.cardWrapper}>
               <ExperienceCard exp={exp} />
             </div>
