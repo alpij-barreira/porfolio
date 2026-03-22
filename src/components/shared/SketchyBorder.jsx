@@ -19,6 +19,22 @@ const SketchyBorder = () => (
           yChannelSelector="G"
         />
       </filter>
+      <filter id="sketchy-subtle">
+        <feTurbulence
+          type="turbulence"
+          baseFrequency="0.015"
+          numOctaves="2"
+          result="noise"
+          seed="2"
+        />
+        <feDisplacementMap
+          in="SourceGraphic"
+          in2="noise"
+          scale="1.2"
+          xChannelSelector="R"
+          yChannelSelector="G"
+        />
+      </filter>
     </defs>
   </svg>
 );

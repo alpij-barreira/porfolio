@@ -109,7 +109,7 @@
     var(--color-pencil-line) 27px,
     var(--color-pencil-line) 28px
   );
-  filter: url(#sketchy);
+  filter: url(#sketchy-subtle);
 }
 
 .learningList {
