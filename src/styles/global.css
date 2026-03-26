@@ -19,7 +19,7 @@ html {
 /* ── Body: fondo papel + dot grid bullet journal ── */
 body {
   background-color: var(--color-paper);
-  background-image: radial-gradient(circle, var(--color-graphite-soft) 0.7px, transparent 0.7px);
+  background-image: radial-gradient(circle, color-mix(in srgb, var(--color-shadow-paper) 75%, transparent) 0.7px, transparent 0.7px);
   background-size: 22px 22px;
   background-position: 11px 11px;
   color: var(--color-graphite);
