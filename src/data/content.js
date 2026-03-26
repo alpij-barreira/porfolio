@@ -19,25 +19,26 @@ export const content = {
 
   skills: {
     core: [
-      "Investigación de usuarios",
       "Diseño de interfaces",
+      "Investigación de usuarios",
       "Wireframes",
-      "Prototipado",
+      "Prototipado alto/bajo nivel",
+      "Pruebas de usabilidad",
       "Maquetación web",
       "Newsletters",
       "Banners y publicidad",
-      "Edición de vídeo",
-      "Pruebas de usabilidad"
+      "Experiencia en RRSS",
+      "Edición de vídeo"
     ],
     tools: [
       { name: "Figma", icon: "figma", note: "Mi primera herramienta de UX/UI" },
+      { name: "Suite de Adobe", icon: "adobe", note: "Para profundizar en diseño" },
       { name: "Notion", icon: "notion", note: "Donde se organiza la magia" },
       { name: "Jira", icon: "jira", note: "Para los grandes proyectos" },
-      { name: "Whimsical", icon: "whimsical", note: "Mi preferencia para wireframes" },
-      { name: "Suite de Adobe", icon: "adobe", note: "Para profundizar en diseño" }
+      { name: "Whimsical", icon: "whimsical", note: "Mi preferencia para wireframes" }
     ],
     learning: [
-      "Cursando el Máster en Diseño UX/UI & AI Native de Diseño de Producto en la escuela Barreira de Arte + Diseño.",
+      "Cursando el Máster en Diseño UX/UI & AI Native de Diseño de Producto en la escuela Barreira de Arte + Diseño, con posibilidad de convenio",
       "Aprendiendo acerca de las nuevas herramientas del sector, como Figma Make, Claude Code o Framer.",
       "Estudiando para presentarme al examen Cambridge de C1 para mejorar mi nivel actual de B2 en inglés."
     ]
