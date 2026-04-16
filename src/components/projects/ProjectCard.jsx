@@ -3,9 +3,12 @@
 import { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { SiFigma } from 'react-icons/si';
+import { useLanguage } from '../../contexts/LanguageContext';
 import styles from './ProjectCard.module.css';
 
 const tagColorMap = {
+  // ES
   'UX Research': 'blue',
   'Investigación cualitativa': 'blue',
   'Design Thinking': 'blue',
@@ -15,9 +18,16 @@ const tagColorMap = {
   'Pruebas de usuario': 'amber',
   'Design Sprint': 'red',
   'Análisis heurístico': 'red',
+  // EN
+  'Qualitative Research': 'blue',
+  'Prototyping': 'amber',
+  'User Testing': 'amber',
+  'Heuristic Analysis': 'red',
 };
 
 const ProjectCard = ({ project }) => {
+  const { content } = useLanguage();
+  const labels = content.ui.projectCard;
   const [expanded, setExpanded] = useState(false);
   const scrollPosRef = useRef(0);
 
@@ -83,7 +93,7 @@ const ProjectCard = ({ project }) => {
           </div>
           <div className={styles.headerRight}>
             <span className={styles.moreInfo}>
-              Más información
+              {labels.moreInfo}
               <span className={styles.moreInfoUnderline} />
             </span>
             <span className={styles.arrow}>↗</span>
@@ -115,7 +125,7 @@ const ProjectCard = ({ project }) => {
                 onClick={e => e.stopPropagation()}
               >
                 {/* Botón cerrar */}
-                <button className={styles.close} onClick={() => setExpanded(false)} aria-label="Cerrar">✕</button>
+                <button className={styles.close} onClick={() => setExpanded(false)} aria-label={labels.close}>✕</button>
 
                 {/* Imagen */}
                 {project.image && (
@@ -142,6 +152,25 @@ const ProjectCard = ({ project }) => {
                       <p className={styles.sectionContent}>{section.content}</p>
                     </div>
                   ))}
+
+                  {/* CTA: Ver proyecto en Figma */}
+                  {project.figmaUrl && (
+                    <div className={styles.figmaCta}>
+                      <span className={styles.figmaHook}>{labels.figmaHook}</span>
+                      <a
+                        href={project.figmaUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.figmaButton}
+                        title={`${labels.figmaAria} — ${project.title}`}
+                        aria-label={`${labels.figmaButton} · ${labels.figmaAria}`}
+                      >
+                        <SiFigma aria-hidden="true" />
+                        <span>{labels.figmaButton}</span>
+                        <span className={styles.figmaArrow} aria-hidden="true">↗</span>
+                      </a>
+                    </div>
+                  )}
 
                   {project.tools && project.tools.length > 0 && (
                     <div className={styles.tools}>

@@ -1,7 +1,7 @@
 // Projects — Grid de proyectos con stagger animation
 // Framer: motion.div (staggerChildren on grid, rotate on cards)
 import { motion } from 'framer-motion';
-import { content } from '../../data/content';
+import { useLanguage } from '../../contexts/LanguageContext';
 import Section from '../layout/Section';
 import ProjectCard from './ProjectCard';
 import styles from './Projects.module.css';
@@ -19,9 +19,11 @@ const itemVariants = {
 };
 
 const Projects = () => {
+  const { content } = useLanguage();
+
   return (
     <Section id="proyectos">
-      <h2 className={styles.sectionTitle}>Proyectos</h2>
+      <h2 className={styles.sectionTitle}>{content.ui.sections.projects}</h2>
 
       <motion.div
         className={styles.grid}

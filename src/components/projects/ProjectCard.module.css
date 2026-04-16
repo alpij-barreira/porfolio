@@ -275,6 +275,64 @@
   margin: 0;
 }
 
+/* ── CTA: Ver proyecto en Figma ── */
+.figmaCta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background-color: var(--color-paper-warm);
+  border: var(--border-sketch-width) solid var(--color-paper-lines);
+  box-shadow: 2px 2px 0 var(--color-shadow-paper);
+}
+
+.figmaHook {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-graphite);
+  font-style: italic;
+}
+
+.figmaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--color-paper);
+  background-color: var(--color-graphite);
+  border: var(--border-sketch-width) solid var(--color-graphite);
+  padding: var(--space-xs) var(--space-md);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform var(--duration-fast) var(--ease-soft),
+              box-shadow var(--duration-fast) var(--ease-soft);
+  box-shadow: 2px 2px 0 var(--color-shadow-paper);
+}
+
+.figmaButton:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--color-shadow-paper-hover);
+}
+
+.figmaButton:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--color-shadow-paper);
+}
+
+.figmaButton svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.figmaArrow {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
 .tools {
   display: flex;
   flex-wrap: wrap;

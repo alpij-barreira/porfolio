@@ -3,7 +3,7 @@
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
 import { TbFileText } from 'react-icons/tb';
-import { content } from '../../data/content';
+import { useLanguage } from '../../contexts/LanguageContext';
 import styles from './Footer.module.css';
 
 const FooterLink = ({ href, download, children }) => (
@@ -20,6 +20,7 @@ const FooterLink = ({ href, download, children }) => (
 );
 
 const Footer = () => {
+  const { content } = useLanguage();
   const year = new Date().getFullYear();
   const { contact } = content.personal;
   const signatureRef = useRef(null);
@@ -38,7 +39,7 @@ const Footer = () => {
           <FooterLink href={contact.cv} download="JavierPineda_CV2026.pdf">
             <span className={styles.linkInner}>
               <TbFileText />
-              Consulta mi CV
+              {content.ui.footer.cv}
             </span>
           </FooterLink>
         </div>

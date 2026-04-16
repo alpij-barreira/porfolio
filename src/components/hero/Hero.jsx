@@ -1,7 +1,7 @@
 // Hero — Sección principal con bio, foto y animación de entrada
 // Framer: motion.div (stagger fade-in en textos), motion.svg (photo frame)
 import { motion } from 'framer-motion';
-import { content } from '../../data/content';
+import { useLanguage } from '../../contexts/LanguageContext';
 import HandwrittenNote from '../shared/HandwrittenNote';
 import styles from './Hero.module.css';
 
@@ -24,6 +24,7 @@ const itemVariants = {
 };
 
 const Hero = () => {
+  const { content } = useLanguage();
   const { personal } = content;
 
   return (

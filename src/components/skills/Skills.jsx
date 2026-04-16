@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SiFigma, SiNotion, SiJira } from 'react-icons/si';
 import { TbPencil, TbPalette } from 'react-icons/tb';
-import { content } from '../../data/content';
+import { useLanguage } from '../../contexts/LanguageContext';
 import Section from '../layout/Section';
 import BulletJournalIcon from '../shared/BulletJournalIcon';
 import styles from './Skills.module.css';
@@ -55,15 +55,17 @@ const ToolCard = ({ tool }) => {
 };
 
 const Skills = () => {
+  const { content } = useLanguage();
   const { skills } = content;
+  const ui = content.ui;
 
   return (
     <Section id="skills">
-      <h2 className={styles.sectionTitle}>Competencias y herramientas</h2>
+      <h2 className={styles.sectionTitle}>{ui.sections.skills}</h2>
 
       {/* Core skills */}
       <div className={styles.block}>
-        <h3 className={styles.blockTitle}>Competencias</h3>
+        <h3 className={styles.blockTitle}>{ui.skills.competencias}</h3>
         <motion.div
           className={styles.skillsGrid}
           variants={containerVariants}
@@ -81,7 +83,7 @@ const Skills = () => {
 
       {/* Tools */}
       <div className={styles.block}>
-        <h3 className={styles.blockTitle}>Herramientas</h3>
+        <h3 className={styles.blockTitle}>{ui.skills.herramientas}</h3>
         <motion.div
           className={styles.toolsGrid}
           variants={containerVariants}
@@ -99,7 +101,7 @@ const Skills = () => {
 
       {/* Currently learning */}
       <div className={`${styles.block} ${styles.learningBlock}`}>
-        <h3 className={styles.blockTitle}>Actualmente aprendiendo</h3>
+        <h3 className={styles.blockTitle}>{ui.skills.aprendiendo}</h3>
         <div className={styles.learningList}>
           {skills.learning.map((item, i) => (
             <div key={i} className={styles.learningItem}>

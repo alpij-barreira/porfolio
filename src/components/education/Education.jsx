@@ -1,7 +1,7 @@
 // Education — Formación académica con timeline
 // Framer: motion.div (stagger en cards)
 import { motion } from 'framer-motion';
-import { content } from '../../data/content';
+import { useLanguage } from '../../contexts/LanguageContext';
 import Section from '../layout/Section';
 import styles from './Education.module.css';
 
@@ -16,9 +16,11 @@ const itemVariants = {
 };
 
 const Education = () => {
+  const { content } = useLanguage();
+
   return (
     <Section id="estudios">
-      <h2 className={styles.sectionTitle}>Estudios</h2>
+      <h2 className={styles.sectionTitle}>{content.ui.sections.education}</h2>
 
       <motion.div
         className={styles.timeline}

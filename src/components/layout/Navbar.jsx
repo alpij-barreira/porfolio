@@ -1,8 +1,9 @@
-// Navbar — Navegación fija con logo animado y menú móvil
+// Navbar — Navegación fija con logo animado, menú móvil y selector de idioma
 // Framer: AnimatePresence (logo clipPath reveal, mobile menu height)
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { content } from '../../data/content';
+import { useLanguage } from '../../contexts/LanguageContext';
+import LanguageSwitcher from './LanguageSwitcher';
 import styles from './Navbar.module.css';
 
 const NavLink = ({ href, children }) => {
@@ -15,6 +16,9 @@ const NavLink = ({ href, children }) => {
 };
 
 const Navbar = () => {
+  const { content } = useLanguage();
+  const { nav } = content.ui;
+
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [pastHero, setPastHero] = useState(false);
@@ -37,10 +41,10 @@ const Navbar = () => {
   }, []);
 
   const links = [
-    { href: '#sobre-mi', label: 'Sobre mí' },
-    { href: '#experiencia', label: 'Experiencia' },
-    { href: '#proyectos', label: 'Proyectos' },
-    { href: '#contacto', label: 'Contacto' },
+    { href: '#sobre-mi', label: nav.about },
+    { href: '#experiencia', label: nav.experience },
+    { href: '#proyectos', label: nav.projects },
+    { href: '#contacto', label: nav.contact },
   ];
 
   return (
@@ -65,12 +69,13 @@ const Navbar = () => {
           {links.map(link => (
             <NavLink key={link.href} href={link.href}>{link.label}</NavLink>
           ))}
+          <LanguageSwitcher />
         </nav>
 
         <button
           className={styles.hamburger}
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Abrir menú"
+          aria-label={nav.openMenu}
         >
           <span className={`${styles.bar} ${menuOpen ? styles.barOpen1 : ''}`} />
           <span className={`${styles.bar} ${menuOpen ? styles.barOpen2 : ''}`} />
@@ -97,6 +102,7 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
+            <LanguageSwitcher variant="mobile" />
           </motion.div>
         )}
       </AnimatePresence>

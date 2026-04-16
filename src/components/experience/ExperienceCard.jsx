@@ -2,11 +2,14 @@
 // Framer: motion.div (layout), AnimatePresence (expand/collapse con height auto)
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLanguage } from '../../contexts/LanguageContext';
 import BulletJournalIcon from '../shared/BulletJournalIcon';
 import ArchitectCota from '../shared/ArchitectCota';
 import styles from './ExperienceCard.module.css';
 
 const ExperienceCard = ({ exp }) => {
+  const { content } = useLanguage();
+  const labels = content.ui.experienceCard;
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -30,7 +33,7 @@ const ExperienceCard = ({ exp }) => {
         </div>
         <div className={styles.headerRight}>
           <span className={styles.moreInfo}>
-            Más información
+            {labels.moreInfo}
             <span className={styles.moreInfoUnderline} />
           </span>
           <span className={`${styles.toggle} ${expanded ? styles.toggleOpen : ''}`}>
@@ -62,7 +65,7 @@ const ExperienceCard = ({ exp }) => {
               </div>
 
               <div className={styles.achievements}>
-                <h4>Logros & responsabilidades</h4>
+                <h4>{labels.achievements}</h4>
                 {exp.achievements.map((a, i) => (
                   <div key={i} className={styles.achievement}>
                     <BulletJournalIcon type={a.status === 'done' ? 'done' : 'progress'} />

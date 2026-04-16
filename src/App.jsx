@@ -6,12 +6,13 @@ import Experience from './components/experience/Experience';
 import Projects from './components/projects/Projects';
 import Education from './components/education/Education';
 import Footer from './components/layout/Footer';
+import { LanguageProvider } from './contexts/LanguageContext';
 import './styles/global.css';
 import './styles/textures.css';
 
 function App() {
   return (
-    <>
+    <LanguageProvider>
       {/* Global SVG filters */}
       <SketchyBorder />
 
@@ -26,7 +27,7 @@ function App() {
       </main>
 
       <Footer />
-    </>
+    </LanguageProvider>
   );
 }
 

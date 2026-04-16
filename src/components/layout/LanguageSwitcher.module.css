@@ -1,0 +1,73 @@
+.switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: var(--space-md);
+  padding-left: var(--space-md);
+  border-left: 1px solid var(--color-paper-lines);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--color-graphite-faint);
+  transition:
+    color var(--duration-fast) var(--ease-soft),
+    border-color var(--duration-fast) var(--ease-soft),
+    background-color var(--duration-fast) var(--ease-soft);
+}
+
+.btn:hover {
+  color: var(--color-graphite-soft);
+}
+
+.btn.active {
+  color: var(--color-graphite);
+  border-color: var(--color-paper-lines);
+  background-color: var(--color-paper-warm);
+}
+
+.flag {
+  width: 18px;
+  height: 12px;
+  display: block;
+  border: 0.5px solid rgba(45, 43, 40, 0.15);
+  border-radius: 1.5px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.code {
+  line-height: 1;
+}
+
+/* Variante para el menú mobile */
+.switcher.mobile {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: none;
+  padding: var(--space-md) var(--space-lg);
+  justify-content: flex-start;
+  gap: var(--space-sm);
+  border-top: 1px solid var(--color-pencil-line);
+}
+
+.switcher.mobile .btn {
+  padding: 6px 10px;
+  font-size: 0.8125rem;
+}
+
+.switcher.mobile .flag {
+  width: 20px;
+  height: 14px;
+}
