@@ -7,8 +7,9 @@ const es = {
     role: "Product Designer",
     tagline: "Diseño de producto · UX/UI · Ingeniero Informático",
     bio: [
-      "Finalizados mis estudios como ingeniero informático, descubrí mi pasión por el diseño de interfaces. Desde entonces, he ido estudiando y evolucionando mi perfil con el objetivo de diseñar productos digitales pensando siempre en la experiencia del usuario.",
-      "Me encantaría trabajar en un entorno donde pueda participar en proyectos diversos y creativos, donde poder sumergirme en cualquier contexto aportando soluciones innovadoras. Actualmente me encuentro aprendiendo e integrando nuevas tecnologías de IA en mi flujo de trabajo."
+      "Soy diseñador de producto digital e ingeniero informático. Mi trabajo vive en la intersección entre el diseño UX/UI y el desarrollo: investigo necesidades, prototipo soluciones y las construyo utilizando herramientas de desarrollo con inteligencia artificial.",
+      "Mi base técnica me permite comunicarme con naturalidad con equipos de desarrollo, entender las restricciones del código y tomar decisiones de diseño más realistas. He trabajado en proyectos de digitalización, e-commerce y automatización de procesos, siempre con un enfoque centrado en el usuario y orientado a resultados medibles.",
+      "Mi proyección: evolucionar hacia la gestión de producto digital, combinando visión estratégica, conocimiento técnico y la capacidad de llevar ideas desde la investigación hasta un producto funcional."
     ],
     photo: "/profile.jpg",
     marginNote: "← estos párrafos cambian tanto como este sector",
@@ -282,8 +283,9 @@ const en = {
     role: "Product Designer",
     tagline: "Product Design · UX/UI · Computer Engineer",
     bio: [
-      "After finishing my Computer Engineering degree I discovered a passion for interface design. Since then I've kept studying and shaping my profile to design digital products that always put the user experience first.",
-      "I'd love to work in an environment where I can contribute to diverse, creative projects — diving into any context and bringing fresh solutions. Right now I'm learning and integrating new AI tools into my workflow."
+      "I'm a digital product designer and computer engineer. My work sits at the intersection of UX/UI design and development: I research user needs, prototype solutions and build them using AI-powered development tools.",
+      "My technical background lets me communicate naturally with development teams, understand code constraints and make more realistic design decisions. I've worked on digitalisation, e-commerce and process-automation projects — always user-centred and driven by measurable outcomes.",
+      "Where I'm heading: evolving towards digital product management, combining strategic vision, technical know-how and the ability to take ideas from research all the way to a working product."
     ],
     photo: "/profile.jpg",
     marginNote: "← these paragraphs change as often as this industry does",
