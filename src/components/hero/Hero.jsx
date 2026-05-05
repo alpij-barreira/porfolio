@@ -60,6 +60,7 @@ const Hero = () => {
             >
               <div className={styles.handwriteReveal}>
                 <HandwrittenNote rotation={-2} withTape tapeColor="amber">
+                  <span style={{ display: 'inline-block', transform: 'scale(-1, -1)', marginRight: '0.2em' }} aria-hidden="true">↰</span>
                   {personal.marginNote}
                 </HandwrittenNote>
               </div>

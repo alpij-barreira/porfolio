@@ -11,7 +11,7 @@ const es = {
       "Mi proyección profesional es evolucionar hacia la gestión de producto digital, combinando visión estratégica, conocimiento técnico y la capacidad de llevar ideas desde la investigación hasta un producto funcional."
     ],
     photo: "/profile.jpg",
-    marginNote: "↰ estos párrafos cambian tanto como este sector",
+    marginNote: "estos párrafos cambian tanto como este sector",
     contact: {
       email: "pinedaux@gmail.com",
       phone: "+34639418865",
@@ -287,7 +287,7 @@ const en = {
       "My professional goal is to move into digital product management — combining strategic vision, technical expertise and the ability to take ideas from research all the way to a working product."
     ],
     photo: "/profile.jpg",
-    marginNote: "↰ these paragraphs change as often as this industry does",
+    marginNote: "these paragraphs change as often as this industry does",
     contact: {
       email: "pinedaux@gmail.com",
       phone: "+34639418865",
