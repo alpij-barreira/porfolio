@@ -36,7 +36,7 @@ const Footer = () => {
           <FooterLink href={`tel:${contact.phone.replace(/\s/g, '')}`}>
             {contact.phone}
           </FooterLink>
-          <FooterLink href={contact.cv} download="JavierPineda_CV2026.pdf">
+          <FooterLink href={contact.cv} download="JavierPineda_CV.pdf">
             <span className={styles.linkInner}>
               <TbFileText />
               {content.ui.footer.cv}
