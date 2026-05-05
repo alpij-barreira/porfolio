@@ -2,6 +2,7 @@
 // Framer: AnimatePresence (logo clipPath reveal, mobile menu height)
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { TbFileText } from 'react-icons/tb';
 import { useLanguage } from '../../contexts/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
 import styles from './Navbar.module.css';
@@ -18,6 +19,7 @@ const NavLink = ({ href, children }) => {
 const Navbar = () => {
   const { content } = useLanguage();
   const { nav } = content.ui;
+  const { cv } = content.personal.contact;
 
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -69,6 +71,15 @@ const Navbar = () => {
           {links.map(link => (
             <NavLink key={link.href} href={link.href}>{link.label}</NavLink>
           ))}
+          <a
+            href={cv}
+            download="JavierPineda_CV.pdf"
+            className={styles.cvButton}
+            title={nav.downloadCV}
+          >
+            <TbFileText aria-hidden="true" />
+            <span>{nav.downloadCV}</span>
+          </a>
           <LanguageSwitcher />
         </nav>
 
@@ -102,6 +113,14 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
+            <a
+              href={cv}
+              download="JavierPineda_CV.pdf"
+              className={styles.mobileCvLink}
+            >
+              <TbFileText aria-hidden="true" />
+              {nav.downloadCV}
+            </a>
             <LanguageSwitcher variant="mobile" />
           </motion.div>
         )}

@@ -20,9 +20,9 @@ function App() {
 
       <main>
         <Hero />
-        <Skills />
         <Experience />
         <Projects />
+        <Skills />
         <Education />
       </main>
 

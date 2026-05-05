@@ -71,6 +71,60 @@
   transform: scaleX(1);
 }
 
+/* CV download button en navbar */
+.cvButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  color: var(--color-graphite-soft);
+  text-decoration: none;
+  border: 1px solid var(--color-paper-lines);
+  padding: 3px var(--space-sm);
+  background-color: transparent;
+  transition: color var(--duration-fast) var(--ease-soft),
+              border-color var(--duration-fast) var(--ease-soft),
+              background-color var(--duration-fast) var(--ease-soft);
+  white-space: nowrap;
+}
+
+.cvButton:hover {
+  color: var(--color-graphite);
+  border-color: var(--color-graphite-soft);
+  background-color: var(--color-paper-warm);
+}
+
+.cvButton svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
+/* CV link en menú móvil */
+.mobileCvLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: var(--space-md) var(--space-lg);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-graphite-soft);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-pencil-line);
+}
+
+.mobileCvLink:hover {
+  color: var(--color-graphite);
+  background-color: var(--color-paper-warm);
+}
+
+.mobileCvLink svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
 .hamburger {
   display: none;
   flex-direction: column;

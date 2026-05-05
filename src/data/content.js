@@ -243,7 +243,8 @@ const es = {
       experience: "Experiencia",
       projects: "Proyectos",
       contact: "Contacto",
-      openMenu: "Abrir menú"
+      openMenu: "Abrir menú",
+      downloadCV: "Descargar CV"
     },
     sections: {
       experience: "Experiencia laboral",
@@ -519,7 +520,8 @@ const en = {
       experience: "Experience",
       projects: "Projects",
       contact: "Contact",
-      openMenu: "Open menu"
+      openMenu: "Open menu",
+      downloadCV: "Download CV"
     },
     sections: {
       experience: "Work experience",

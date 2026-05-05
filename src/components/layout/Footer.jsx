@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
 import { TbFileText } from 'react-icons/tb';
+import { FaLinkedin } from 'react-icons/fa';
 import { useLanguage } from '../../contexts/LanguageContext';
 import styles from './Footer.module.css';
 
@@ -40,6 +41,12 @@ const Footer = () => {
             <span className={styles.linkInner}>
               <TbFileText />
               {content.ui.footer.cv}
+            </span>
+          </FooterLink>
+          <FooterLink href={contact.linkedin}>
+            <span className={styles.linkInner}>
+              <FaLinkedin />
+              LinkedIn
             </span>
           </FooterLink>
         </div>
