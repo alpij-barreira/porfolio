@@ -43,7 +43,6 @@ const Navbar = () => {
   }, []);
 
   const links = [
-    { href: '#sobre-mi', label: nav.about },
     { href: '#experiencia', label: nav.experience },
     { href: '#proyectos', label: nav.projects },
     { href: '#contacto', label: nav.contact },
