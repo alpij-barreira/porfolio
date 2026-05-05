@@ -7,12 +7,11 @@ const es = {
     role: "Product Designer",
     tagline: "Diseño de producto · UX/UI · Ingeniero Informático",
     bio: [
-      "Soy diseñador de producto digital e ingeniero informático. Mi trabajo vive en la intersección entre el diseño UX/UI y el desarrollo: investigo necesidades, prototipo soluciones y las construyo utilizando herramientas de desarrollo con inteligencia artificial.",
-      "Mi base técnica me permite comunicarme con naturalidad con equipos de desarrollo, entender las restricciones del código y tomar decisiones de diseño más realistas. He trabajado en proyectos de digitalización, e-commerce y automatización de procesos, siempre con un enfoque centrado en el usuario y orientado a resultados medibles.",
-      "Mi proyección: evolucionar hacia la gestión de producto digital, combinando visión estratégica, conocimiento técnico y la capacidad de llevar ideas desde la investigación hasta un producto funcional."
+      "Soy diseñador de producto digital e ingeniero informático. Investigo necesidades, prototipo soluciones y las construyo utilizando herramientas de desarrollo con inteligencia artificial. Mi base técnica me permite colaborar con desarrolladores de forma fluida y tomar decisiones de diseño más realistas.",
+      "Mi proyección profesional es evolucionar hacia la gestión de producto digital, combinando visión estratégica, conocimiento técnico y la capacidad de llevar ideas desde la investigación hasta un producto funcional."
     ],
     photo: "/profile.jpg",
-    marginNote: "← estos párrafos cambian tanto como este sector",
+    marginNote: "↰ estos párrafos cambian tanto como este sector",
     contact: {
       email: "pinedaux@gmail.com",
       phone: "+34639418865",
@@ -284,12 +283,11 @@ const en = {
     role: "Product Designer",
     tagline: "Product Design · UX/UI · Computer Engineer",
     bio: [
-      "I'm a digital product designer and computer engineer. My work sits at the intersection of UX/UI design and development: I research user needs, prototype solutions and build them using AI-powered development tools.",
-      "My technical background lets me communicate naturally with development teams, understand code constraints and make more realistic design decisions. I've worked on digitalisation, e-commerce and process-automation projects — always user-centred and driven by measurable outcomes.",
-      "Where I'm heading: evolving towards digital product management, combining strategic vision, technical know-how and the ability to take ideas from research all the way to a working product."
+      "I'm a digital product designer and computer engineer. I research user needs, prototype solutions and build them using AI-powered development tools. My technical background lets me collaborate with developers naturally and make more realistic design decisions.",
+      "My professional goal is to move into digital product management — combining strategic vision, technical expertise and the ability to take ideas from research all the way to a working product."
     ],
     photo: "/profile.jpg",
-    marginNote: "← these paragraphs change as often as this industry does",
+    marginNote: "↰ these paragraphs change as often as this industry does",
     contact: {
       email: "pinedaux@gmail.com",
       phone: "+34639418865",
