@@ -92,6 +92,40 @@ const es = {
 
   projects: [
     {
+      title: "Mental Hub",
+      image: "/MentalHub.png",
+      summary: "Una plataforma para que los jóvenes encuentren contenido fiable sobre salud mental y profesionales cercanos. Mi proyecto final del módulo de UX/UI.",
+      tags: ["UX Research", "Design Thinking", "UX/UI Design", "Prototipado"],
+      tools: ["Figma", "Whimsical", "Google Forms"],
+      figmaUrl: "https://www.figma.com/design/dKwlsRsbCrBU0dTvSc7uXe/Mental-HUB?node-id=81-374&p=f",
+      sections: [
+        {
+          title: "El origen del problema",
+          content: "Como proyecto final del módulo de UX/UI quise abordar la salud mental de los jóvenes. En clase estudiamos, con un caso real, cómo una mala interfaz puede tener consecuencias negativas. El razonamiento inverso es sencillo: si un mal diseño perjudica, uno bueno debería poder ayudar. La salud mental era un terreno con mucha desinformación y pocas soluciones digitales bien planteadas."
+        },
+        {
+          title: "Metodología Design Thinking",
+          content: "Seguí las cinco etapas del Design Thinking: Observar, Sintetizar, Idear, Diseñar y Probar. En cada fase analicé las experiencias de los jóvenes con su bienestar, identificando desafíos y aspiraciones para convertirlos en decisiones de diseño concretas."
+        },
+        {
+          title: "Cuestionario e investigación",
+          content: "Realicé un cuestionario a 50 jóvenes de entre 18 y 27 años sobre su interés por la salud mental, su relación con los psicólogos y sus hábitos de búsqueda en internet. Los resultados mostraron que reflexionan con frecuencia sobre su bienestar, pero los recursos digitales que encuentran no siempre son fiables."
+        },
+        {
+          title: "User Persona",
+          content: "Con los datos recogidos construí un perfil de usuario representativo, ficticio pero basado en patrones reales, que sirvió como guía para las decisiones posteriores: desde la arquitectura de la información hasta las matrices de necesidad que orientaron cada funcionalidad."
+        },
+        {
+          title: "La solución: Mental Hub",
+          content: "La plataforma ofrece recomendaciones personalizadas en su pantalla de inicio, secciones diferenciadas para contenido escrito y en vídeo, un espacio para guardar artículos y un buscador de psicólogos y profesionales cercanos. Construida con diseño atómico de tarjetas para mantener la coherencia visual y facilitar la navegación."
+        },
+        {
+          title: "Prototipo de alta fidelidad",
+          content: "Definí la arquitectura con sitemaps y flowcharts, pasé por un wireframe de baja fidelidad y construí el prototipo interactivo en Figma con diseño atómico y un sistema de componentes propio. El resultado refleja la experiencia completa de la aplicación."
+        }
+      ]
+    },
+    {
       title: "Ventura",
       image: "/ventura.png",
       summary: "Audioguías gamificadas para que los niños disfruten de los museos tanto como los adultos. Todo empezó con una observación real en el Van Gogh de Ámsterdam.",
@@ -130,36 +164,24 @@ const es = {
       ]
     },
     {
-      title: "Mental Hub",
-      image: "/MentalHub.png",
-      summary: "Una plataforma para que los jóvenes encuentren contenido fiable sobre salud mental y profesionales cercanos. Mi proyecto final del módulo de UX/UI.",
-      tags: ["UX Research", "Design Thinking", "UX/UI Design", "Prototipado"],
-      tools: ["Figma", "Whimsical", "Google Forms"],
-      figmaUrl: "https://www.figma.com/design/dKwlsRsbCrBU0dTvSc7uXe/Mental-HUB?node-id=81-374&p=f",
+      title: "Calendario académico",
+      image: "/calendario.png",
+      summary: "Análisis heurístico y rediseño del calendario académico de nuestro propio centro, un caso real con problemas de usabilidad conocidos por todos los alumnos.",
+      tags: ["Análisis heurístico", "UX Research", "UX/UI Design", "Wireframing"],
+      tools: ["Figma", "Whimsical"],
+      figmaUrl: "https://www.figma.com/design/5eM1kDf2G6RLH9xYYyeALq/Calendario-CEI?node-id=52-450",
       sections: [
         {
-          title: "El origen del problema",
-          content: "Como proyecto final del módulo de UX/UI quise abordar la salud mental de los jóvenes. En clase estudiamos, con un caso real, cómo una mala interfaz puede tener consecuencias negativas. El razonamiento inverso es sencillo: si un mal diseño perjudica, uno bueno debería poder ayudar. La salud mental era un terreno con mucha desinformación y pocas soluciones digitales bien planteadas."
+          title: "El contexto del proyecto",
+          content: "En uno de los proyectos finales del módulo de UX/UI en CEI, toda la clase simulamos ser una agencia de diseño. Con Agustina Irarrázaval al frente, nos dividimos en equipos para abordar 3 proyectos simultáneos. Mi foco fue el calendario académico del centro, una herramienta con problemas de usabilidad conocidos por todos los alumnos."
         },
         {
-          title: "Metodología Design Thinking",
-          content: "Seguí las cinco etapas del Design Thinking: Observar, Sintetizar, Idear, Diseñar y Probar. En cada fase analicé las experiencias de los jóvenes con su bienestar, identificando desafíos y aspiraciones para convertirlos en decisiones de diseño concretas."
+          title: "Análisis heurístico",
+          content: "Junto con Marco Garnés, analizamos la web área por área según los principios de usabilidad, aplicando un sistema de puntuaciones por gravedad. El resultado fue un mapa claro de qué era imprescindible corregir y qué funcionaba correctamente y debía mantenerse."
         },
         {
-          title: "Cuestionario e investigación",
-          content: "Realicé un cuestionario a 50 jóvenes de entre 18 y 27 años sobre su interés por la salud mental, su relación con los psicólogos y sus hábitos de búsqueda en internet. Los resultados mostraron que reflexionan con frecuencia sobre su bienestar, pero los recursos digitales que encuentran no siempre son fiables."
-        },
-        {
-          title: "User Persona",
-          content: "Con los datos recogidos construí un perfil de usuario representativo, ficticio pero basado en patrones reales, que sirvió como guía para las decisiones posteriores: desde la arquitectura de la información hasta las matrices de necesidad que orientaron cada funcionalidad."
-        },
-        {
-          title: "La solución: Mental Hub",
-          content: "La plataforma ofrece recomendaciones personalizadas en su pantalla de inicio, secciones diferenciadas para contenido escrito y en vídeo, un espacio para guardar artículos y un buscador de psicólogos y profesionales cercanos. Construida con diseño atómico de tarjetas para mantener la coherencia visual y facilitar la navegación."
-        },
-        {
-          title: "Prototipo de alta fidelidad",
-          content: "Definí la arquitectura con sitemaps y flowcharts, pasé por un wireframe de baja fidelidad y construí el prototipo interactivo en Figma con diseño atómico y un sistema de componentes propio. El resultado refleja la experiencia completa de la aplicación."
+          title: "Desarrollo de la solución",
+          content: "Con el análisis completado, creamos un perfil de usuario para asegurarnos de que la solución abordara problemas reales. Desarrollé la propuesta en solitario: primero un wireframe en Whimsical con nuevos sistemas de reserva y filtrado, más ágiles e intuitivos, y una jerarquía visual más clara. El diseño final lo construí en Figma con diseño atómico, desarrollando las diferentes vistas del calendario."
         }
       ]
     },
@@ -190,28 +212,6 @@ const es = {
         {
           title: "Pruebas con usuarios reales",
           content: "Mediante Maze puse el prototipo en manos de usuarios reales. Además de probar la navegación, incluí preguntas para medir qué información retenían. El hallazgo principal fue que, en una pregunta de verdadero o falso, la mayoría falló con la tarea del 'examen de cálculo'. Existía en el prototipo pero estaba asignada a otro día, lo que revelaba un problema en la diferenciación visual de las fechas."
-        }
-      ]
-    },
-    {
-      title: "Calendario académico",
-      image: "/calendario.png",
-      summary: "Análisis heurístico y rediseño del calendario académico de nuestro propio centro, un caso real con problemas de usabilidad conocidos por todos los alumnos.",
-      tags: ["Análisis heurístico", "UX Research", "UX/UI Design", "Wireframing"],
-      tools: ["Figma", "Whimsical"],
-      figmaUrl: "https://www.figma.com/design/5eM1kDf2G6RLH9xYYyeALq/Calendario-CEI?node-id=52-450",
-      sections: [
-        {
-          title: "El contexto del proyecto",
-          content: "En uno de los proyectos finales del módulo de UX/UI en CEI, toda la clase simulamos ser una agencia de diseño. Con Agustina Irarrázaval al frente, nos dividimos en equipos para abordar 3 proyectos simultáneos. Mi foco fue el calendario académico del centro, una herramienta con problemas de usabilidad conocidos por todos los alumnos."
-        },
-        {
-          title: "Análisis heurístico",
-          content: "Junto con Marco Garnés, analizamos la web área por área según los principios de usabilidad, aplicando un sistema de puntuaciones por gravedad. El resultado fue un mapa claro de qué era imprescindible corregir y qué funcionaba correctamente y debía mantenerse."
-        },
-        {
-          title: "Desarrollo de la solución",
-          content: "Con el análisis completado, creamos un perfil de usuario para asegurarnos de que la solución abordara problemas reales. Desarrollé la propuesta en solitario: primero un wireframe en Whimsical con nuevos sistemas de reserva y filtrado, más ágiles e intuitivos, y una jerarquía visual más clara. El diseño final lo construí en Figma con diseño atómico, desarrollando las diferentes vistas del calendario."
         }
       ]
     }
