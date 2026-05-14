@@ -93,7 +93,7 @@ const es = {
   projects: [
     {
       title: "Reimagine: Landing page",
-      image: "/reimagine.png",
+      image: "/ReimagineCover.png",
       summary: "Diseño y desarrollo de la landing de Reimagine, una marca de moda deportiva pensada para corredores introspectivos. Mi primera web diseñada y construida íntegramente con Claude Code.",
       tags: ["Claude Code", "Figma", "Design Sprint"],
       tools: ["Claude Code", "Figma", "Vercel"],
@@ -122,10 +122,10 @@ const es = {
       ]
     },
     {
-      title: "Ventura",
+      title: "Ventura: App interactiva para museos",
       image: "/ventura.png",
       summary: "Audioguías gamificadas para que los niños disfruten de los museos tanto como los adultos. Todo empezó con una observación real en el Van Gogh de Ámsterdam.",
-      tags: ["UX Research", "Investigación cualitativa", "UX/UI Design", "Prototipado"],
+      tags: ["UX Research", "Investigación cualitativa", "Prototipado"],
       tools: ["Figma", "Whimsical", "Google Forms"],
       figmaUrl: "https://www.figma.com/design/V9c4Ulz1MMmPJuCFIPmkbn/Ventura?node-id=1-4&p=f",
       sections: [
@@ -160,10 +160,10 @@ const es = {
       ]
     },
     {
-      title: "Calendario académico",
+      title: "Calendario académico: Rediseño",
       image: "/calendario.png",
       summary: "Análisis heurístico y rediseño del calendario académico de nuestro propio centro, un caso real con problemas de usabilidad conocidos por todos los alumnos.",
-      tags: ["Análisis heurístico", "UX Research", "UX/UI Design", "Wireframing"],
+      tags: ["Análisis heurístico", "UX/UI Design", "Wireframing"],
       tools: ["Figma", "Whimsical"],
       figmaUrl: "https://www.figma.com/design/5eM1kDf2G6RLH9xYYyeALq/Calendario-CEI?node-id=52-450",
       sections: [
@@ -182,10 +182,10 @@ const es = {
       ]
     },
     {
-      title: "Family Flow",
+      title: "Family Flow: App de gestión familiar",
       image: "/familyFlow.png",
       summary: "Gestión de tareas y emociones para familias con adolescentes. Nuestro primer Design Sprint en equipo y mi primera prueba con usuarios reales.",
-      tags: ["Design Sprint", "UX Research", "UX/UI Design", "Pruebas de usuario"],
+      tags: ["Design Sprint", "UX Research", "UX/UI Design"],
       tools: ["Figma", "Maze"],
       figmaUrl: "https://www.figma.com/design/f36DWZjDMFdjhDSCvAV4cX/Family-Flow---Template-Design-Sprint-Javi?node-id=2431-645&p=f",
       sections: [
@@ -367,10 +367,10 @@ const en = {
 
   projects: [
     {
-      title: "Ventura",
+      title: "Ventura: Interactive museum app",
       image: "/ventura.png",
       summary: "Gamified audio guides so kids can enjoy museums as much as adults do. It all started with a real observation at the Van Gogh Museum in Amsterdam.",
-      tags: ["UX Research", "Qualitative Research", "UX/UI Design", "Prototyping"],
+      tags: ["UX Research", "Qualitative Research", "Prototyping"],
       tools: ["Figma", "Whimsical", "Google Forms"],
       figmaUrl: "https://www.figma.com/design/V9c4Ulz1MMmPJuCFIPmkbn/Ventura?node-id=1-4&p=f",
       sections: [
@@ -406,7 +406,7 @@ const en = {
     },
     {
       title: "Reimagine: Landing page",
-      image: "/reimagine.png",
+      image: "/ReimagineCover.png",
       summary: "Design and build of the Reimagine landing page — a sportswear brand for introspective runners. My first website designed and shipped end to end with Claude Code.",
       tags: ["Claude Code", "Figma", "Design Sprint"],
       tools: ["Claude Code", "Figma", "Vercel"],
@@ -435,10 +435,10 @@ const en = {
       ]
     },
     {
-      title: "Family Flow",
+      title: "Family Flow: Family management app",
       image: "/familyFlow.png",
       summary: "Task and emotion management for families with teenagers. Our first team Design Sprint and my first round of testing with real users.",
-      tags: ["Design Sprint", "UX Research", "UX/UI Design", "User Testing"],
+      tags: ["Design Sprint", "UX Research", "UX/UI Design"],
       tools: ["Figma", "Maze"],
       figmaUrl: "https://www.figma.com/design/f36DWZjDMFdjhDSCvAV4cX/Family-Flow---Template-Design-Sprint-Javi?node-id=2431-645&p=f",
       sections: [
@@ -465,10 +465,10 @@ const en = {
       ]
     },
     {
-      title: "Academic calendar",
+      title: "Academic calendar: Redesign",
       image: "/calendario.png",
       summary: "Heuristic analysis and redesign of our own school's academic calendar — a real case with usability issues every student already knew about.",
-      tags: ["Heuristic Analysis", "UX Research", "UX/UI Design", "Wireframing"],
+      tags: ["Heuristic Analysis", "UX/UI Design", "Wireframing"],
       tools: ["Figma", "Whimsical"],
       figmaUrl: "https://www.figma.com/design/5eM1kDf2G6RLH9xYYyeALq/Calendario-CEI?node-id=52-450",
       sections: [
