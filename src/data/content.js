@@ -92,36 +92,32 @@ const es = {
 
   projects: [
     {
-      title: "Mental Hub",
-      image: "/MentalHub.png",
-      summary: "Una plataforma para que los jóvenes encuentren contenido fiable sobre salud mental y profesionales cercanos. Mi proyecto final del módulo de UX/UI.",
-      tags: ["UX Research", "Design Thinking", "UX/UI Design", "Prototipado"],
-      tools: ["Figma", "Whimsical", "Google Forms"],
-      figmaUrl: "https://www.figma.com/design/dKwlsRsbCrBU0dTvSc7uXe/Mental-HUB?node-id=81-374&p=f",
+      title: "Reimagine: Landing page",
+      image: "/reimagine.png",
+      summary: "Diseño y desarrollo de la landing de Reimagine, una marca de moda deportiva pensada para corredores introspectivos. Mi primera web diseñada y construida íntegramente con Claude Code.",
+      tags: ["Claude Code", "Figma", "Design Sprint"],
+      tools: ["Claude Code", "Figma", "Vercel"],
+      liveUrl: "https://reimagine-landing.vercel.app",
       sections: [
         {
-          title: "El origen del problema",
-          content: "Como proyecto final del módulo de UX/UI quise abordar la salud mental de los jóvenes. En clase estudiamos, con un caso real, cómo una mala interfaz puede tener consecuencias negativas. El razonamiento inverso es sencillo: si un mal diseño perjudica, uno bueno debería poder ayudar. La salud mental era un terreno con mucha desinformación y pocas soluciones digitales bien planteadas."
+          title: "El brief",
+          content: "Reimagine es una marca dirigida a deportistas introspectivos: corredores que entienden el entrenamiento como una práctica personal más que como una competición. El reto era diseñar y publicar una landing page que transmitiera esa estética serena y enfocada desde la primera pantalla."
         },
         {
-          title: "Metodología Design Thinking",
-          content: "Seguí las cinco etapas del Design Thinking: Observar, Sintetizar, Idear, Diseñar y Probar. En cada fase analicé las experiencias de los jóvenes con su bienestar, identificando desafíos y aspiraciones para convertirlos en decisiones de diseño concretas."
+          title: "Metodología Design Sprint",
+          content: "Apliqué un Design Sprint condensado para llegar rápido a un concepto, un mood y una arquitectura de información sólidos. El formato obliga a tomar decisiones claras desde el primer día y a iterar sin perder el norte de la marca."
         },
         {
-          title: "Cuestionario e investigación",
-          content: "Realicé un cuestionario a 50 jóvenes de entre 18 y 27 años sobre su interés por la salud mental, su relación con los psicólogos y sus hábitos de búsqueda en internet. Los resultados mostraron que reflexionan con frecuencia sobre su bienestar, pero los recursos digitales que encuentran no siempre son fiables."
+          title: "Diseño en Figma",
+          content: "Construí el sistema visual en Figma: tipografía serif para los titulares, escala neutra para el cuerpo, mucho aire negativo y una jerarquía pensada para que cada bloque respirase. La hero respeta el silencio de la marca: una palabra, una imagen."
         },
         {
-          title: "User Persona",
-          content: "Con los datos recogidos construí un perfil de usuario representativo, ficticio pero basado en patrones reales, que sirvió como guía para las decisiones posteriores: desde la arquitectura de la información hasta las matrices de necesidad que orientaron cada funcionalidad."
+          title: "Desarrollo con Claude Code",
+          content: "El desarrollo lo llevé íntegramente con Claude Code, dirigiéndolo desde el diseño hasta el código final en React + Vite. Mi primera experiencia diseñando y construyendo una web con IA como pareja de programación, con ciclos de iteración mucho más rápidos que en cualquier proyecto anterior."
         },
         {
-          title: "La solución: Mental Hub",
-          content: "La plataforma ofrece recomendaciones personalizadas en su pantalla de inicio, secciones diferenciadas para contenido escrito y en vídeo, un espacio para guardar artículos y un buscador de psicólogos y profesionales cercanos. Construida con diseño atómico de tarjetas para mantener la coherencia visual y facilitar la navegación."
-        },
-        {
-          title: "Prototipo de alta fidelidad",
-          content: "Definí la arquitectura con sitemaps y flowcharts, pasé por un wireframe de baja fidelidad y construí el prototipo interactivo en Figma con diseño atómico y un sistema de componentes propio. El resultado refleja la experiencia completa de la aplicación."
+          title: "El resultado",
+          content: "La landing está publicada en Vercel y captura la voz pausada de Reimagine: una invitación a correr por uno mismo, no contra los demás."
         }
       ]
     },
@@ -265,7 +261,10 @@ const es = {
       close: "Cerrar",
       figmaHook: "¿Quieres ver el proyecto por dentro?",
       figmaButton: "Abrir en Figma",
-      figmaAria: "Proyecto de Figma, se abre en una pestaña nueva"
+      figmaAria: "Proyecto de Figma, se abre en una pestaña nueva",
+      liveHook: "¿Quieres ver el resultado en vivo?",
+      liveButton: "Visitar el sitio",
+      liveAria: "Enlace al sitio en vivo, se abre en una pestaña nueva"
     },
     footer: {
       cv: "Consulta mi CV"
@@ -406,36 +405,32 @@ const en = {
       ]
     },
     {
-      title: "Mental Hub",
-      image: "/MentalHub.png",
-      summary: "A platform for young people to find trustworthy content on mental health and nearby professionals. My final project for the UX/UI module.",
-      tags: ["UX Research", "Design Thinking", "UX/UI Design", "Prototyping"],
-      tools: ["Figma", "Whimsical", "Google Forms"],
-      figmaUrl: "https://www.figma.com/design/dKwlsRsbCrBU0dTvSc7uXe/Mental-HUB?node-id=81-374&p=f",
+      title: "Reimagine: Landing page",
+      image: "/reimagine.png",
+      summary: "Design and build of the Reimagine landing page — a sportswear brand for introspective runners. My first website designed and shipped end to end with Claude Code.",
+      tags: ["Claude Code", "Figma", "Design Sprint"],
+      tools: ["Claude Code", "Figma", "Vercel"],
+      liveUrl: "https://reimagine-landing.vercel.app",
       sections: [
         {
-          title: "Where the problem started",
-          content: "For my UX/UI module's final project I wanted to tackle young people's mental health. In class we looked at a real case showing how a bad interface can have real negative consequences. The reverse reasoning is straightforward: if bad design harms, good design should be able to help. Mental health was an area with plenty of misinformation and very few digital solutions done properly."
+          title: "The brief",
+          content: "Reimagine is a brand aimed at introspective athletes — runners who treat training as a personal practice rather than a competition. The challenge was to design and ship a landing page that conveyed that quiet, focused aesthetic from the very first screen."
         },
         {
-          title: "Design Thinking methodology",
-          content: "I followed the five stages of Design Thinking: Empathise, Synthesise, Ideate, Design and Test. In each phase I analysed young people's experiences with their own wellbeing, turning challenges and aspirations into concrete design decisions."
+          title: "Design Sprint methodology",
+          content: "I ran a condensed Design Sprint to converge quickly on a concept, a mood and a solid information architecture. The format forces clear decisions from day one and keeps iterations tied to the brand's compass."
         },
         {
-          title: "Survey and research",
-          content: "I ran a survey with 50 young people aged 18–27, asking about their interest in mental health, their relationship with therapists and their online search habits. The results showed they reflect on their wellbeing often, but the digital resources they come across aren't always trustworthy."
+          title: "Design in Figma",
+          content: "I built the visual system in Figma: serif typography for headlines, a neutral scale for body, lots of negative space and a hierarchy that lets every block breathe. The hero respects the brand's silence — one word, one image."
         },
         {
-          title: "User persona",
-          content: "With the data collected I built a representative user persona — fictional but grounded in real patterns — which guided every following decision: from information architecture to the needs matrices that drove each feature."
+          title: "Development with Claude Code",
+          content: "I ran the build entirely with Claude Code, directing it from design through to the final React + Vite code. It was my first experience designing and shipping a website with AI as a pair-programmer, with iteration loops dramatically faster than any previous project."
         },
         {
-          title: "The solution: Mental Hub",
-          content: "The platform offers personalised recommendations on the home screen, separate sections for written and video content, a space to save articles, and a finder for nearby therapists and other professionals. Built on an atomic card system to keep the visuals consistent and make navigation feel natural."
-        },
-        {
-          title: "High-fidelity prototype",
-          content: "I defined the architecture with sitemaps and flowcharts, moved through a low-fidelity wireframe and built the interactive prototype in Figma using atomic design and a custom component system. The end result captures the full app experience."
+          title: "The result",
+          content: "The landing is live on Vercel and captures Reimagine's unhurried voice: an invitation to run for yourself, not against everyone else."
         }
       ]
     },
@@ -541,7 +536,10 @@ const en = {
       close: "Close",
       figmaHook: "You can take a look inside the project here",
       figmaButton: "Open in Figma",
-      figmaAria: "Figma project, opens in a new tab"
+      figmaAria: "Figma project, opens in a new tab",
+      liveHook: "Want to see it live?",
+      liveButton: "Visit the site",
+      liveAria: "Live site link, opens in a new tab"
     },
     footer: {
       cv: "Check my CV"

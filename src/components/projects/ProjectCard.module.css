@@ -122,6 +122,12 @@
   border-color: color-mix(in srgb, var(--color-ink-red) 20%, var(--color-paper-lines));
 }
 
+.tagorange {
+  color: #c2410c;
+  background-color: color-mix(in srgb, #c2410c 10%, var(--color-paper));
+  border-color: color-mix(in srgb, #c2410c 25%, var(--color-paper-lines));
+}
+
 .headerRight {
   display: flex;
   align-items: center;

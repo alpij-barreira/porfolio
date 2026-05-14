@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SiFigma } from 'react-icons/si';
+import { TbExternalLink } from 'react-icons/tb';
 import { useLanguage } from '../../contexts/LanguageContext';
 import styles from './ProjectCard.module.css';
 
@@ -18,6 +19,8 @@ const tagColorMap = {
   'Pruebas de usuario': 'amber',
   'Design Sprint': 'red',
   'Análisis heurístico': 'red',
+  'Claude Code': 'orange',
+  'Figma': 'green',
   // EN
   'Qualitative Research': 'blue',
   'Prototyping': 'amber',
@@ -153,8 +156,24 @@ const ProjectCard = ({ project }) => {
                     </div>
                   ))}
 
-                  {/* CTA: Ver proyecto en Figma */}
-                  {project.figmaUrl && (
+                  {/* CTA: Ver proyecto (en vivo o en Figma) */}
+                  {project.liveUrl ? (
+                    <div className={styles.figmaCta}>
+                      <span className={styles.figmaHook}>{labels.liveHook}</span>
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.figmaButton}
+                        title={`${labels.liveAria} — ${project.title}`}
+                        aria-label={`${labels.liveButton} · ${labels.liveAria}`}
+                      >
+                        <TbExternalLink aria-hidden="true" />
+                        <span>{labels.liveButton}</span>
+                        <span className={styles.figmaArrow} aria-hidden="true">↗</span>
+                      </a>
+                    </div>
+                  ) : project.figmaUrl ? (
                     <div className={styles.figmaCta}>
                       <span className={styles.figmaHook}>{labels.figmaHook}</span>
                       <a
@@ -170,7 +189,7 @@ const ProjectCard = ({ project }) => {
                         <span className={styles.figmaArrow} aria-hidden="true">↗</span>
                       </a>
                     </div>
-                  )}
+                  ) : null}
 
                   {project.tools && project.tools.length > 0 && (
                     <div className={styles.tools}>
