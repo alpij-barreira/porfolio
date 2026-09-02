@@ -92,6 +92,35 @@ const es = {
 
   projects: [
     {
+      title: "FC Barcelona: Plataforma para aficionados",
+      image: null,
+      summary: "Proyecto troncal del Máster de UX/UI & AI-Native de Diseño de Producto en Barreira Arte + Diseño: seis meses aplicando Design Sprint a un briefing ficticio del FC Barcelona, con el reto de acercar el club a sus aficionados en el extranjero. Cerramos con una demo funcional entre Figma y Claude Code.",
+      tags: ["Design Sprint", "UX Research", "UX/UI Design", "Claude Code"],
+      tools: ["Figma", "Claude Code", "Maze"],
+      sections: [
+        {
+          title: "El contexto",
+          content: "Este proyecto es el trabajo troncal del Máster de UX/UI & AI-Native de Diseño de Producto en Barreira Arte + Diseño: seis meses de recorrido en los que hemos aprendido a fondo la metodología Design Sprint y hemos ejercitado el proceso completo de diseño de producto sobre un caso planteado como si fuese un encargo real."
+        },
+        {
+          title: "El briefing",
+          content: "Partíamos de un encargo hipotético en el que nos situábamos dentro del equipo de innovación del FC Barcelona. El objetivo era claro: diseñar una aplicación que ayudase a los aficionados del club en el extranjero a sentirse más cerca de él, especialmente en aquellos momentos en los que ver un partido pesa más que estar en el Camp Nou."
+        },
+        {
+          title: "Investigación con usuarios",
+          content: "Aplicamos las técnicas propias del Design Sprint durante todas las fases: entrevistas con aficionados culés, encuestas, pruebas de concepto y sesiones de validación con usuarios reales. La investigación destapó un patrón claro: muchos aficionados viven el fútbol como algo colectivo y echan de menos con quién compartirlo cuando están lejos de casa."
+        },
+        {
+          title: "La solución",
+          content: "Del proceso surgió la idea de una plataforma que conecta a aficionados con bares, negocios locales y otros usuarios dispuestos a hostear encuentros para ver los partidos en compañía. La aplicación centraliza el calendario completo del FC Barcelona y sus resultados en directo, y permite descubrir eventos cercanos donde ver cada partido acompañado."
+        },
+        {
+          title: "Prototipo interactivo",
+          content: "Cerramos el proyecto con una demo funcional construida entre Figma y Claude Code, en la línea del flujo diseño-desarrollo con IA que hemos ido interiorizando durante el máster. El prototipo permite recorrer la experiencia completa: descubrir bares y usuarios que hostean partidos cerca, unirse a un evento y seguir el calendario del club."
+        }
+      ]
+    },
+    {
       title: "Reimagine: Landing page",
       image: "/ReimagineCover.png",
       summary: "Diseño y desarrollo de la landing de Reimagine, una marca de moda deportiva pensada para corredores introspectivos. Mi primera web diseñada y construida íntegramente con Claude Code.",
@@ -178,19 +207,6 @@ const es = {
         {
           title: "Desarrollo de la solución",
           content: "Con el análisis completado, creamos un perfil de usuario para asegurarnos de que la solución abordara problemas reales. Desarrollé la propuesta en solitario: primero un wireframe en Whimsical con nuevos sistemas de reserva y filtrado, más ágiles e intuitivos, y una jerarquía visual más clara. El diseño final lo construí en Figma con diseño atómico, desarrollando las diferentes vistas del calendario."
-        }
-      ]
-    },
-    {
-      title: "FC Barcelona: Próximamente",
-      image: null,
-      summary: "Proyecto en preparación. Próximamente publicaré aquí los detalles del trabajo desarrollado para el FC Barcelona en el marco del Máster de Barreira Arte + Diseño.",
-      tags: ["FC Barcelona", "Barreira", "Próximamente"],
-      tools: [],
-      sections: [
-        {
-          title: "Próximamente",
-          content: "Este espacio recogerá el proyecto que estoy desarrollando para el FC Barcelona junto a Barreira. El contenido completo — contexto, metodología, decisiones de diseño y resultados — estará disponible aquí en cuanto termine de prepararlo."
         }
       ]
     }
@@ -350,6 +366,35 @@ const en = {
 
   projects: [
     {
+      title: "FC Barcelona: Fan platform",
+      image: null,
+      summary: "The flagship project of the UX/UI & AI-Native Product Design master's at Barreira Arte + Diseño: six months applying Design Sprint to a fictional FC Barcelona brief, with the challenge of bringing the club closer to its fans abroad. We wrapped with a working demo built between Figma and Claude Code.",
+      tags: ["Design Sprint", "UX Research", "UX/UI Design", "Claude Code"],
+      tools: ["Figma", "Claude Code", "Maze"],
+      sections: [
+        {
+          title: "The context",
+          content: "This is the flagship project of the UX/UI & AI-Native Product Design master's at Barreira Arte + Diseño: six months of hands-on work where we learned Design Sprint methodology in depth and ran the full product-design process end to end on a case framed as if it were a real client brief."
+        },
+        {
+          title: "The brief",
+          content: "We started from a hypothetical assignment placing us inside FC Barcelona's innovation team. The goal was clear: design an app that helps the club's fans abroad feel closer to it, especially in those moments when watching a match weighs more than being at the Camp Nou."
+        },
+        {
+          title: "User research",
+          content: "We applied Design Sprint techniques throughout every phase: interviews with Barça fans, surveys, concept tests and validation sessions with real users. The research surfaced a clear pattern: many fans live football as a collective ritual and miss the shared experience when they're far from home."
+        },
+        {
+          title: "The solution",
+          content: "Out of the process came a platform that connects fans with bars, local businesses and other users willing to host meetups to watch the matches together. The app centralises FC Barcelona's full calendar and live results, and lets you discover nearby events where you can watch each match in company."
+        },
+        {
+          title: "Interactive prototype",
+          content: "We wrapped the project with a working demo built between Figma and Claude Code, following the design-to-development-with-AI workflow we've been internalising throughout the master's. The prototype lets you walk through the full experience: discover bars and users hosting matches nearby, join an event and follow the club's calendar."
+        }
+      ]
+    },
+    {
       title: "Reimagine: Landing page",
       image: "/ReimagineCover.png",
       summary: "Design and build of the Reimagine landing page — a sportswear brand for introspective runners. My first website designed and shipped end to end with Claude Code.",
@@ -436,19 +481,6 @@ const en = {
         {
           title: "Building the solution",
           content: "With the analysis done, we built a user persona to make sure the solution addressed real problems. I developed the proposal solo: first a wireframe in Whimsical with new booking and filtering systems that were faster and more intuitive, and a clearer visual hierarchy. I built the final design in Figma with an atomic approach, laying out the different calendar views."
-        }
-      ]
-    },
-    {
-      title: "FC Barcelona: Coming soon",
-      image: null,
-      summary: "Project in progress. I'll be publishing here the details of the work developed for FC Barcelona as part of the master's programme at Barreira Arte + Diseño.",
-      tags: ["FC Barcelona", "Barreira", "Coming soon"],
-      tools: [],
-      sections: [
-        {
-          title: "Coming soon",
-          content: "This space will cover the project I'm developing for FC Barcelona together with Barreira. Full context, methodology, design decisions and results will be published here as soon as it's ready."
         }
       ]
     }
