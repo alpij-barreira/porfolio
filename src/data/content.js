@@ -93,10 +93,11 @@ const es = {
   projects: [
     {
       title: "FC Barcelona: Plataforma para aficionados",
-      image: null,
+      image: "/FCBCover.png",
       summary: "Proyecto troncal del Máster de UX/UI & AI-Native de Diseño de Producto en Barreira Arte + Diseño: seis meses aplicando Design Sprint a un briefing ficticio del FC Barcelona, con el reto de acercar el club a sus aficionados en el extranjero. Cerramos con una demo funcional entre Figma y Claude Code.",
       tags: ["Design Sprint", "UX Research", "UX/UI Design", "Claude Code"],
       tools: ["Figma", "Claude Code", "Maze"],
+      liveUrl: "https://fcb-buddies-prototype.vercel.app",
       sections: [
         {
           title: "El contexto",
@@ -367,10 +368,11 @@ const en = {
   projects: [
     {
       title: "FC Barcelona: Fan platform",
-      image: null,
+      image: "/FCBCover.png",
       summary: "The flagship project of the UX/UI & AI-Native Product Design master's at Barreira Arte + Diseño: six months applying Design Sprint to a fictional FC Barcelona brief, with the challenge of bringing the club closer to its fans abroad. We wrapped with a working demo built between Figma and Claude Code.",
       tags: ["Design Sprint", "UX Research", "UX/UI Design", "Claude Code"],
       tools: ["Figma", "Claude Code", "Maze"],
+      liveUrl: "https://fcb-buddies-prototype.vercel.app",
       sections: [
         {
           title: "The context",
