@@ -182,32 +182,15 @@ const es = {
       ]
     },
     {
-      title: "Family Flow: App de gestión familiar",
-      image: "/familyFlow.png",
-      summary: "Gestión de tareas y emociones para familias con adolescentes. Nuestro primer Design Sprint en equipo y mi primera prueba con usuarios reales.",
-      tags: ["Design Sprint", "UX Research", "UX/UI Design"],
-      tools: ["Figma", "Maze"],
-      figmaUrl: "https://www.figma.com/design/f36DWZjDMFdjhDSCvAV4cX/Family-Flow---Template-Design-Sprint-Javi?node-id=2431-645&p=f",
+      title: "FC Barcelona: Próximamente",
+      image: null,
+      summary: "Proyecto en preparación. Próximamente publicaré aquí los detalles del trabajo desarrollado para el FC Barcelona en el marco del Máster de Barreira Arte + Diseño.",
+      tags: ["FC Barcelona", "Barreira", "Próximamente"],
+      tools: [],
       sections: [
         {
-          title: "El origen del problema",
-          content: "Family Flow nació del primer briefing real al que nos enfrentamos en CEI. La pregunta era directa: ¿cómo sería una app que mejore la vida en familia con adolescentes? Trabajamos en equipo con metodología Design Sprint, aunque el diseño final de la interfaz fue individual."
-        },
-        {
-          title: "Metodología Design Sprint",
-          content: "El Design Sprint estructura la resolución de problemas complejos en cinco días. Trabajamos con técnicas colaborativas como lluvia de ideas y Crazy 8, donde todas las propuestas tenían cabida. Un sistema de votaciones nos ayudó a filtrar y desarrollar las más prometedoras."
-        },
-        {
-          title: "La solución del equipo",
-          content: "El equipo apostó por combinar un gestor de tareas familiares con un gestor emocional, en la línea de lo que Apple Health ha empezado a hacer con la salud mental. Además de organizar el día a día, la app reconoce e informa del estado emocional de cada miembro para mejorar la comunicación familiar."
-        },
-        {
-          title: "Prototipo de alta fidelidad",
-          content: "En mi versión, Family Flow, centré el flujo en la relación entre tareas y emociones. La paleta usa 3 colores primarios para representar las 3 emociones principales, contrastando con blancos y grises para un aspecto limpio. Incluye un onboarding de 3 pantallas que presenta las ventajas de la app de forma clara."
-        },
-        {
-          title: "Pruebas con usuarios reales",
-          content: "Mediante Maze puse el prototipo en manos de usuarios reales. Además de probar la navegación, incluí preguntas para medir qué información retenían. El hallazgo principal fue que, en una pregunta de verdadero o falso, la mayoría falló con la tarea del 'examen de cálculo'. Existía en el prototipo pero estaba asignada a otro día, lo que revelaba un problema en la diferenciación visual de las fechas."
+          title: "Próximamente",
+          content: "Este espacio recogerá el proyecto que estoy desarrollando para el FC Barcelona junto a Barreira. El contenido completo — contexto, metodología, decisiones de diseño y resultados — estará disponible aquí en cuanto termine de prepararlo."
         }
       ]
     }
@@ -367,6 +350,36 @@ const en = {
 
   projects: [
     {
+      title: "Reimagine: Landing page",
+      image: "/ReimagineCover.png",
+      summary: "Design and build of the Reimagine landing page — a sportswear brand for introspective runners. My first website designed and shipped end to end with Claude Code.",
+      tags: ["Claude Code", "Figma", "Design Sprint"],
+      tools: ["Claude Code", "Figma", "Vercel"],
+      liveUrl: "https://reimagine-landing.vercel.app",
+      sections: [
+        {
+          title: "The brief",
+          content: "Reimagine is a brand aimed at introspective athletes — runners who treat training as a personal practice rather than a competition. The challenge was to design and ship a landing page that conveyed that quiet, focused aesthetic from the very first screen."
+        },
+        {
+          title: "Design Sprint methodology",
+          content: "I ran a condensed Design Sprint to converge quickly on a concept, a mood and a solid information architecture. The format forces clear decisions from day one and keeps iterations tied to the brand's compass."
+        },
+        {
+          title: "Design in Figma",
+          content: "I built the visual system in Figma: serif typography for headlines, a neutral scale for body, lots of negative space and a hierarchy that lets every block breathe. The hero respects the brand's silence — one word, one image."
+        },
+        {
+          title: "Development with Claude Code",
+          content: "I ran the build entirely with Claude Code, directing it from design through to the final React + Vite code. It was my first experience designing and shipping a website with AI as a pair-programmer, with iteration loops dramatically faster than any previous project."
+        },
+        {
+          title: "The result",
+          content: "The landing is live on Vercel and captures Reimagine's unhurried voice: an invitation to run for yourself, not against everyone else."
+        }
+      ]
+    },
+    {
       title: "Ventura: Interactive museum app",
       image: "/ventura.png",
       summary: "Gamified audio guides so kids can enjoy museums as much as adults do. It all started with a real observation at the Van Gogh Museum in Amsterdam.",
@@ -405,66 +418,6 @@ const en = {
       ]
     },
     {
-      title: "Reimagine: Landing page",
-      image: "/ReimagineCover.png",
-      summary: "Design and build of the Reimagine landing page — a sportswear brand for introspective runners. My first website designed and shipped end to end with Claude Code.",
-      tags: ["Claude Code", "Figma", "Design Sprint"],
-      tools: ["Claude Code", "Figma", "Vercel"],
-      liveUrl: "https://reimagine-landing.vercel.app",
-      sections: [
-        {
-          title: "The brief",
-          content: "Reimagine is a brand aimed at introspective athletes — runners who treat training as a personal practice rather than a competition. The challenge was to design and ship a landing page that conveyed that quiet, focused aesthetic from the very first screen."
-        },
-        {
-          title: "Design Sprint methodology",
-          content: "I ran a condensed Design Sprint to converge quickly on a concept, a mood and a solid information architecture. The format forces clear decisions from day one and keeps iterations tied to the brand's compass."
-        },
-        {
-          title: "Design in Figma",
-          content: "I built the visual system in Figma: serif typography for headlines, a neutral scale for body, lots of negative space and a hierarchy that lets every block breathe. The hero respects the brand's silence — one word, one image."
-        },
-        {
-          title: "Development with Claude Code",
-          content: "I ran the build entirely with Claude Code, directing it from design through to the final React + Vite code. It was my first experience designing and shipping a website with AI as a pair-programmer, with iteration loops dramatically faster than any previous project."
-        },
-        {
-          title: "The result",
-          content: "The landing is live on Vercel and captures Reimagine's unhurried voice: an invitation to run for yourself, not against everyone else."
-        }
-      ]
-    },
-    {
-      title: "Family Flow: Family management app",
-      image: "/familyFlow.png",
-      summary: "Task and emotion management for families with teenagers. Our first team Design Sprint and my first round of testing with real users.",
-      tags: ["Design Sprint", "UX Research", "UX/UI Design"],
-      tools: ["Figma", "Maze"],
-      figmaUrl: "https://www.figma.com/design/f36DWZjDMFdjhDSCvAV4cX/Family-Flow---Template-Design-Sprint-Javi?node-id=2431-645&p=f",
-      sections: [
-        {
-          title: "Where the problem started",
-          content: "Family Flow came out of the first real-world brief we tackled at CEI. The question was simple: what would an app that improves family life with teenagers look like? We worked as a team using the Design Sprint methodology, though the final interface design was done solo."
-        },
-        {
-          title: "Design Sprint methodology",
-          content: "The Design Sprint frames the solving of complex problems across five days. We worked with collaborative techniques like brainstorming and Crazy 8, where every idea got room to breathe. A voting system helped us filter and develop the most promising ones."
-        },
-        {
-          title: "The team's solution",
-          content: "The team went for a mix of a family task manager and an emotional tracker — in the same direction Apple Health has started moving with mental health. Beyond organising the everyday, the app recognises and reports each member's emotional state to improve communication inside the family."
-        },
-        {
-          title: "High-fidelity prototype",
-          content: "In my version, Family Flow, I focused the flow on the relationship between tasks and emotions. The palette uses 3 primary colours to represent the 3 main emotions, contrasted with whites and greys for a clean look. It includes a 3-screen onboarding that presents the app's benefits clearly."
-        },
-        {
-          title: "Testing with real users",
-          content: "Using Maze I put the prototype in real users' hands. Beyond testing navigation, I added questions to measure how much information stuck. The main finding was that, on a true-or-false question, most users got the 'maths exam' task wrong. It was there in the prototype — just scheduled for another day — which revealed an issue with how the dates were visually differentiated."
-        }
-      ]
-    },
-    {
       title: "Academic calendar: Redesign",
       image: "/calendario.png",
       summary: "Heuristic analysis and redesign of our own school's academic calendar — a real case with usability issues every student already knew about.",
@@ -483,6 +436,19 @@ const en = {
         {
           title: "Building the solution",
           content: "With the analysis done, we built a user persona to make sure the solution addressed real problems. I developed the proposal solo: first a wireframe in Whimsical with new booking and filtering systems that were faster and more intuitive, and a clearer visual hierarchy. I built the final design in Figma with an atomic approach, laying out the different calendar views."
+        }
+      ]
+    },
+    {
+      title: "FC Barcelona: Coming soon",
+      image: null,
+      summary: "Project in progress. I'll be publishing here the details of the work developed for FC Barcelona as part of the master's programme at Barreira Arte + Diseño.",
+      tags: ["FC Barcelona", "Barreira", "Coming soon"],
+      tools: [],
+      sections: [
+        {
+          title: "Coming soon",
+          content: "This space will cover the project I'm developing for FC Barcelona together with Barreira. Full context, methodology, design decisions and results will be published here as soon as it's ready."
         }
       ]
     }
