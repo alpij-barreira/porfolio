@@ -43,7 +43,7 @@ const es = {
     learning: [
       "Cursando el Máster en Diseño UX/UI & AI Native de Diseño de Producto en la escuela Barreira de Arte + Diseño, con posibilidad de convenio",
       "Aprendiendo acerca de las nuevas herramientas del sector, como Figma Make, Claude Code o Framer.",
-      "Estudiando para presentarme al examen Cambridge de C1 para mejorar mi nivel actual de B2 en inglés."
+      "Con el título C1 de inglés certificado por Cambridge tras superar el examen oficial."
     ]
   },
 
@@ -215,6 +215,12 @@ const es = {
 
   education: [
     {
+      institution: "Barreira Arte + Diseño",
+      degree: "Máster Intensivo en AI-Native Product Design",
+      period: "Enero 2026 — Actualidad",
+      description: "Máster intensivo de seis meses centrado en el diseño de producto digital con enfoque AI-First. Aplicamos la metodología Design Sprint sobre proyectos reales — de la estrategia al prototipo — combinando herramientas tradicionales como Figma con nuevas herramientas de desarrollo asistido por IA como Claude Code, guiados por docentes de empresas como Google o Shopify."
+    },
+    {
       institution: "CEI: Centro de Estudios de Innovación",
       degree: "Doble módulo de UX/UI y Diseño Gráfico",
       period: "2023 — 2024",
@@ -318,7 +324,7 @@ const en = {
     learning: [
       "Studying the Master's in UX/UI & AI-Native Product Design at Barreira Arte + Diseño, with an internship option.",
       "Exploring the latest tools in the industry, like Figma Make, Claude Code and Framer.",
-      "Preparing for the Cambridge C1 exam to step up from my current B2 in English."
+      "Cambridge C1 English certificate, earned by passing the official exam."
     ]
   },
 
@@ -489,6 +495,12 @@ const en = {
   ],
 
   education: [
+    {
+      institution: "Barreira Arte + Diseño",
+      degree: "Intensive Master's in AI-Native Product Design",
+      period: "January 2026 — Present",
+      description: "Six-month intensive master's focused on digital product design with an AI-first approach. We apply Design Sprint methodology to real projects — from strategy to prototype — combining traditional tools like Figma with new AI-assisted development tools like Claude Code, guided by lecturers from companies such as Google and Shopify."
+    },
     {
       institution: "CEI: Centro de Estudios de Innovación",
       degree: "UX/UI and Graphic Design double module",
