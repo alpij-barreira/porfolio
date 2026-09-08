@@ -223,13 +223,13 @@ const es = {
       institution: "Barreira Arte + Diseño",
       degree: "Máster Intensivo en AI-Native Product Design",
       period: "Enero 2026 — Septiembre 2026",
-      description: "Máster intensivo de seis meses centrado en el diseño de producto digital con enfoque AI-First. Aplicamos la metodología Design Sprint sobre proyectos reales — de la estrategia al prototipo — combinando herramientas tradicionales como Figma con nuevas herramientas de desarrollo asistido por IA como Claude Code."
+      description: "Máster de seis meses centrado en el diseño de producto digital con enfoque AI-First. Aplicamos la metodología Design Sprint sobre proyectos reales, recorriendo todo el proceso desde la estrategia hasta el prototipo, y combinando herramientas tradicionales como Figma con nuevas herramientas de desarrollo asistido por IA como Claude Code."
     },
     {
       institution: "CEI: Centro de Estudios de Innovación",
       degree: "Doble módulo de UX/UI y Diseño Gráfico",
       period: "2023 — 2024",
-      description: "Formación intensiva donde adquirí las bases del diseño de experiencia de usuario y diseño gráfico. Aquí desarrollé mis primeros proyectos reales con metodologías como Design Thinking y Design Sprint, aprendiendo a investigar, prototipar y validar soluciones digitales."
+      description: "Formación en las bases del diseño de experiencia de usuario y diseño gráfico. Aquí desarrollé mis primeros proyectos reales con metodologías como Design Thinking y Design Sprint, aprendiendo a investigar, prototipar y validar soluciones digitales."
     },
     {
       institution: "Universidad Politécnica de Valencia",
@@ -509,13 +509,13 @@ const en = {
       institution: "Barreira Arte + Diseño",
       degree: "Intensive Master's in AI-Native Product Design",
       period: "January 2026 — September 2026",
-      description: "Six-month intensive master's focused on digital product design with an AI-first approach. We apply Design Sprint methodology to real projects — from strategy to prototype — combining traditional tools like Figma with new AI-assisted development tools like Claude Code."
+      description: "Six-month master's focused on digital product design with an AI-first approach. We apply Design Sprint methodology to real projects, going through the full process from strategy to prototype, and combining traditional tools like Figma with new AI-assisted development tools like Claude Code."
     },
     {
       institution: "CEI: Centro de Estudios de Innovación",
       degree: "UX/UI and Graphic Design double module",
       period: "2023 — 2024",
-      description: "Intensive training where I picked up the fundamentals of user-experience and graphic design. This is where I developed my first real projects with methodologies like Design Thinking and Design Sprint, learning how to research, prototype and validate digital solutions."
+      description: "Training in the fundamentals of user-experience and graphic design. This is where I developed my first real projects with methodologies like Design Thinking and Design Sprint, learning how to research, prototype and validate digital solutions."
     },
     {
       institution: "Polytechnic University of Valencia",
