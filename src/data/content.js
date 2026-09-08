@@ -214,9 +214,15 @@ const es = {
 
   education: [
     {
+      institution: "CEI: Centro de Estudios de Innovación",
+      degree: "Doble módulo de Cloud Computing y Big Data",
+      period: "Septiembre 2026 — Actualidad",
+      description: "Formación en tecnologías cloud y procesamiento de grandes volúmenes de datos. Mi interés en estas áreas nace del deseo de maximizar mi alcance en el diseño de producto digital, incorporando la lógica de la infraestructura y los datos a las decisiones de diseño."
+    },
+    {
       institution: "Barreira Arte + Diseño",
       degree: "Máster Intensivo en AI-Native Product Design",
-      period: "Enero 2026 — Actualidad",
+      period: "Enero 2026 — Septiembre 2026",
       description: "Máster intensivo de seis meses centrado en el diseño de producto digital con enfoque AI-First. Aplicamos la metodología Design Sprint sobre proyectos reales — de la estrategia al prototipo — combinando herramientas tradicionales como Figma con nuevas herramientas de desarrollo asistido por IA como Claude Code."
     },
     {
@@ -494,9 +500,15 @@ const en = {
 
   education: [
     {
+      institution: "CEI: Centro de Estudios de Innovación",
+      degree: "Cloud Computing and Big Data double module",
+      period: "September 2026 — Present",
+      description: "Training in cloud technologies and large-scale data processing. My interest in these areas comes from wanting to broaden my reach in digital product design, bringing infrastructure and data thinking into design decisions."
+    },
+    {
       institution: "Barreira Arte + Diseño",
       degree: "Intensive Master's in AI-Native Product Design",
-      period: "January 2026 — Present",
+      period: "January 2026 — September 2026",
       description: "Six-month intensive master's focused on digital product design with an AI-first approach. We apply Design Sprint methodology to real projects — from strategy to prototype — combining traditional tools like Figma with new AI-assisted development tools like Claude Code."
     },
     {
