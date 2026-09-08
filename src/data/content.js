@@ -35,14 +35,10 @@ const es = {
     ],
     tools: [
       { name: "Figma", icon: "figma", note: "Mi primera herramienta de UX/UI" },
+      { name: "Claude", icon: "claude", note: "Mi copiloto en diseño y desarrollo" },
       { name: "Suite de Adobe", icon: "adobe", note: "Para profundizar en diseño" },
       { name: "Notion", icon: "notion", note: "Donde se organiza la magia" },
-      { name: "Jira", icon: "jira", note: "Para los grandes proyectos" },
-      { name: "Whimsical", icon: "whimsical", note: "Mi preferencia para wireframes" }
-    ],
-    learning: [
-      "Aprendiendo acerca de las nuevas herramientas del sector, como Figma Make, Claude Code o Framer.",
-      "Con el título C1 de inglés certificado por Cambridge tras superar el examen oficial."
+      { name: "Jira", icon: "jira", note: "Para los grandes proyectos" }
     ]
   },
 
@@ -321,14 +317,10 @@ const en = {
     ],
     tools: [
       { name: "Figma", icon: "figma", note: "My first UX/UI tool" },
+      { name: "Claude", icon: "claude", note: "My design and development copilot" },
       { name: "Adobe Suite", icon: "adobe", note: "For going deeper into design" },
       { name: "Notion", icon: "notion", note: "Where the magic gets organised" },
-      { name: "Jira", icon: "jira", note: "For the bigger projects" },
-      { name: "Whimsical", icon: "whimsical", note: "My go-to for wireframes" }
-    ],
-    learning: [
-      "Exploring the latest tools in the industry, like Figma Make, Claude Code and Framer.",
-      "Cambridge C1 English certificate, earned by passing the official exam."
+      { name: "Jira", icon: "jira", note: "For the bigger projects" }
     ]
   },
 

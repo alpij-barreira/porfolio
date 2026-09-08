@@ -2,18 +2,17 @@
 // Framer: motion.div (stagger en skill tags y tool cards)
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { SiFigma, SiNotion, SiJira } from 'react-icons/si';
-import { TbPencil, TbPalette } from 'react-icons/tb';
+import { SiFigma, SiNotion, SiJira, SiClaude } from 'react-icons/si';
+import { TbPalette } from 'react-icons/tb';
 import { useLanguage } from '../../contexts/LanguageContext';
 import Section from '../layout/Section';
-import BulletJournalIcon from '../shared/BulletJournalIcon';
 import styles from './Skills.module.css';
 
 const toolIcons = {
   figma: <SiFigma />,
+  claude: <SiClaude />,
   notion: <SiNotion />,
   jira: <SiJira />,
-  whimsical: <TbPencil />,
   adobe: <TbPalette />,
 };
 
@@ -99,18 +98,6 @@ const Skills = () => {
         </motion.div>
       </div>
 
-      {/* Currently learning */}
-      <div className={`${styles.block} ${styles.learningBlock}`}>
-        <h3 className={styles.blockTitle}>{ui.skills.aprendiendo}</h3>
-        <div className={styles.learningList}>
-          {skills.learning.map((item, i) => (
-            <div key={i} className={styles.learningItem}>
-              <BulletJournalIcon type="progress" />
-              <span>{item}</span>
-            </div>
-          ))}
-        </div>
-      </div>
     </Section>
   );
 };
