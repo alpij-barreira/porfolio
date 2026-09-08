@@ -15,8 +15,8 @@ const es = {
     contact: {
       email: "pinedaux@gmail.com",
       phone: "+34639418865",
-      linkedin: "https://www.linkedin.com/in/javier-alonso-pineda-4b70aa285/",
-      cv: "/cv.pdf"
+      linkedin: "https://www.linkedin.com/in/javier-pineda-alonso/",
+      cv: "/cv-es.pdf"
     }
   },
 
@@ -297,7 +297,7 @@ const en = {
     contact: {
       email: "pinedaux@gmail.com",
       phone: "+34639418865",
-      linkedin: "https://www.linkedin.com/in/javier-alonso-pineda-4b70aa285/",
+      linkedin: "https://www.linkedin.com/in/javier-pineda-alonso/",
       cv: "/cv.pdf"
     }
   },
