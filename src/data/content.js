@@ -229,7 +229,7 @@ const es = {
         },
         {
           title: "El principio de la solución",
-          content: "Vestirse de fallera es una compra cara y fragmentada, con cada pieza en un proveedor distinto y precios que rara vez son públicos. La usuaria fija cuánto puede gastar y Reviu compone paquetes completos y coherentes dentro de ese límite. No vende, no cobra comisión y no intermedia: la neutralidad se construye en la estructura del producto, no se declara."
+          content: "Vestirse de fallera es una compra cara y fragmentada, con cada pieza en un proveedor distinto y precios que rara vez son públicos. La usuaria fija cuánto puede gastar y Reviu compone paquetes completos y coherentes dentro de ese límite."
         },
         {
           title: "Cómo lo estamos construyendo",
@@ -640,7 +640,7 @@ const en = {
         },
         {
           title: "The principle behind the solution",
-          content: "Dressing as a fallera is an expensive, fragmented purchase, with every garment at a different supplier and prices that are rarely public. The user sets how much she can spend and Reviu puts together complete, coherent packages within that limit. It doesn't sell, take commission or act as a middleman: neutrality is built into the structure of the product, not declared."
+          content: "Dressing as a fallera is an expensive, fragmented purchase, with every garment at a different supplier and prices that are rarely public. The user sets how much she can spend and Reviu puts together complete, coherent packages within that limit."
         },
         {
           title: "How we're building it",
