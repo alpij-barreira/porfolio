@@ -1,5 +1,8 @@
 /* ── Card compacta en grid ── */
 .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   border: var(--border-sketch-width) solid var(--color-paper-lines);
   background-color: var(--color-paper);
   overflow: hidden;
@@ -13,6 +16,7 @@
 
 /* Thumbnail */
 .thumbnailWrapper {
+  position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
@@ -55,29 +59,37 @@
   opacity: 0.6;
 }
 
-/* Info row compacta */
-.infoRow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--space-sm) var(--space-md);
-  gap: var(--space-md);
+/* El año, estampado sobre la miniatura */
+.year {
+  position: absolute;
+  right: var(--space-sm);
+  bottom: var(--space-sm);
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  color: var(--color-graphite);
+  background-color: rgba(250, 248, 245, 0.92);
+  border: 1px solid rgba(45, 43, 40, 0.12);
+  padding: 2px var(--space-sm);
+  backdrop-filter: blur(2px);
 }
 
-.meta {
+/* Cuerpo: crece para empujar el pie al fondo y alinearlo entre tarjetas */
+.body {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  flex: 1;
-  min-width: 0;
+  gap: var(--space-sm);
+  padding: var(--space-md);
 }
 
 .title {
   font-family: var(--font-serif);
   font-size: 1.125rem;
   font-weight: 600;
+  line-height: 1.35;
   color: var(--color-graphite);
-  display: block;
+  margin: 0;
 }
 
 .tags {
@@ -128,11 +140,14 @@
   border-color: color-mix(in srgb, #c2410c 25%, var(--color-paper-lines));
 }
 
-.headerRight {
+.footer {
   display: flex;
   align-items: center;
-  gap: var(--space-xs);
-  flex-shrink: 0;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  border-top: 1px solid var(--color-paper-lines);
+  background-color: var(--color-paper-warm);
 }
 
 .moreInfo {
@@ -145,7 +160,7 @@
 
 .moreInfoUnderline {
   position: absolute;
-  bottom: -2px;
+  bottom: 0;
   left: 0;
   right: 0;
   height: 1.5px;
@@ -358,18 +373,6 @@
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
-  .infoRow {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-xs);
-    padding: var(--space-sm) var(--space-md);
-  }
-
-  .headerRight {
-    width: 100%;
-    justify-content: space-between;
-  }
-
   .overlay {
     padding: var(--space-sm);
     align-items: center;

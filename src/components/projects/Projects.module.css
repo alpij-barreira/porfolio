@@ -10,7 +10,11 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-lg);
-  align-items: start;
+  align-items: stretch;
+}
+
+.cardWrapper {
+  height: 100%;
 }
 
 @media (max-width: 768px) {

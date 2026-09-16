@@ -35,6 +35,7 @@ const Projects = () => {
         {content.projects.map((project, i) => (
           <motion.div
             key={i}
+            className={styles.cardWrapper}
             variants={itemVariants}
             style={{ rotate: cardRotations[i % cardRotations.length] }}
             whileHover={{ rotate: 0 }}

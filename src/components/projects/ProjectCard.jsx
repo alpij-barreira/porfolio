@@ -72,7 +72,7 @@ const ProjectCard = ({ project }) => {
         onClick={() => setExpanded(true)}
         style={{ cursor: 'pointer' }}
       >
-        {/* Thumbnail */}
+        {/* Thumbnail, con el año estampado en la esquina */}
         <div className={styles.thumbnailWrapper}>
           {project.image ? (
             <img src={project.image} alt={project.title} className={styles.thumbnail} />
@@ -82,25 +82,26 @@ const ProjectCard = ({ project }) => {
               <span className={styles.thumbnailSize}>16:9</span>
             </div>
           )}
+          {project.year && <span className={styles.year}>{project.year}</span>}
         </div>
 
-        {/* Info row */}
-        <div className={styles.infoRow}>
-          <div className={styles.meta}>
-            <span className={styles.title}>{project.title}</span>
-            <div className={styles.tags}>
-              {project.tags.map((tag, i) => (
-                <span key={i} className={`${styles.tag} ${styles[`tag${tagColorMap[tag] || ''}`] || ''}`}>{tag}</span>
-              ))}
-            </div>
+        {/* Cuerpo: titular y etiquetas */}
+        <div className={styles.body}>
+          <h3 className={styles.title}>{project.title}</h3>
+          <div className={styles.tags}>
+            {project.tags.map((tag, i) => (
+              <span key={i} className={`${styles.tag} ${styles[`tag${tagColorMap[tag] || ''}`] || ''}`}>{tag}</span>
+            ))}
           </div>
-          <div className={styles.headerRight}>
-            <span className={styles.moreInfo}>
-              {labels.moreInfo}
-              <span className={styles.moreInfoUnderline} />
-            </span>
-            <span className={styles.arrow}>↗</span>
-          </div>
+        </div>
+
+        {/* Pie: la acción, siempre a la misma altura en todas las tarjetas */}
+        <div className={styles.footer}>
+          <span className={styles.moreInfo}>
+            {labels.moreInfo}
+            <span className={styles.moreInfoUnderline} />
+          </span>
+          <span className={styles.arrow} aria-hidden="true">↗</span>
         </div>
       </motion.div>
 
@@ -159,7 +160,7 @@ const ProjectCard = ({ project }) => {
                   {/* CTA: Ver proyecto (en vivo o en Figma) */}
                   {project.liveUrl ? (
                     <div className={styles.figmaCta}>
-                      <span className={styles.figmaHook}>{labels.liveHook}</span>
+                      <span className={styles.figmaHook}>{project.liveHook || labels.liveHook}</span>
                       <a
                         href={project.liveUrl}
                         target="_blank"
