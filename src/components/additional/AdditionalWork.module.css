@@ -1,0 +1,116 @@
+.section {
+  padding-top: 0;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: var(--border-sketch-width) dashed var(--color-paper-lines);
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  min-width: 0;
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  font-weight: 600;
+  color: var(--color-graphite);
+  margin: 0;
+}
+
+.intro {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-graphite-faint);
+  margin: 0;
+  max-width: 52ch;
+}
+
+/* Botón desplegar / plegar */
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  color: var(--color-graphite);
+  background-color: var(--color-paper-warm);
+  border: var(--border-sketch-width) solid var(--color-paper-lines);
+  padding: var(--space-sm) var(--space-md);
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--color-shadow-paper);
+  transition: transform var(--duration-fast) var(--ease-soft),
+              box-shadow var(--duration-fast) var(--ease-soft);
+}
+
+.toggle:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--color-shadow-paper-hover);
+}
+
+.toggle:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--color-shadow-paper);
+}
+
+.toggle:focus-visible {
+  outline: var(--border-sketch-width) solid var(--color-graphite);
+  outline-offset: 2px;
+}
+
+.count {
+  font-size: 0.6875rem;
+  color: var(--color-graphite-soft);
+  background-color: var(--color-paper);
+  border: 1px solid var(--color-paper-lines);
+  padding: 0 5px;
+  line-height: 1.5;
+}
+
+.chevron {
+  display: inline-block;
+  font-size: 0.875rem;
+  line-height: 0.6;
+  color: var(--color-graphite-soft);
+}
+
+/* Contenido desplegable */
+.reveal {
+  overflow: hidden;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding-top: var(--space-lg);
+  padding-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .toggle {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .list {
+    padding-top: var(--space-md);
+    padding-bottom: 8px;
+  }
+}

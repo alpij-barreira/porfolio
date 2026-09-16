@@ -4,6 +4,7 @@ import Hero from './components/hero/Hero';
 import Skills from './components/skills/Skills';
 import Experience from './components/experience/Experience';
 import Projects from './components/projects/Projects';
+import AdditionalWork from './components/additional/AdditionalWork';
 import Education from './components/education/Education';
 import Footer from './components/layout/Footer';
 import { LanguageProvider } from './contexts/LanguageContext';
@@ -22,6 +23,7 @@ function App() {
         <Hero />
         <Experience />
         <Projects />
+        <AdditionalWork />
         <Skills />
         <Education />
       </main>

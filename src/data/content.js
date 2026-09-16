@@ -88,6 +88,7 @@ const es = {
   projects: [
     {
       title: "FC Barcelona: Plataforma para aficionados",
+      year: "2026",
       image: "/FCBCover.png",
       summary: "Proyecto troncal del Máster de UX/UI & AI-Native de Diseño de Producto en Barreira Arte + Diseño: seis meses aplicando Design Sprint a un briefing ficticio del FC Barcelona, con el reto de acercar el club a sus aficionados en el extranjero. Cerramos con una demo funcional entre Figma y Claude Code.",
       tags: ["Design Sprint", "UX Research", "UX/UI Design", "Claude Code"],
@@ -118,6 +119,7 @@ const es = {
     },
     {
       title: "Reimagine: Landing page",
+      year: "2026",
       image: "/ReimagineCover.png",
       summary: "Diseño y desarrollo de la landing de Reimagine, una marca de moda deportiva pensada para corredores introspectivos. Mi primera web diseñada y construida íntegramente con Claude Code.",
       tags: ["Claude Code", "Figma", "Design Sprint"],
@@ -148,6 +150,7 @@ const es = {
     },
     {
       title: "Ventura: App interactiva para museos",
+      year: "2023",
       image: "/ventura.png",
       summary: "Audioguías gamificadas para que los niños disfruten de los museos tanto como los adultos. Todo empezó con una observación real en el Van Gogh de Ámsterdam.",
       tags: ["UX Research", "Investigación cualitativa", "Prototipado"],
@@ -186,6 +189,7 @@ const es = {
     },
     {
       title: "Calendario académico: Rediseño",
+      year: "2023",
       image: "/calendario.png",
       summary: "Análisis heurístico y rediseño del calendario académico de nuestro propio centro, un caso real con problemas de usabilidad conocidos por todos los alumnos.",
       tags: ["Análisis heurístico", "UX/UI Design", "Wireframing"],
@@ -205,6 +209,113 @@ const es = {
           content: "Con el análisis completado, creamos un perfil de usuario para asegurarnos de que la solución abordara problemas reales. Desarrollé la propuesta en solitario: primero un wireframe en Whimsical con nuevos sistemas de reserva y filtrado, más ágiles e intuitivos, y una jerarquía visual más clara. El diseño final lo construí en Figma con diseño atómico, desarrollando las diferentes vistas del calendario."
         }
       ]
+    }
+  ],
+
+  additionalWork: [
+    {
+      title: "Reviu: Recomendador fallero por presupuesto",
+      year: "2026",
+      status: "En desarrollo",
+      thumbnail: "/reviu/reviu-thumb.jpg",
+      summary: "Nuestro trabajo de fin de máster en Barreira, todavía en desarrollo: una web-app que una compañera de clase y yo estamos construyendo para recomendar indumentaria y servicios falleros dentro del presupuesto que marca la usuaria. El modelo mental es el de un metabuscador de vuelos, aplicado al traje de fallera.",
+      tools: ["Figma", "Claude Code", "Next.js", "GitHub", "Vercel"],
+      liveUrl: "https://reviu-flax.vercel.app",
+      liveHook: "El proyecto sigue en desarrollo. En este enlace puedes consultar en qué estado está en cada momento:",
+      sections: [
+        {
+          title: "El contexto",
+          content: "Reviu es el proyecto con el que cerramos el Máster de UX/UI & AI-Native de Diseño de Producto en Barreira Arte + Diseño. Lo desarrollamos en equipo, una compañera de clase y yo. Sigue abierto: ahora mismo estamos levantando un prototipo navegable de alta fidelidad, con datos simulados y controlados, que defenderemos ante el tribunal del máster."
+        },
+        {
+          title: "El principio de la solución",
+          content: "Vestirse de fallera es una compra cara y fragmentada, con cada pieza en un proveedor distinto y precios que rara vez son públicos. La usuaria fija cuánto puede gastar y Reviu compone paquetes completos y coherentes dentro de ese límite. No vende, no cobra comisión y no intermedia: la neutralidad se construye en la estructura del producto, no se declara."
+        },
+        {
+          title: "Cómo lo estamos construyendo",
+          content: "El proyecto reúne todo lo aprendido en el máster. Figma manda en lo visual, con su propia librería de diseño, y desde ahí levantamos la interfaz con Claude Code. Trabajamos por historias de usuario, con una rama y una pull request en GitHub por cada una, lo que nos permite repartirnos el trabajo sin pisarnos, y se publica en Vercel."
+        }
+      ]
+    },
+    {
+      title: "Sexplace: Diseño de publicidad",
+      year: "2024",
+      thumbnail: "/sexplace/sexplace-logo.jpg",
+      summary: "Durante mi trabajo en Tramiting, era el único encargado del diseño de la marca en todos sus entornos. Por lo que diseñé una veintena de piezas para distintos entornos: Campañas de mailing, historias de instagram y piezas publicitarias para los diferentes e-commerce de la compañía.",
+      tools: ["Photoshop"],
+      sections: [
+        {
+          title: "El encargo",
+          content: "Cada mes me facilitaban las diferentes campañas de ofertas, promociones y artículos nuevos que iban a suceder tanto en las tiendas como en las webs. Mi trabajo consistía en planificar toda la línea gráfica de dichas promociones y crear los recursos necesarios para todos los entornos."
+        },
+        {
+          title: "Responsabilidades adicionales",
+          content: "Además de diseñar las piezas gráficas que iban a acompañar cada pantalla, mi trabajo también abarcaba la redacción y creación del resto de elementos que las acompañaban. Programaba las promociones, gestionaba la publicación de los contenidos, redactaba las newsletter y manejaba Prestashop para obtener métricas de éxito y valorar los resultados de las campañas."
+        }
+      ],
+      gallery: [
+        {
+          src: "/sexplace/sexplace-banner-web.jpg",
+          caption: "Banner de home — campaña cruzada de dos productos",
+          format: "Banner web · 1920 × 600"
+        },
+        {
+          src: "/sexplace/sexplace-banner-movil.jpg",
+          caption: "Adaptación cuadrada del lanzamiento para el mercado latinoamericano",
+          format: "Banner móvil · 600 × 600"
+        },
+        {
+          src: "/sexplace/sexplace-historia-instagram.jpg",
+          caption: "Historia para el Día del Soltero con código promocional",
+          format: "Historia de Instagram · 1080 × 1920"
+        },
+        {
+          src: "/sexplace/sexplace-newsletter.jpg",
+          caption: "Cabecera de newsletter para el calendario de adviento de Satisfyer",
+          format: "Newsletter · 1080 × 1465"
+        }
+      ]
+    },
+    {
+      title: "Sexplace TV: Edición de vídeo para Youtube e Instagram",
+      year: "2024",
+      thumbnail: "/sexplace/sexplace-tv.jpg",
+      summary: "Como encargado del diseño de la marca, también llevaba la edición de los vídeos que se publicaban en redes. No participaba en la grabación: recibía los brutos que realizaban nuestros colaboradores y me ocupaba de todo lo que venía después, hasta dejar cada pieza lista para publicar.",
+      tools: ["Premiere Pro"],
+      sections: [
+        {
+          title: "El encargo",
+          content: "De cada bruto salía el montaje completo para YouTube: efectos, música, corrección de color y ritmo. Después preparaba su versión correspondiente y simplificada para Instagram, ajustada a un formato y a un consumo mucho más rápidos sin perder lo que hacía funcionar al vídeo original."
+        },
+        {
+          title: "Responsabilidades adicionales",
+          content: "La tarea no terminaba en el montaje. También me encargaba de todo lo relacionado con la gestión del contenido: preparaba la publicación, redactaba las descripciones, respondía los comentarios y decidía el ritmo con el que salía cada vídeo y cómo se repartía entre las dos plataformas."
+        }
+      ],
+      videos: ["y0SnmQqByuI", "GPxX2hBOyo8", "jUOz1jo8D78", "OcMTl44hMW4"]
+    },
+    {
+      title: "Mental Hub: Divulgación de salud mental para la juventud",
+      year: "2023",
+      thumbnail: "/mental-hub/mental-hub-thumb.jpg",
+      summary: "Trabajo final del módulo de Interfaces y Experiencia de Usuario en CEI: el diseño de una app que reúne artículos y vídeos verificados sobre salud mental y pone en contacto a los jóvenes con profesionales, para combatir la desinformación y el autodiagnóstico.",
+      tools: ["Figma", "draw.io"],
+      sections: [
+        {
+          title: "El encargo",
+          content: "El punto de partida era un dato: el 59,3% de los jóvenes españoles de entre 15 y 29 años reconoce haber tenido problemas de salud mental. Buena parte de ellos se informa en redes sociales, donde el contenido se banaliza y empuja al autodiagnóstico erróneo. Hacía falta una fuente fiable."
+        },
+        {
+          title: "El proceso",
+          content: "Apliqué Design Thinking con un modelo de doble diamante a lo largo de cuatro fases: observar, sintetizar, idear y diseñar. De ahí salieron el desk research, la netnografía, la user persona, el customer journey, la matriz DAFO y el Business Model Canvas, hasta cerrar con un prototipo de alta fidelidad en Figma."
+        }
+      ],
+      pdf: {
+        file: "/mental-hub/mental-hub.pdf",
+        downloadName: "Mental-Hub-Javier-Pineda.pdf",
+        cover: "/mental-hub/mental-hub-portada.jpg",
+        meta: "PDF · 30 páginas · 5,8 MB"
+      }
     }
   ],
 
@@ -251,7 +362,8 @@ const es = {
     sections: {
       experience: "Experiencia laboral",
       skills: "Competencias y herramientas",
-      projects: "Proyectos",
+      projects: "Proyectos principales",
+      additionalWork: "Trabajos adicionales",
       education: "Estudios"
     },
     skills: {
@@ -269,6 +381,23 @@ const es = {
       figmaHook: "¿Quieres ver el proyecto por dentro?",
       figmaButton: "Abrir en Figma",
       figmaAria: "Proyecto de Figma, se abre en una pestaña nueva",
+      liveHook: "¿Quieres ver el resultado en vivo?",
+      liveButton: "Visitar el sitio",
+      liveAria: "Enlace al sitio en vivo, se abre en una pestaña nueva"
+    },
+    additionalWork: {
+      intro: "Colección de trabajos independientes o tareas realizadas en el entorno laboral donde se muestran diferentes habilidades aplicadas en entornos reales.",
+      expand: "Ver trabajos",
+      collapse: "Ocultar trabajos",
+      moreInfo: "Ver el trabajo",
+      close: "Cerrar",
+      gallery: "Piezas seleccionadas",
+      videos: "Vídeos editados",
+      videoLabel: "Vídeo",
+      videoAria: "en YouTube, se abre en una pestaña nueva",
+      pdfHeading: "La presentación del proyecto",
+      pdfAction: "Descargar",
+      pdfAria: "Descargar la presentación del proyecto en PDF",
       liveHook: "¿Quieres ver el resultado en vivo?",
       liveButton: "Visitar el sitio",
       liveAria: "Enlace al sitio en vivo, se abre en una pestaña nueva"
@@ -370,6 +499,7 @@ const en = {
   projects: [
     {
       title: "FC Barcelona: Fan platform",
+      year: "2026",
       image: "/FCBCover.png",
       summary: "The flagship project of the UX/UI & AI-Native Product Design master's at Barreira Arte + Diseño: six months applying Design Sprint to a fictional FC Barcelona brief, with the challenge of bringing the club closer to its fans abroad. We wrapped with a working demo built between Figma and Claude Code.",
       tags: ["Design Sprint", "UX Research", "UX/UI Design", "Claude Code"],
@@ -400,6 +530,7 @@ const en = {
     },
     {
       title: "Reimagine: Landing page",
+      year: "2026",
       image: "/ReimagineCover.png",
       summary: "Design and build of the Reimagine landing page — a sportswear brand for introspective runners. My first website designed and shipped end to end with Claude Code.",
       tags: ["Claude Code", "Figma", "Design Sprint"],
@@ -430,6 +561,7 @@ const en = {
     },
     {
       title: "Ventura: Interactive museum app",
+      year: "2023",
       image: "/ventura.png",
       summary: "Gamified audio guides so kids can enjoy museums as much as adults do. It all started with a real observation at the Van Gogh Museum in Amsterdam.",
       tags: ["UX Research", "Qualitative Research", "Prototyping"],
@@ -468,6 +600,7 @@ const en = {
     },
     {
       title: "Academic calendar: Redesign",
+      year: "2023",
       image: "/calendario.png",
       summary: "Heuristic analysis and redesign of our own school's academic calendar — a real case with usability issues every student already knew about.",
       tags: ["Heuristic Analysis", "UX/UI Design", "Wireframing"],
@@ -487,6 +620,113 @@ const en = {
           content: "With the analysis done, we built a user persona to make sure the solution addressed real problems. I developed the proposal solo: first a wireframe in Whimsical with new booking and filtering systems that were faster and more intuitive, and a clearer visual hierarchy. I built the final design in Figma with an atomic approach, laying out the different calendar views."
         }
       ]
+    }
+  ],
+
+  additionalWork: [
+    {
+      title: "Reviu: Budget-led fallera outfit recommender",
+      year: "2026",
+      status: "In progress",
+      thumbnail: "/reviu/reviu-thumb.jpg",
+      summary: "Our master's final project at Barreira, still in progress: a web app a classmate and I are building to recommend fallera clothing and services within the budget the user sets. The mental model is a flight metasearch engine, applied to the fallera outfit.",
+      tools: ["Figma", "Claude Code", "Next.js", "GitHub", "Vercel"],
+      liveUrl: "https://reviu-flax.vercel.app",
+      liveHook: "The project is still in progress. This link lets you check where it stands at any time:",
+      sections: [
+        {
+          title: "The context",
+          content: "Reviu is the project closing our Master's in UX/UI & AI-Native Product Design at Barreira Arte + Diseño. A classmate and I are developing it as a team. It is still open: right now we are building a navigable high-fidelity prototype, with simulated and controlled data, to be defended before the master's panel."
+        },
+        {
+          title: "The principle behind the solution",
+          content: "Dressing as a fallera is an expensive, fragmented purchase, with every garment at a different supplier and prices that are rarely public. The user sets how much she can spend and Reviu puts together complete, coherent packages within that limit. It doesn't sell, take commission or act as a middleman: neutrality is built into the structure of the product, not declared."
+        },
+        {
+          title: "How we're building it",
+          content: "The project brings together everything learned on the master's. Figma leads on the visual side, with its own design library, and from there we build the interface with Claude Code. We work user story by user story, with a branch and a pull request on GitHub for each, which lets us split the work without stepping on each other, and it ships on Vercel."
+        }
+      ]
+    },
+    {
+      title: "Sexplace: Advertising design",
+      year: "2024",
+      thumbnail: "/sexplace/sexplace-logo.jpg",
+      summary: "While working at Tramiting I was the only person handling the brand's design across every channel, so I designed around twenty pieces for different settings: mailing campaigns, Instagram stories and advertising pieces for the company's various e-commerce sites.",
+      tools: ["Photoshop"],
+      sections: [
+        {
+          title: "The brief",
+          content: "Each month I was given the offer campaigns, promotions and new products coming up in both the stores and the websites. My job was to plan the whole graphic line for those promotions and produce the assets needed for every channel."
+        },
+        {
+          title: "Additional responsibilities",
+          content: "Beyond designing the graphics for each screen, my work also covered writing and producing everything around them. I scheduled the promotions, managed content publishing, wrote the newsletters and worked in Prestashop to pull success metrics and assess how the campaigns had performed."
+        }
+      ],
+      gallery: [
+        {
+          src: "/sexplace/sexplace-banner-web.jpg",
+          caption: "Homepage banner — cross-promotion of two products",
+          format: "Web banner · 1920 × 600"
+        },
+        {
+          src: "/sexplace/sexplace-banner-movil.jpg",
+          caption: "Square adaptation of the launch for the Latin American market",
+          format: "Mobile banner · 600 × 600"
+        },
+        {
+          src: "/sexplace/sexplace-historia-instagram.jpg",
+          caption: "Singles' Day story with a promo code",
+          format: "Instagram story · 1080 × 1920"
+        },
+        {
+          src: "/sexplace/sexplace-newsletter.jpg",
+          caption: "Newsletter header for the Satisfyer advent calendar",
+          format: "Newsletter · 1080 × 1465"
+        }
+      ]
+    },
+    {
+      title: "Sexplace TV: Video editing for YouTube and Instagram",
+      year: "2024",
+      thumbnail: "/sexplace/sexplace-tv.jpg",
+      summary: "As the person in charge of the brand's design, I also handled the editing of the videos published on social media. I wasn't involved in filming: I received the raw footage our collaborators shot and took care of everything that came after, until each piece was ready to publish.",
+      tools: ["Premiere Pro"],
+      sections: [
+        {
+          title: "The brief",
+          content: "Each batch of footage became a full edit for YouTube: effects, music, colour grading and pacing. I then prepared its matching, stripped-back version for Instagram, cut for a faster format and a faster viewing without losing what made the original video work."
+        },
+        {
+          title: "Additional responsibilities",
+          content: "The job didn't end at the edit. I also handled everything around content management: preparing each post, writing the descriptions, replying to comments and deciding the pace at which each video went out and how it was split across the two platforms."
+        }
+      ],
+      videos: ["y0SnmQqByuI", "GPxX2hBOyo8", "jUOz1jo8D78", "OcMTl44hMW4"]
+    },
+    {
+      title: "Mental Hub: Mental-health outreach for young people",
+      year: "2023",
+      thumbnail: "/mental-hub/mental-hub-thumb.jpg",
+      summary: "Final project for the Interface and User Experience module at CEI: the design of an app that gathers verified articles and videos on mental health and puts young people in touch with professionals, to push back against misinformation and self-diagnosis.",
+      tools: ["Figma", "draw.io"],
+      sections: [
+        {
+          title: "The brief",
+          content: "The starting point was one figure: 59.3% of Spaniards aged 15 to 29 report having had mental-health problems. Many of them get their information on social media, where the subject gets trivialised and nudges people towards mistaken self-diagnosis. A reliable source was missing."
+        },
+        {
+          title: "The process",
+          content: "I applied Design Thinking with a double-diamond model across four phases: observe, synthesise, ideate and design. That produced the desk research, netnography, user persona, customer journey, SWOT matrix and Business Model Canvas, closing with a high-fidelity prototype in Figma."
+        }
+      ],
+      pdf: {
+        file: "/mental-hub/mental-hub.pdf",
+        downloadName: "Mental-Hub-Javier-Pineda.pdf",
+        cover: "/mental-hub/mental-hub-portada.jpg",
+        meta: "PDF · 30 pages · 5.8 MB"
+      }
     }
   ],
 
@@ -533,7 +773,8 @@ const en = {
     sections: {
       experience: "Work experience",
       skills: "Skills & tools",
-      projects: "Projects",
+      projects: "Main projects",
+      additionalWork: "Additional work",
       education: "Education"
     },
     skills: {
@@ -551,6 +792,23 @@ const en = {
       figmaHook: "You can take a look inside the project here",
       figmaButton: "Open in Figma",
       figmaAria: "Figma project, opens in a new tab",
+      liveHook: "Want to see it live?",
+      liveButton: "Visit the site",
+      liveAria: "Live site link, opens in a new tab"
+    },
+    additionalWork: {
+      intro: "A collection of independent pieces and tasks carried out at work, showing different skills applied in real settings.",
+      expand: "View work",
+      collapse: "Hide work",
+      moreInfo: "View the work",
+      close: "Close",
+      gallery: "Selected pieces",
+      videos: "Edited videos",
+      videoLabel: "Video",
+      videoAria: "on YouTube, opens in a new tab",
+      pdfHeading: "The project presentation",
+      pdfAction: "Download",
+      pdfAria: "Download the project presentation as a PDF",
       liveHook: "Want to see it live?",
       liveButton: "Visit the site",
       liveAria: "Live site link, opens in a new tab"
