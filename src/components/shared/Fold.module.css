@@ -28,13 +28,6 @@
 
 .spacer { flex: 1; min-width: var(--space-sm); }
 
-.count {
-  font-family: var(--font-sans);
-  font-size: var(--t-xs);
-  font-variant-numeric: tabular-nums;
-  color: var(--color-graphite-muted);
-}
-
 .icon {
   display: grid;
   place-items: center;

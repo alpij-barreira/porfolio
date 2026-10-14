@@ -10,6 +10,5 @@
 /* Un papel ligeramente más cálido para romper el ritmo entre secciones */
 .warm {
   background-color: var(--color-paper-warm);
-  border-top: 1px solid var(--color-rule);
   padding-block: var(--space-2xl);
 }

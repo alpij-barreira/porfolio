@@ -14,20 +14,31 @@ const toolIcons = {
   adobe: <TbPalette />,
 };
 
+// Reparte la lista en dos columnas equilibradas, la primera con el resto.
+const inTwoColumns = (items) => {
+  const half = Math.ceil(items.length / 2);
+  return [items.slice(0, half), items.slice(half)];
+};
+
 const Skills = () => {
   const { content } = useLanguage();
   const { skills, ui } = content;
+  const columns = inTwoColumns(skills.core);
 
   return (
     <Fold id="habilidades" title={ui.sections.skills}>
       <div className={styles.grid}>
         <div>
           <h3 className="label">{ui.skills.competencias}</h3>
-          <ul className={styles.skillList}>
-            {skills.core.map((skill) => (
-              <li key={skill} className={styles.skill}>{skill}</li>
+          <div className={styles.skillColumns}>
+            {columns.map((column, i) => (
+              <ul key={i} className={styles.skillList}>
+                {column.map((skill) => (
+                  <li key={skill} className={styles.skill}>{skill}</li>
+                ))}
+              </ul>
             ))}
-          </ul>
+          </div>
         </div>
 
         <div>

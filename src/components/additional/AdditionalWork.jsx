@@ -26,7 +26,7 @@ const AdditionalWork = () => {
       : active;
 
   return (
-    <Fold id="trabajos-adicionales" title={content.ui.sections.additionalWork} count={works.length}>
+    <Fold id="trabajos-adicionales" title={content.ui.sections.additionalWork}>
       <p className={styles.intro}>{labels.intro}</p>
 
       <ul className={styles.list}>

@@ -5,7 +5,7 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { TbPlus } from 'react-icons/tb';
 import styles from './Fold.module.css';
 
-const Fold = ({ id, title, count, children }) => {
+const Fold = ({ id, title, children }) => {
   const [open, setOpen] = useState(false);
   const reduced = useReducedMotion();
   const panelId = useId();
@@ -22,7 +22,6 @@ const Fold = ({ id, title, count, children }) => {
         >
           <span className={styles.title}>{title}</span>
           <span className={styles.spacer} aria-hidden="true" />
-          {count != null && <span className={styles.count}>{count}</span>}
           <span className={`${styles.icon} ${open ? styles.iconOpen : ''}`} aria-hidden="true">
             <TbPlus />
           </span>

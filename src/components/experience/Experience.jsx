@@ -15,7 +15,7 @@ const Experience = () => {
 
       <div className={styles.list}>
         {content.experience.map((exp, i) => (
-          <Reveal key={exp.company} delay={i * 0.06} y={16}>
+          <Reveal key={exp.company} className={styles.item} delay={i * 0.06} y={16}>
             <ExperienceCard exp={exp} />
           </Reveal>
         ))}

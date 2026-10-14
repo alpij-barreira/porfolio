@@ -18,8 +18,6 @@ const Hero = () => {
           <p className={styles.tagline}>{personal.tagline}</p>
         </div>
 
-        <div className={styles.rule} aria-hidden="true" />
-
         <div className={styles.lower}>
           <Polaroid
             className={styles.portrait}

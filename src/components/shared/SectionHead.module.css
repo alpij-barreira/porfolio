@@ -1,24 +1,12 @@
 .head {
   margin-bottom: var(--space-2xl);
-}
-
-.titleRow {
-  display: flex;
-  align-items: baseline;
-  gap: var(--space-md);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-rule);
 }
 
 .title {
   font-size: var(--t-h2);
   font-weight: 500;
-  flex-shrink: 0;
-}
-
-.rule {
-  flex: 1;
-  height: 1px;
-  background: var(--color-rule-strong);
-  transform: translateY(-0.35em);
 }
 
 .intro {
@@ -30,5 +18,4 @@
 
 @media (max-width: 899px) {
   .head { margin-bottom: var(--space-xl); }
-  .titleRow { gap: var(--space-sm); }
 }

@@ -19,11 +19,6 @@
   to   { opacity: 1; transform: none; }
 }
 
-@keyframes cover-draw {
-  from { transform: scaleX(0); }
-  to   { transform: scaleX(1); }
-}
-
 @keyframes cover-place {
   from { opacity: 0; transform: rotate(-6deg) translateY(18px); }
   to   { opacity: 1; transform: rotate(var(--rotate, -1.4deg)); }
@@ -53,16 +48,9 @@
   color: var(--color-graphite-soft);
 }
 
-.rule {
-  height: 1px;
-  background: var(--color-rule-strong);
-  margin-block: clamp(1.75rem, 4vw, 2.75rem);
-  transform-origin: left center;
-  animation: cover-draw 1.1s var(--ease-out) 0.3s both;
-}
-
 /* ── Retrato y biografía ─────────────────────── */
 .lower {
+  margin-top: clamp(2.25rem, 5vw, 3.5rem);
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: var(--space-xl);

@@ -7,7 +7,7 @@ const Education = () => {
   const { content } = useLanguage();
 
   return (
-    <Fold id="estudios" title={content.ui.sections.education} count={content.education.length}>
+    <Fold id="estudios" title={content.ui.sections.education}>
       <div className={styles.list}>
         {content.education.map((edu) => (
           <article key={`${edu.institution}-${edu.degree}`} className={`rail-grid ${styles.entry}`}>

@@ -87,14 +87,15 @@
   font-size: var(--t-sm);
   font-weight: 500;
   color: var(--color-graphite);
-  border-bottom: 1px solid var(--color-graphite);
   transition: gap var(--dur-normal) var(--ease-out), color var(--dur-fast) var(--ease-soft);
 }
 
 .action:hover {
   gap: 0.65rem;
   color: var(--color-ink-blue);
-  border-bottom-color: var(--color-ink-blue);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
 }
 
 @media (max-width: 899px) {

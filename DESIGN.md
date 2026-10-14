@@ -26,8 +26,8 @@ Modo: *Experience* — manda la obra, la interfaz se retira.
 3. **Experiencia** (`experience/`) — periodo y logo al margen, primer
    párrafo visible, el detalle desplegable.
 4. **Apéndice plegado** (`shared/Fold.jsx`) — Trabajos adicionales, Estudios
-   y Habilidades, cerrados por defecto, con el número de fichas a la derecha.
-   Una sola línea entre pliego y pliego: no se enmarca nada.
+   y Habilidades, cerrados por defecto. Una sola línea entre pliego y pliego:
+   no se enmarca nada ni se cuentan las fichas.
 5. **Contacto** (`layout/Footer.jsx`) — «Puedes escribirme a:» y el correo
    como enlace grande en serif, las otras tres vías como botones, y la firma
    manuscrita con el copyright al pie.
@@ -35,6 +35,9 @@ Modo: *Experience* — manda la obra, la interfaz se retira.
 ## Piezas compartidas
 
 - `shared/Polaroid.jsx` — el marco de papel de todas las imágenes.
+- `skills/Skills.jsx` reparte las competencias en dos columnas de verdad
+  (`inTwoColumns`), no con `columns: 2`, para que «la última de la columna»
+  sea una posición real y su filete se pueda quitar con `:last-child`.
 - `shared/Action.jsx` — el botón del sitio: icono en su casilla y acción al
   lado. Portada y pie usan el mismo, nunca enlaces de texto suelto para una
   acción. En pantallas estrechas ocupa el ancho completo.
@@ -66,9 +69,16 @@ Todo en `src/styles/variables.css`. Nunca valores sueltos en los módulos.
    mismo que el elemento que tiene al lado, sobra: el título de sección va
    solo, el valor de contacto no necesita su rótulo, el oficio no se repite
    bajo la foto.
-2. **Un filete sólo cuando separa algo.** Si dos líneas delimitan lo mismo,
-   sobra una: el apéndice se apoya en la separación entre pliegos y en el
-   borde de la sección, nada más.
+2. **Un filete sólo cuando separa dos cosas.** Nada abre ni cierra una lista:
+   la primera fila no lleva línea encima y la última no lleva línea debajo,
+   también dentro de los logros, las herramientas y cada columna de
+   competencias. Las demás líneas van *entre* elementos hermanos: entre
+   asiento y asiento, entre pliego y pliego, entre filas. Las dos excepciones,
+   porque cierran un bloque entero y no un elemento: el filete bajo el H2 de
+   sección y el borde superior del pie. Nunca un filete al lado de un título.
+   Las acciones tampoco se subrayan en reposo —«Leer el caso», «Más
+   información», el correo del pie—: el icono o la flecha ya dicen que lo son,
+   y el subrayado aparece al pasar por encima.
 3. Las superficies del navegador también son diseño: selección, scrollbar y
    anillo de foco están tematizados en `global.css`.
 4. Un solo momento de movimiento (la portada) y una entrada contenida
