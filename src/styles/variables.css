@@ -1,53 +1,90 @@
 /* ══════════════════════════════════════════════════
    DESIGN TOKENS — Craft Journal Portfolio
-   Sistema de variables centralizado.
-   Todos los valores visuales parten de aquí.
+   Grafito sobre papel. Un dossier, no una web de plantilla.
    ══════════════════════════════════════════════════ */
 
 :root {
-  /* ── Papel ── */
+  /* ── Papel ─────────────────────────────────── */
   --color-paper: #FAF8F5;
-  --color-paper-warm: #F5F0E8;
-  --color-paper-lines: #E8E4DC;
+  --color-paper-warm: #F4EFE6;
+  --color-paper-plate: #EFE9DE;   /* fondo de láminas e imágenes */
+  --color-paper-raised: #FDFCFA;  /* cards que flotan sobre el papel */
 
-  /* ── Grafito (jerarquía de texto) ── */
-  --color-graphite: #2D2B28;
-  --color-graphite-soft: #5C5955;
-  --color-graphite-faint: #9E9A94;
+  /* ── Grafito (jerarquía de texto) ──────────── */
+  --color-graphite: #272521;       /* 2B presionado fuerte */
+  --color-graphite-soft: #605B54;  /* HB — texto secundario, AA sobre papel */
+  --color-graphite-muted: #6F6A61; /* 2H — metadatos cortos */
+  --color-graphite-faint: #A9A299; /* solo decoración, nunca texto */
 
-  /* ── Tintas de papelería (acentos de color) ── */
-  --color-ink-red: #C4554D;
-  --color-ink-blue: #4A7B9D;
-  --color-ink-green: #6B8F71;
-  --color-ink-amber: #C49A4D;
+  /* ── Líneas ────────────────────────────────── */
+  --color-rule: #E3DCD0;           /* filete de cuadrícula */
+  --color-rule-strong: #CDC5B6;    /* filete marcado */
+  --color-pencil-line: rgba(39, 37, 33, 0.07);
 
-  /* ── Sombras y overlays ── */
-  --color-shadow-paper: rgba(45, 43, 40, 0.06);
-  --color-shadow-paper-hover: rgba(45, 43, 40, 0.12);
-  --color-overlay: rgba(45, 43, 40, 0.55);
+  /* ── Tintas de papelería ───────────────────── */
+  --color-ink-red: #B0463C;
+  --color-ink-blue: #3D6B8E;
+  --color-ink-green: #56805E;
+  --color-ink-amber: #9C7628;
+  --color-ink-amber-wash: #EBDCB8;
+  --color-ink-blue-wash: #D7E2EC;
 
-  /* ── Pauta de libreta ── */
-  --color-pencil-line: rgba(45, 43, 40, 0.08);
+  /* ── Sombras: siempre con desplazamiento y difuminado ── */
+  --shadow-plate: 0 1px 2px rgba(39, 37, 33, 0.05), 0 10px 28px -16px rgba(39, 37, 33, 0.22);
+  --shadow-lift: 0 2px 5px rgba(39, 37, 33, 0.07), 0 22px 48px -22px rgba(39, 37, 33, 0.30);
+  --shadow-sheet: 0 4px 10px rgba(39, 37, 33, 0.08), 0 40px 90px -30px rgba(39, 37, 33, 0.38);
+  --color-overlay: rgba(32, 30, 26, 0.58);
 
-  /* ── Tipografías ── */
-  --font-serif: 'Crimson Pro', Georgia, serif;
-  --font-sans: 'Inter', -apple-system, sans-serif;
-  --font-handwritten: 'Caveat', cursive;
+  /* ── Tipografías ───────────────────────────── */
+  --font-serif: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-hand: 'Caveat', cursive;
 
-  /* ── Espaciado (grid de 8px) ── */
-  --space-xs: 0.25rem;   /* 4px */
-  --space-sm: 0.5rem;    /* 8px */
-  --space-md: 1rem;      /* 16px */
-  --space-lg: 2rem;      /* 32px */
-  --space-xl: 4rem;      /* 64px */
-  --space-2xl: 8rem;     /* 128px */
+  /* ── Escala tipográfica ────────────────────── */
+  --t-display: clamp(3.25rem, 11vw, 6rem);
+  --t-h1: clamp(2rem, 5.2vw, 3.25rem);
+  --t-h2: clamp(1.75rem, 3.6vw, 2.5rem);
+  --t-h3: clamp(1.25rem, 2.2vw, 1.5rem);
+  --t-lead: clamp(1.125rem, 1.5vw, 1.3125rem);
+  --t-body: 1.0625rem;
+  --t-sm: 0.9375rem;
+  --t-xs: 0.8125rem;
+  --t-label: 0.6875rem;
 
-  /* ── Transiciones ── */
+  --track-display: -0.03em;
+  --track-tight: -0.015em;
+  --track-label: 0.14em;
+
+  --measure: 66ch;
+  --measure-narrow: 54ch;
+
+  /* ── Espaciado ─────────────────────────────── */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4.5rem;
+  --space-3xl: 7rem;
+  --space-4xl: 10rem;
+
+  /* ── Rejilla ───────────────────────────────── */
+  --page-max: 1200px;
+  --page-gutter: clamp(1.25rem, 5vw, 4rem);
+  --rail: 11rem;
+  --nav-h: 4.25rem;
+
+  /* ── Formas ────────────────────────────────── */
+  --r-sm: 2px;
+  --r-md: 3px;
+  --r-lg: 5px;
+
+  /* ── Movimiento ────────────────────────────── */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-soft: cubic-bezier(0.25, 0.1, 0.25, 1);
-  --duration-fast: 150ms;
-  --duration-normal: 300ms;
-  --duration-slow: 500ms;
-
-  /* ── Bordes sketchy ── */
-  --border-sketch-width: 1.5px;
+  --dur-fast: 160ms;
+  --dur-normal: 320ms;
+  --dur-slow: 620ms;
 }

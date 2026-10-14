@@ -1,51 +1,30 @@
-// Education — Formación académica con timeline
-// Framer: motion.div (stagger en cards)
-import { motion } from 'framer-motion';
+// Education — Formación, plegada con el resto del material de apoyo.
 import { useLanguage } from '../../contexts/LanguageContext';
-import Section from '../layout/Section';
+import Fold from '../shared/Fold';
 import styles from './Education.module.css';
-
-const containerVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.15 } },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 12 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] } },
-};
 
 const Education = () => {
   const { content } = useLanguage();
 
   return (
-    <Section id="estudios">
-      <h2 className={styles.sectionTitle}>{content.ui.sections.education}</h2>
-
-      <motion.div
-        className={styles.timeline}
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        {content.education.map((edu, i) => (
-          <motion.div key={i} className={styles.timelineItem} variants={itemVariants}>
-            <div className={styles.timelineMarker}>
-              {i > 0 && <div className={styles.timelineConnectorTop} />}
-              <div className={`${styles.timelineNode} ${i === 0 ? styles.timelineNodeActive : ''}`} />
-              {i < content.education.length - 1 && <div className={styles.timelineConnectorBottom} />}
+    <Fold id="estudios" title={content.ui.sections.education} count={content.education.length}>
+      <div className={styles.list}>
+        {content.education.map((edu) => (
+          <article key={`${edu.institution}-${edu.degree}`} className={`rail-grid ${styles.entry}`}>
+            <div className={styles.rail}>
+              <span className={`label ${styles.period}`}>{edu.period}</span>
+              {edu.current && <span className={styles.current} aria-hidden="true" />}
             </div>
-            <div className={styles.card}>
-              <span className={styles.period}>{edu.period}</span>
-              <h3 className={styles.institution}>{edu.institution}</h3>
-              <span className={styles.degree}>{edu.degree}</span>
+
+            <div className={styles.main}>
+              <h3 className={styles.degree}>{edu.degree}</h3>
+              <p className={styles.institution}>{edu.institution}</p>
               <p className={styles.description}>{edu.description}</p>
             </div>
-          </motion.div>
+          </article>
         ))}
-      </motion.div>
-    </Section>
+      </div>
+    </Fold>
   );
 };
 

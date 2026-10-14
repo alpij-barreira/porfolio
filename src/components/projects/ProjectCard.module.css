@@ -1,384 +1,102 @@
-/* ── Card compacta en grid ── */
-.card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  border: var(--border-sketch-width) solid var(--color-paper-lines);
-  background-color: var(--color-paper);
-  overflow: hidden;
-  box-shadow: 2px 2px 0 var(--color-shadow-paper);
-  transition: box-shadow var(--duration-fast) var(--ease-soft);
-}
-
-.card:hover {
-  box-shadow: 4px 6px 0 var(--color-shadow-paper-hover);
-}
-
-/* Thumbnail */
-.thumbnailWrapper {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-bottom: var(--border-sketch-width) solid var(--color-paper-lines);
-}
-
-.thumbnail {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s var(--ease-soft);
-}
-
-.card:hover .thumbnail {
-  transform: scale(1.03);
-}
-
-.thumbnailPlaceholder {
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-paper-warm);
-  display: flex;
-  flex-direction: column;
+.plate {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-lg);
   align-items: center;
-  justify-content: center;
-  gap: var(--space-xs);
+  scroll-margin-top: calc(var(--nav-h) + 2rem);
 }
 
-.thumbnailLabel {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  color: var(--color-graphite-faint);
+@media (min-width: 900px) {
+  .plate {
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+  }
+
+  /* Las polaroids pares se apoyan al otro lado: el ojo no se duerme.
+     La columna ancha viaja con la imagen, así todas miden igual. */
+  .plate:nth-child(even) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  }
+
+  .plate:nth-child(even) .frame { order: 2; }
+  .plate:nth-child(even) .info { order: 1; }
 }
 
-.thumbnailSize {
-  font-family: var(--font-sans);
-  font-size: 0.6875rem;
-  color: var(--color-graphite-faint);
-  opacity: 0.6;
+.frame {
+  display: block;
+  width: 100%;
+  padding: 0;
 }
 
-/* El año, estampado sobre la miniatura */
-.year {
-  position: absolute;
-  right: var(--space-sm);
-  bottom: var(--space-sm);
-  font-family: var(--font-sans);
-  font-size: 0.6875rem;
-  letter-spacing: 0.1em;
-  color: var(--color-graphite);
-  background-color: rgba(250, 248, 245, 0.92);
-  border: 1px solid rgba(45, 43, 40, 0.12);
-  padding: 2px var(--space-sm);
-  backdrop-filter: blur(2px);
-}
-
-/* Cuerpo: crece para empujar el pie al fondo y alinearlo entre tarjetas */
-.body {
-  flex: 1;
+/* ── La ficha ────────────────────────────────── */
+.info {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
-  padding: var(--space-md);
+  align-items: flex-start;
 }
 
 .title {
-  font-family: var(--font-serif);
-  font-size: 1.125rem;
-  font-weight: 600;
-  line-height: 1.35;
-  color: var(--color-graphite);
-  margin: 0;
+  font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+.subtitle {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.62em;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--color-graphite-soft);
+}
+
+.summary {
+  margin-top: var(--space-sm);
+  font-size: var(--t-body);
+  line-height: 1.65;
+  color: var(--color-graphite-soft);
+  max-width: var(--measure-narrow);
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 3px;
+  gap: 0.35rem 0.5rem;
+  margin-top: var(--space-md);
 }
 
 .tag {
   font-family: var(--font-sans);
-  font-size: 0.625rem;
-  color: var(--color-graphite-soft);
-  background-color: var(--color-paper-warm);
-  border: 1px solid var(--color-paper-lines);
-  padding: 1px var(--space-xs);
-  letter-spacing: 0.05em;
-  white-space: nowrap;
-}
-
-/* Tags coloreados por categoría */
-.tagblue {
-  color: var(--color-ink-blue);
-  background-color: color-mix(in srgb, var(--color-ink-blue) 8%, var(--color-paper));
-  border-color: color-mix(in srgb, var(--color-ink-blue) 20%, var(--color-paper-lines));
-}
-
-.taggreen {
-  color: var(--color-ink-green);
-  background-color: color-mix(in srgb, var(--color-ink-green) 8%, var(--color-paper));
-  border-color: color-mix(in srgb, var(--color-ink-green) 20%, var(--color-paper-lines));
-}
-
-.tagamber {
-  color: var(--color-ink-amber);
-  background-color: color-mix(in srgb, var(--color-ink-amber) 8%, var(--color-paper));
-  border-color: color-mix(in srgb, var(--color-ink-amber) 20%, var(--color-paper-lines));
-}
-
-.tagred {
-  color: var(--color-ink-red);
-  background-color: color-mix(in srgb, var(--color-ink-red) 8%, var(--color-paper));
-  border-color: color-mix(in srgb, var(--color-ink-red) 20%, var(--color-paper-lines));
-}
-
-.tagorange {
-  color: #c2410c;
-  background-color: color-mix(in srgb, #c2410c 10%, var(--color-paper));
-  border-color: color-mix(in srgb, #c2410c 25%, var(--color-paper-lines));
-}
-
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-md);
-  padding: var(--space-sm) var(--space-md);
-  border-top: 1px solid var(--color-paper-lines);
-  background-color: var(--color-paper-warm);
-}
-
-.moreInfo {
-  position: relative;
-  font-family: var(--font-sans);
-  font-size: 0.8125rem;
-  color: var(--color-graphite-soft);
-  padding-bottom: 2px;
-}
-
-.moreInfoUnderline {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1.5px;
-  background-color: var(--color-graphite);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--duration-normal) var(--ease-soft);
-}
-
-.card:hover .moreInfoUnderline {
-  transform: scaleX(1);
-}
-
-.arrow {
-  font-size: 0.9rem;
-  color: var(--color-graphite-faint);
-}
-
-/* ── Modal overlay ── */
-.overlay {
-  position: fixed;
-  inset: 0;
-  background-color: var(--color-overlay);
-  z-index: 2000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-lg);
-  backdrop-filter: blur(2px);
-}
-
-.modal {
-  background-color: var(--color-paper);
-  border: var(--border-sketch-width) solid var(--color-paper-lines);
-  max-width: 680px;
-  width: 100%;
-  max-height: 88vh;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  -webkit-overflow-scrolling: touch;
-  position: relative;
-  box-shadow: 8px 8px 0 var(--color-shadow-paper-hover);
-}
-
-.close {
-  position: sticky;
-  top: 0;
-  float: right;
-  background: var(--color-paper-warm);
-  border: none;
-  border-left: var(--border-sketch-width) solid var(--color-paper-lines);
-  border-bottom: var(--border-sketch-width) solid var(--color-paper-lines);
-  padding: var(--space-sm) var(--space-md);
-  cursor: pointer;
-  font-family: var(--font-sans);
-  font-size: 0.875rem;
-  color: var(--color-graphite-soft);
-  z-index: 1;
-  transition: color var(--duration-fast);
-}
-
-.close:hover {
-  color: var(--color-graphite);
-}
-
-/* Imagen en el modal */
-.modalThumbnail {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-bottom: var(--border-sketch-width) solid var(--color-paper-lines);
-}
-
-.modalImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Contenido del modal */
-.modalContent {
-  padding: var(--space-lg);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-lg);
-}
-
-.modalTitle {
-  font-family: var(--font-serif);
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: var(--color-graphite);
-}
-
-.modalTags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
-  margin-top: calc(-1 * var(--space-sm));
-}
-
-.modalSummary {
-  font-family: var(--font-serif);
-  font-size: 1.0625rem;
-  line-height: 1.7;
-  color: var(--color-graphite);
-  margin: 0;
-  padding-bottom: var(--space-md);
-  border-bottom: 1px solid var(--color-paper-lines);
-}
-
-.section {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-}
-
-.sectionHeading {
-  font-family: var(--font-sans);
-  font-size: 0.8125rem;
-  font-weight: 400;
-  letter-spacing: 0.1em;
+  font-size: var(--t-label);
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-graphite-faint);
+  color: var(--color-graphite-muted);
+  padding: 0.3rem 0.55rem;
+  border: 1px solid var(--color-rule-strong);
+  border-radius: 99px;
 }
 
-.sectionContent {
-  font-family: var(--font-serif);
-  font-size: 1.0625rem;
-  line-height: 1.7;
-  color: var(--color-graphite);
-  margin: 0;
-}
-
-/* ── CTA: Ver proyecto en Figma ── */
-.figmaCta {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-sm);
-  padding: var(--space-md);
-  background-color: var(--color-paper-warm);
-  border: var(--border-sketch-width) solid var(--color-paper-lines);
-  box-shadow: 2px 2px 0 var(--color-shadow-paper);
-}
-
-.figmaHook {
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  line-height: 1.5;
-  color: var(--color-graphite);
-  font-style: italic;
-}
-
-.figmaButton {
+.action {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-xs);
+  gap: 0.4rem;
+  margin-top: var(--space-md);
+  padding-bottom: 0.25rem;
   font-family: var(--font-sans);
-  font-size: 0.875rem;
-  color: var(--color-paper);
-  background-color: var(--color-graphite);
-  border: var(--border-sketch-width) solid var(--color-graphite);
-  padding: var(--space-xs) var(--space-md);
-  text-decoration: none;
-  cursor: pointer;
-  transition: transform var(--duration-fast) var(--ease-soft),
-              box-shadow var(--duration-fast) var(--ease-soft);
-  box-shadow: 2px 2px 0 var(--color-shadow-paper);
+  font-size: var(--t-sm);
+  font-weight: 500;
+  color: var(--color-graphite);
+  border-bottom: 1px solid var(--color-graphite);
+  transition: gap var(--dur-normal) var(--ease-out), color var(--dur-fast) var(--ease-soft);
 }
 
-.figmaButton:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: 4px 4px 0 var(--color-shadow-paper-hover);
+.action:hover {
+  gap: 0.65rem;
+  color: var(--color-ink-blue);
+  border-bottom-color: var(--color-ink-blue);
 }
 
-.figmaButton:active {
-  transform: translate(1px, 1px);
-  box-shadow: 1px 1px 0 var(--color-shadow-paper);
-}
-
-.figmaButton svg {
-  width: 14px;
-  height: 14px;
-  flex-shrink: 0;
-}
-
-.figmaArrow {
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-.tools {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
-  padding-top: var(--space-md);
-  border-top: 1px solid var(--color-paper-lines);
-}
-
-.toolTag {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  color: var(--color-graphite-soft);
-  background-color: var(--color-paper-warm);
-  border: var(--border-sketch-width) solid var(--color-paper-lines);
-  padding: 2px var(--space-sm);
-}
-
-/* ── Responsive ── */
-@media (max-width: 768px) {
-  .overlay {
-    padding: var(--space-sm);
-    align-items: center;
-  }
-
-  .modal {
-    max-height: 90vh;
-  }
+@media (max-width: 899px) {
+  .summary { max-width: none; }
 }

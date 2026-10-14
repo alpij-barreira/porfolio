@@ -1,41 +1,34 @@
-// Navbar — Navegación fija con logo animado, menú móvil y selector de idioma
-// Framer: AnimatePresence (logo clipPath reveal, mobile menu height)
+// Navbar — Barra de papel: el nombre aparece al dejar la portada atrás,
+// y la navegación se mantiene a mano sin pesar.
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { TbFileText } from 'react-icons/tb';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { TbFileText, TbMenu2, TbX } from 'react-icons/tb';
 import { useLanguage } from '../../contexts/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
 import styles from './Navbar.module.css';
-
-const NavLink = ({ href, children }) => {
-  return (
-    <a href={href} className={styles.navLink}>
-      {children}
-      <span className={styles.underline} />
-    </a>
-  );
-};
 
 const Navbar = () => {
   const { content } = useLanguage();
   const { nav } = content.ui;
   const { cv } = content.personal.contact;
+  const reduced = useReducedMotion();
 
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [pastHero, setPastHero] = useState(false);
+  const [pastCover, setPastCover] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 16);
+    onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   useEffect(() => {
-    const title = document.querySelector('#sobre-mi h1');
+    const title = document.querySelector('#portada h1');
     if (!title) return;
     const observer = new IntersectionObserver(
-      ([entry]) => setPastHero(!entry.isIntersecting),
+      ([entry]) => setPastCover(!entry.isIntersecting),
       { threshold: 0 }
     );
     observer.observe(title);
@@ -43,39 +36,36 @@ const Navbar = () => {
   }, []);
 
   const links = [
+    { href: '#trabajo', label: nav.work },
     { href: '#experiencia', label: nav.experience },
-    { href: '#proyectos', label: nav.projects },
     { href: '#contacto', label: nav.contact },
   ];
 
   return (
     <header className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
-      <div className={styles.inner}>
+      <div className={`page ${styles.inner}`}>
         <AnimatePresence>
-          {pastHero && (
+          {pastCover && (
             <motion.a
-              href="#"
+              href="#portada"
               className={styles.logo}
-              initial={{ clipPath: 'inset(0 100% 0 0)', opacity: 0 }}
+              initial={reduced ? { opacity: 0 } : { clipPath: 'inset(0 100% 0 0)', opacity: 0 }}
               animate={{ clipPath: 'inset(0 0% 0 0)', opacity: 1 }}
-              exit={{ clipPath: 'inset(0 100% 0 0)', opacity: 0 }}
-              transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+              exit={reduced ? { opacity: 0 } : { clipPath: 'inset(0 100% 0 0)', opacity: 0 }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             >
               {content.personal.name}
             </motion.a>
           )}
         </AnimatePresence>
 
-        <nav className={styles.nav}>
-          {links.map(link => (
-            <NavLink key={link.href} href={link.href}>{link.label}</NavLink>
+        <nav className={styles.nav} aria-label={content.ui.sections.contact}>
+          {links.map((link) => (
+            <a key={link.href} href={link.href} className={styles.navLink}>
+              {link.label}
+            </a>
           ))}
-          <a
-            href={cv}
-            download="JavierPineda_CV.pdf"
-            className={styles.cvButton}
-            title={nav.downloadCV}
-          >
+          <a href={cv} download="JavierPineda_CV.pdf" className={styles.cvButton}>
             <TbFileText aria-hidden="true" />
             <span>{nav.downloadCV}</span>
           </a>
@@ -83,13 +73,13 @@ const Navbar = () => {
         </nav>
 
         <button
+          type="button"
           className={styles.hamburger}
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => setMenuOpen((o) => !o)}
           aria-label={nav.openMenu}
+          aria-expanded={menuOpen}
         >
-          <span className={`${styles.bar} ${menuOpen ? styles.barOpen1 : ''}`} />
-          <span className={`${styles.bar} ${menuOpen ? styles.barOpen2 : ''}`} />
-          <span className={`${styles.bar} ${menuOpen ? styles.barOpen3 : ''}`} />
+          {menuOpen ? <TbX aria-hidden="true" /> : <TbMenu2 aria-hidden="true" />}
         </button>
       </div>
 
@@ -97,30 +87,33 @@ const Navbar = () => {
         {menuOpen && (
           <motion.div
             className={styles.mobileMenu}
-            initial={{ opacity: 0, height: 0 }}
+            initial={reduced ? { opacity: 0 } : { opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+            exit={reduced ? { opacity: 0 } : { opacity: 0, height: 0 }}
+            transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
           >
-            {links.map(link => (
+            <div className={`page ${styles.mobileInner}`}>
+              {links.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={styles.mobileLink}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.label}
+                </a>
+              ))}
               <a
-                key={link.href}
-                href={link.href}
-                className={styles.mobileLink}
+                href={cv}
+                download="JavierPineda_CV.pdf"
+                className={styles.mobileCv}
                 onClick={() => setMenuOpen(false)}
               >
-                {link.label}
+                <TbFileText aria-hidden="true" />
+                {nav.downloadCV}
               </a>
-            ))}
-            <a
-              href={cv}
-              download="JavierPineda_CV.pdf"
-              className={styles.mobileCvLink}
-            >
-              <TbFileText aria-hidden="true" />
-              {nav.downloadCV}
-            </a>
-            <LanguageSwitcher variant="mobile" />
+              <LanguageSwitcher variant="mobile" />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

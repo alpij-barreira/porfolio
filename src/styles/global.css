@@ -1,11 +1,11 @@
 /* ══════════════════════════════════════════════════
-   GLOBAL STYLES — Craft Journal Portfolio
-   Reset, tipografía base y utilidades globales.
+   GLOBAL — Craft Journal Portfolio
+   Reset, voz tipográfica, superficies del navegador
+   y las pocas utilidades de rejilla que comparte todo.
    ══════════════════════════════════════════════════ */
 
 @import './variables.css';
 
-/* ── Reset ── */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -14,49 +14,69 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + 1.5rem);
+  -webkit-text-size-adjust: 100%;
 }
 
-/* ── Body: fondo papel + dot grid bullet journal ── */
 body {
   background-color: var(--color-paper);
-  background-image: radial-gradient(circle, color-mix(in srgb, var(--color-shadow-paper) 50%, transparent) 0.7px, transparent 0.7px);
-  background-size: 22px 22px;
-  background-position: 11px 11px;
+  /* Pauta de cuaderno: una retícula de puntos muy tenue */
+  background-image: radial-gradient(circle, rgba(39, 37, 33, 0.055) 0.7px, transparent 0.75px);
+  background-size: 24px 24px;
+  background-position: 12px 12px;
   color: var(--color-graphite);
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: var(--t-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
   position: relative;
 }
 
+/* Grano de papel sobre todo el documento */
 body::after {
   content: '';
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: 0.04;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.035;
   z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
 
-/* ── Tipografía base ── */
+/* ── Voz tipográfica ───────────────────────────── */
 h1, h2, h3, h4 {
   font-family: var(--font-serif);
-  font-weight: 600;
+  font-weight: 500;
   color: var(--color-graphite);
+  line-height: 1.12;
+  letter-spacing: var(--track-tight);
+  text-wrap: balance;
 }
 
 p {
   font-family: var(--font-serif);
-  font-size: 1.125rem;
-  line-height: 1.7;
+  font-size: var(--t-lead);
+  line-height: 1.68;
   color: var(--color-graphite);
+  text-wrap: pretty;
+  font-variant-numeric: oldstyle-nums;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: from-font;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 img {
@@ -64,7 +84,89 @@ img {
   display: block;
 }
 
-/* ── SVG filter (usado por SketchyBorder.jsx) ── */
-.sketchy-filter {
-  display: none;
+ul, ol { list-style: none; }
+
+/* ── Superficies del navegador: también son diseño ── */
+::selection {
+  background: var(--color-ink-amber-wash);
+  color: var(--color-graphite);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ink-blue);
+  outline-offset: 3px;
+  border-radius: var(--r-sm);
+}
+
+html { scrollbar-color: var(--color-rule-strong) transparent; scrollbar-width: thin; }
+::-webkit-scrollbar { width: 11px; height: 11px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--color-rule-strong);
+  border: 3px solid var(--color-paper);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--color-graphite-faint); }
+
+/* ── Rejilla de página ─────────────────────────── */
+.page {
+  width: 100%;
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding-inline: var(--page-gutter);
+}
+
+/* Columna de margen + columna de contenido, como las anotaciones
+   al borde de un plano. En móvil el margen se pliega arriba. */
+.rail-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 900px) {
+  .rail-grid {
+    grid-template-columns: var(--rail) minmax(0, 1fr);
+    gap: var(--space-xl);
+  }
+}
+
+/* ── Etiquetas de metadato (versalitas de papelería) ── */
+.label {
+  font-family: var(--font-sans);
+  font-size: var(--t-label);
+  font-weight: 500;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--color-graphite-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.hand {
+  font-family: var(--font-hand);
+  font-size: 1.3rem;
+  line-height: 1.3;
+  color: var(--color-graphite-soft);
+}
+
+.measure { max-width: var(--measure); }
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Movimiento reducido ───────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -1,0 +1,282 @@
+.doc {
+  padding: clamp(3rem, 6vw, 4.5rem) clamp(1.25rem, 5vw, 4rem) var(--space-3xl);
+}
+
+/* ── Cabecera ───────────────────────────────── */
+.head { max-width: 46rem; }
+
+.title {
+  font-size: var(--t-h1);
+  font-weight: 500;
+  margin-bottom: var(--space-md);
+}
+
+.subtitle {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.6em;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--color-graphite-soft);
+}
+
+.lead {
+  font-size: var(--t-lead);
+  color: var(--color-graphite-soft);
+  max-width: var(--measure);
+}
+
+.spec {
+  margin-top: var(--space-lg);
+  border-top: 1px solid var(--color-rule);
+}
+
+.specRow {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  gap: var(--space-sm);
+  padding-block: 0.7rem;
+  border-bottom: 1px solid var(--color-rule);
+  align-items: baseline;
+}
+
+.specValue {
+  font-family: var(--font-sans);
+  font-size: var(--t-xs);
+  line-height: 1.5;
+  color: var(--color-graphite-soft);
+}
+
+/* ── Lámina de imagen ───────────────────────── */
+.plate {
+  margin-top: var(--space-xl);
+  background: var(--color-paper-plate);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-plate);
+}
+
+.plateImage {
+  width: 100%;
+  height: auto;
+}
+
+/* ── Cuerpo del caso ────────────────────────── */
+.body { margin-top: var(--space-2xl); }
+
+.block {
+  padding-block: var(--space-lg);
+  border-top: 1px solid var(--color-rule);
+  align-items: start;
+}
+
+.blockTitle {
+  font-family: var(--font-sans);
+  font-size: var(--t-xs);
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+  color: var(--color-graphite-muted);
+  padding-top: 0.3rem;
+}
+
+.blockText {
+  max-width: var(--measure);
+  color: var(--color-graphite);
+}
+
+/* ── Banda de enlace ────────────────────────── */
+.band {
+  margin-top: var(--space-xl);
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  background: var(--color-paper-warm);
+  border: 1px solid var(--color-rule-strong);
+  border-radius: var(--r-md);
+}
+
+.bandHook {
+  font-family: var(--font-hand);
+  font-size: 1.35rem;
+  color: var(--color-graphite-soft);
+}
+
+.bandButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.6rem 1.1rem;
+  font-family: var(--font-sans);
+  font-size: var(--t-xs);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--color-paper);
+  background: var(--color-graphite);
+  border-radius: var(--r-sm);
+  transition: background var(--dur-fast) var(--ease-soft), transform var(--dur-fast) var(--ease-soft);
+}
+
+.bandButton:hover {
+  background: #15130F;
+  transform: translateY(-1px);
+}
+
+.bandArrow { transition: transform var(--dur-fast) var(--ease-soft); }
+.bandButton:hover .bandArrow { transform: translate(2px, -2px); }
+
+/* ── Anexos: PDF, vídeos, galería ───────────── */
+.extra {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-rule);
+}
+
+.extraTitle {
+  font-family: var(--font-sans);
+  font-size: var(--t-label);
+  font-weight: 500;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--color-graphite-muted);
+  margin-bottom: var(--space-md);
+}
+
+/* PDF */
+.pdfLink {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-md);
+  width: fit-content;
+}
+
+.pdfCover {
+  display: block;
+  width: clamp(9rem, 22vw, 12rem);
+  border: 1px solid var(--color-rule-strong);
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-plate);
+  transition: transform var(--dur-normal) var(--ease-out), box-shadow var(--dur-normal) var(--ease-out);
+}
+
+.pdfLink:hover .pdfCover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lift);
+}
+
+.pdfImage { width: 100%; height: auto; }
+
+.pdfMeta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+  padding-bottom: var(--space-2xs);
+}
+
+.pdfAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-sans);
+  font-size: var(--t-sm);
+  font-weight: 500;
+  color: var(--color-graphite);
+  border-bottom: 1px solid var(--color-rule-strong);
+  padding-bottom: 0.15rem;
+}
+
+.pdfLink:hover .pdfAction { border-bottom-color: var(--color-graphite); }
+
+/* Vídeos */
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: var(--space-md);
+}
+
+.videoThumb {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  background: var(--color-paper-plate);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--r-sm);
+  overflow: hidden;
+}
+
+.videoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-slow) var(--ease-out);
+}
+
+.video:hover .videoImage { transform: scale(1.03); }
+
+.videoPlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  color: var(--color-paper);
+  background: rgba(32, 30, 26, 0.3);
+  opacity: 0.9;
+  transition: background var(--dur-fast) var(--ease-soft);
+}
+
+.video:hover .videoPlay { background: rgba(32, 30, 26, 0.45); }
+
+.videoLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: var(--space-2xs);
+  font-family: var(--font-sans);
+  font-size: var(--t-xs);
+  color: var(--color-graphite-soft);
+}
+
+/* Galería */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-lg);
+}
+
+.pieceFrame {
+  display: block;
+  background: var(--color-paper-plate);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-plate);
+}
+
+.pieceImage { width: 100%; height: auto; }
+
+.pieceCaption {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+  margin-top: var(--space-2xs);
+}
+
+.pieceText {
+  font-family: var(--font-serif);
+  font-size: var(--t-sm);
+  line-height: 1.45;
+  color: var(--color-graphite-soft);
+}
+
+@media (max-width: 768px) {
+  .specRow { grid-template-columns: 1fr; gap: var(--space-3xs); }
+  .band { flex-direction: column; align-items: flex-start; }
+  .pdfLink { flex-direction: column; align-items: flex-start; }
+}

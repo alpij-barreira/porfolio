@@ -1,84 +1,79 @@
-// AdditionalWork — Sección desplegable con trabajos de menor recorrido
-// Framer: AnimatePresence (height reveal), motion.div (stagger de tarjetas)
+// AdditionalWork — Índice plegado de trabajos de menor recorrido.
+// Cada fila abre su ficha completa en la lámina de lectura.
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { TbArrowUpRight } from 'react-icons/tb';
 import { useLanguage } from '../../contexts/LanguageContext';
-import Section from '../layout/Section';
-import AdditionalWorkCard from './AdditionalWorkCard';
+import { projectSlug, splitTitle } from '../../utils/text';
+import Fold from '../shared/Fold';
+import Sheet from '../shared/Sheet';
+import CaseSheet from '../shared/CaseSheet';
 import styles from './AdditionalWork.module.css';
-
-const listVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.08 } },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 12 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] } },
-};
 
 const AdditionalWork = () => {
   const { content } = useLanguage();
-  const labels = content.ui.additionalWork;
+  const labels = { ...content.ui.projectCard, ...content.ui.additionalWork };
   const works = content.additionalWork || [];
-  const [open, setOpen] = useState(false);
+  const [openIndex, setOpenIndex] = useState(null);
 
   if (works.length === 0) return null;
 
+  const active = openIndex === null ? null : works[openIndex];
+  const activeId = active ? `case-${projectSlug(active.title)}` : undefined;
+  // Sólo las fichas sin anexo visual abren con la lámina de portada.
+  const activeItem =
+    active && !active.gallery && !active.videos && !active.pdf
+      ? { ...active, image: active.thumbnail }
+      : active;
+
   return (
-    <Section id="trabajos-adicionales" className={styles.section}>
-      <div className={styles.header}>
-        <div className={styles.headerText}>
-          <h2 className={styles.sectionTitle}>{content.ui.sections.additionalWork}</h2>
-          <p className={styles.intro}>{labels.intro}</p>
-        </div>
+    <Fold id="trabajos-adicionales" title={content.ui.sections.additionalWork} count={works.length}>
+      <p className={styles.intro}>{labels.intro}</p>
 
-        <button
-          type="button"
-          className={styles.toggle}
-          onClick={() => setOpen(o => !o)}
-          aria-expanded={open}
-          aria-controls="trabajos-adicionales-lista"
-        >
-          <span>{open ? labels.collapse : labels.expand}</span>
-          <span className={styles.count}>{works.length}</span>
-          <motion.span
-            className={styles.chevron}
-            animate={{ rotate: open ? 180 : 0 }}
-            transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
-            aria-hidden="true"
-          >
-            ⌄
-          </motion.span>
-        </button>
-      </div>
+      <ul className={styles.list}>
+        {works.map((work, i) => {
+          const [name, subtitle] = splitTitle(work.title);
+          return (
+            <li key={work.title}>
+              <button type="button" className={styles.row} onClick={() => setOpenIndex(i)}>
+                <span className={styles.thumbFrame}>
+                  <img
+                    src={work.thumbnail}
+                    alt=""
+                    className={styles.thumb}
+                    style={work.thumbPosition ? { objectPosition: work.thumbPosition } : undefined}
+                    loading="lazy"
+                  />
+                </span>
 
-      <AnimatePresence initial={false}>
-        {open && (
-          <motion.div
-            id="trabajos-adicionales-lista"
-            className={styles.reveal}
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
-          >
-            <motion.div
-              className={styles.list}
-              variants={listVariants}
-              initial="hidden"
-              animate="visible"
-            >
-              {works.map((work, i) => (
-                <motion.div key={i} variants={itemVariants}>
-                  <AdditionalWorkCard work={work} />
-                </motion.div>
-              ))}
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </Section>
+                <span className={styles.text}>
+                  <span className={styles.name}>{name}</span>
+                  {subtitle && <span className={styles.subtitle}>{subtitle}</span>}
+                </span>
+
+                <span className={styles.meta}>
+                  {work.tools?.length > 0 && (
+                    <span className={styles.tools}>{work.tools.join(' · ')}</span>
+                  )}
+                  <span className={styles.year}>{work.year}</span>
+                </span>
+
+                <TbArrowUpRight className={styles.arrow} aria-hidden="true" />
+                <span className="sr-only">{labels.moreInfo} — {work.title}</span>
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+
+      <Sheet
+        open={openIndex !== null}
+        onClose={() => setOpenIndex(null)}
+        labelledBy={activeId}
+        closeLabel={labels.close}
+      >
+        {activeItem && <CaseSheet item={activeItem} labels={labels} titleId={activeId} />}
+      </Sheet>
+    </Fold>
   );
 };
 

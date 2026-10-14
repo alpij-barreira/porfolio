@@ -1,0 +1,52 @@
+.polaroid {
+  position: relative;
+  padding: 0.65rem 0.65rem 0.6rem;
+  background: var(--color-paper-raised);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--r-sm);
+  box-shadow: var(--shadow-plate);
+  transform: rotate(var(--rotate, -1deg));
+  transition: transform var(--dur-slow) var(--ease-out),
+              box-shadow var(--dur-slow) var(--ease-out);
+}
+
+.polaroid:hover,
+:hover > .polaroid {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: var(--shadow-lift);
+}
+
+.tape {
+  position: absolute;
+  top: -0.7rem;
+  left: 50%;
+  translate: -50% 0;
+  width: 5.5rem;
+  height: 1.7rem;
+  z-index: 2;
+}
+
+.window {
+  display: block;
+  overflow: hidden;
+  background: var(--color-paper-plate);
+  border-radius: 1px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* El canto ancho de la polaroid: donde se escribe a mano */
+.caption {
+  display: block;
+  padding-top: 0.75rem;
+  padding-bottom: 0.15rem;
+  font-family: var(--font-hand);
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: var(--color-graphite-muted);
+  text-align: center;
+}

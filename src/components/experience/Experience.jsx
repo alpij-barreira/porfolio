@@ -1,7 +1,8 @@
-// Experience — Timeline de experiencia laboral
-// Sin dependencias de Framer directas (las animaciones están en ExperienceCard)
+// Experience — El cuaderno de trabajo: un asiento por empresa.
 import { useLanguage } from '../../contexts/LanguageContext';
 import Section from '../layout/Section';
+import SectionHead from '../shared/SectionHead';
+import Reveal from '../shared/Reveal';
 import ExperienceCard from './ExperienceCard';
 import styles from './Experience.module.css';
 
@@ -10,20 +11,13 @@ const Experience = () => {
 
   return (
     <Section id="experiencia">
-      <h2 className={styles.sectionTitle}>{content.ui.sections.experience}</h2>
+      <SectionHead title={content.ui.sections.experience} />
 
-      <div className={styles.timeline}>
+      <div className={styles.list}>
         {content.experience.map((exp, i) => (
-          <div key={i} className={styles.timelineItem}>
-            <div className={styles.timelineMarker}>
-              {i > 0 && <div className={styles.timelineConnectorTop} />}
-              <div className={`${styles.timelineNode} ${i === 0 ? styles.timelineNodeActive : ''}`} />
-              {i < content.experience.length - 1 && <div className={styles.timelineConnectorBottom} />}
-            </div>
-            <div className={styles.cardWrapper}>
-              <ExperienceCard exp={exp} />
-            </div>
-          </div>
+          <Reveal key={exp.company} delay={i * 0.06} y={16}>
+            <ExperienceCard exp={exp} />
+          </Reveal>
         ))}
       </div>
     </Section>

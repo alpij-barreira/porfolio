@@ -1,73 +1,48 @@
 .switcher {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 4px;
-  margin-left: var(--space-md);
-  padding-left: var(--space-md);
-  border-left: 1px solid var(--color-paper-lines);
+  gap: 1px;
+  padding: 2px;
+  border: 1px solid var(--color-rule-strong);
+  border-radius: var(--r-sm);
+  background: color-mix(in srgb, var(--color-paper-raised) 70%, transparent);
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 4px 8px;
-  background: transparent;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  cursor: pointer;
+  gap: 0.35rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 1px;
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: var(--t-label);
   font-weight: 500;
-  letter-spacing: 0.05em;
-  color: var(--color-graphite-faint);
-  transition:
-    color var(--duration-fast) var(--ease-soft),
-    border-color var(--duration-fast) var(--ease-soft),
-    background-color var(--duration-fast) var(--ease-soft);
+  letter-spacing: 0.08em;
+  color: var(--color-graphite-muted);
+  transition: color var(--dur-fast) var(--ease-soft), background var(--dur-fast) var(--ease-soft);
 }
 
-.btn:hover {
-  color: var(--color-graphite-soft);
-}
+.btn:hover { color: var(--color-graphite); }
 
-.btn.active {
+.active {
   color: var(--color-graphite);
-  border-color: var(--color-paper-lines);
-  background-color: var(--color-paper-warm);
+  background: var(--color-paper-plate);
 }
 
 .flag {
-  width: 18px;
-  height: 12px;
-  display: block;
-  border: 0.5px solid rgba(45, 43, 40, 0.15);
-  border-radius: 1.5px;
-  overflow: hidden;
-  flex-shrink: 0;
+  width: 1rem;
+  height: auto;
+  border-radius: 1px;
+  opacity: 0.55;
+  transition: opacity var(--dur-fast) var(--ease-soft);
 }
 
-.code {
-  line-height: 1;
-}
+.active .flag, .btn:hover .flag { opacity: 1; }
 
-/* Variante para el menú mobile */
-.switcher.mobile {
-  margin-left: 0;
-  padding-left: 0;
-  border-left: none;
-  padding: var(--space-md) var(--space-lg);
-  justify-content: flex-start;
-  gap: var(--space-sm);
-  border-top: 1px solid var(--color-pencil-line);
-}
+.code { font-variant-numeric: tabular-nums; }
 
-.switcher.mobile .btn {
-  padding: 6px 10px;
-  font-size: 0.8125rem;
-}
-
-.switcher.mobile .flag {
-  width: 20px;
-  height: 14px;
+/* Variante del menú móvil */
+.mobile {
+  margin-top: var(--space-md);
+  align-self: flex-start;
 }

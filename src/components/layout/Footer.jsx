@@ -1,63 +1,48 @@
-// Footer — Contacto, firma y copyright
-// Framer: useInView (animación de escritura en firma)
-import { useRef } from 'react';
-import { useInView } from 'framer-motion';
-import { TbFileText } from 'react-icons/tb';
+// Footer — El cierre del dossier: el correo grande y las tres vías de contacto
+// como botones, no como texto suelto.
+import { TbFileText, TbPhone } from 'react-icons/tb';
 import { FaLinkedin } from 'react-icons/fa';
 import { useLanguage } from '../../contexts/LanguageContext';
+import Action from '../shared/Action';
+import Reveal from '../shared/Reveal';
 import styles from './Footer.module.css';
-
-const FooterLink = ({ href, download, children }) => (
-  <a
-    href={href}
-    className={styles.link}
-    target="_blank"
-    rel="noopener noreferrer"
-    download={download || undefined}
-  >
-    {children}
-    <span className={styles.underline} />
-  </a>
-);
 
 const Footer = () => {
   const { content } = useLanguage();
-  const year = new Date().getFullYear();
   const { contact } = content.personal;
-  const signatureRef = useRef(null);
-  const isInView = useInView(signatureRef, { once: true, amount: 0.5 });
+  const labels = content.ui.footer;
+  const year = new Date().getFullYear();
 
   return (
     <footer id="contacto" className={styles.footer}>
-      <div className={styles.inner}>
-        <div className={styles.links}>
-          <FooterLink href={`mailto:${contact.email}`}>
+      <div className="page">
+        <Reveal className={styles.head} y={14}>
+          <p className={styles.lead}>{labels.emailLead}</p>
+          <a href={`mailto:${contact.email}`} className={styles.email}>
             {contact.email}
-          </FooterLink>
-          <FooterLink href={`tel:${contact.phone.replace(/\s/g, '')}`}>
+          </a>
+        </Reveal>
+
+        <div className={styles.actions}>
+          <Action
+            href={`tel:${contact.phone.replace(/\s/g, '')}`}
+            icon={<TbPhone />}
+            ariaLabel={`${labels.phone} — ${contact.phone}`}
+          >
             {contact.phone}
-          </FooterLink>
-          <FooterLink href={contact.cv} download="JavierPineda_CV.pdf">
-            <span className={styles.linkInner}>
-              <TbFileText />
-              {content.ui.footer.cv}
-            </span>
-          </FooterLink>
-          <FooterLink href={contact.linkedin}>
-            <span className={styles.linkInner}>
-              <FaLinkedin />
-              LinkedIn
-            </span>
-          </FooterLink>
+          </Action>
+          <Action href={contact.linkedin} icon={<FaLinkedin />} external>
+            {labels.linkedin}
+          </Action>
+          <Action href={contact.cv} download="JavierPineda_CV.pdf" icon={<TbFileText />}>
+            {labels.cv}
+          </Action>
         </div>
 
-        <p
-          ref={signatureRef}
-          className={`${styles.signature} ${isInView ? styles.signatureVisible : ''}`}
-        >
-          {content.footer.signature}
-        </p>
-        <p className={styles.copyright}>© {year} {content.personal.name}</p>
+        <div className={styles.sign}>
+          <p className={styles.signature}>{content.footer.signature}</p>
+          <p className={styles.copyright}>© {year} {content.personal.name}</p>
+        </div>
       </div>
     </footer>
   );
