@@ -123,7 +123,7 @@ const CaseSheet = ({ item, labels, titleId }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.video}
-                aria-label={`${labels.videoLabel} ${i + 1} — ${labels.videoAria}`}
+                aria-label={`${labels.videoLabel} ${i + 1}, ${labels.videoAria}`}
               >
                 <span className={styles.videoThumb}>
                   <img

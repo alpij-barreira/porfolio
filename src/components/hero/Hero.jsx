@@ -43,7 +43,7 @@ const Hero = () => {
               <Action
                 href={`tel:${personal.contact.phone.replace(/\s/g, '')}`}
                 icon={<TbPhone />}
-                ariaLabel={`${ui.cover.callMe} — ${personal.contact.phone}`}
+                ariaLabel={`${ui.cover.callMe}: ${personal.contact.phone}`}
               >
                 {ui.cover.callMe}
               </Action>

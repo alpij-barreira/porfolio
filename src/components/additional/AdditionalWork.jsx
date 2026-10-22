@@ -58,7 +58,7 @@ const AdditionalWork = () => {
                 </span>
 
                 <TbArrowUpRight className={styles.arrow} aria-hidden="true" />
-                <span className="sr-only">{labels.moreInfo} — {work.title}</span>
+                <span className="sr-only">{labels.moreInfo}: {work.title}</span>
               </button>
             </li>
           );

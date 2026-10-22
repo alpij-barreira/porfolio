@@ -27,7 +27,7 @@ const Footer = () => {
           <Action
             href={`tel:${contact.phone.replace(/\s/g, '')}`}
             icon={<TbPhone />}
-            ariaLabel={`${labels.phone} — ${contact.phone}`}
+            ariaLabel={`${labels.phone}: ${contact.phone}`}
           >
             {contact.phone}
           </Action>

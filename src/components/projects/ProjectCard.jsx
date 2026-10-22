@@ -55,7 +55,7 @@ const ProjectCard = ({ project, index }) => {
           <button type="button" className={styles.action} onClick={() => setOpen(true)}>
             <span>{labels.readCase}</span>
             <TbArrowUpRight aria-hidden="true" />
-            <span className="sr-only">— {project.title}</span>
+            <span className="sr-only">: {project.title}</span>
           </button>
         </div>
       </Reveal>
