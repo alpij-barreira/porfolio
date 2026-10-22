@@ -18,9 +18,6 @@ const ExperienceCard = ({ exp }) => {
   return (
     <article className={`rail-grid ${styles.entry}`}>
       <div className={styles.rail}>
-        {exp.logoImage && (
-          <img src={exp.logoImage} alt="" className={styles.logo} loading="lazy" />
-        )}
         <span className={`label ${styles.period}`}>{exp.period}</span>
         <span className={styles.duration}>{exp.duration}</span>
       </div>
@@ -29,6 +26,10 @@ const ExperienceCard = ({ exp }) => {
         <h3 className={styles.company}>{exp.company}</h3>
         <p className={styles.role}>{exp.role}</p>
         <p className={styles.summary}>{firstParagraph}</p>
+
+        {exp.logoImage && (
+          <img src={exp.logoImage} alt="" className={styles.logo} loading="lazy" />
+        )}
 
         <button
           type="button"
