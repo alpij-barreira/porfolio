@@ -11,6 +11,7 @@
   align-items: center;
   gap: var(--space-md);
   width: 100%;
+  min-height: var(--control-h);
   text-align: left;
   padding: var(--space-sm) 0;
   border-top: 1px solid var(--color-rule);
@@ -52,16 +53,16 @@
 
 .name {
   font-family: var(--font-serif);
-  font-size: 1.3rem;
+  font-size: var(--t-h4);
   font-weight: 500;
-  line-height: 1.2;
+  line-height: var(--lh-snug);
   color: var(--color-graphite);
 }
 
 .subtitle {
   font-family: var(--font-sans);
   font-size: var(--t-xs);
-  line-height: 1.4;
+  line-height: var(--lh-ui);
   color: var(--color-graphite-muted);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -75,9 +76,21 @@
   flex-shrink: 0;
 }
 
+/* A partir de aquí la fila usa la misma rejilla que el resto de la página:
+   margen izquierdo, columna de contenido, metadatos. */
+@media (min-width: 900px) {
+  .row {
+    display: grid;
+    grid-template-columns: var(--rail) minmax(0, 1fr) auto;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+}
+
 .tools {
   font-family: var(--font-sans);
   font-size: var(--t-xs);
+  line-height: var(--lh-ui);
   color: var(--color-graphite-muted);
 }
 
@@ -100,6 +113,7 @@
 .year {
   font-family: var(--font-sans);
   font-size: var(--t-xs);
+  line-height: var(--lh-ui);
   font-variant-numeric: tabular-nums;
   color: var(--color-graphite-muted);
 }

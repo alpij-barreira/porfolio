@@ -55,9 +55,8 @@ const AdditionalWork = () => {
                     <span className={styles.tools}>{work.tools.join(' · ')}</span>
                   )}
                   <span className={styles.year}>{work.year}</span>
+                  <TbArrowUpRight className={styles.arrow} aria-hidden="true" />
                 </span>
-
-                <TbArrowUpRight className={styles.arrow} aria-hidden="true" />
                 <span className="sr-only">{labels.moreInfo}: {work.title}</span>
               </button>
             </li>

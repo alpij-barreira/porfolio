@@ -54,21 +54,6 @@ const CaseSheet = ({ item, labels, titleId }) => {
         </dl>
       </header>
 
-      {image && (
-        <figure className={styles.plate}>
-          <img src={image} alt={item.title} className={styles.plateImage} />
-        </figure>
-      )}
-
-      <div className={styles.body}>
-        {item.sections?.map((section, i) => (
-          <section key={i} className={`rail-grid ${styles.block}`}>
-            <h3 className={styles.blockTitle}>{section.title}</h3>
-            <p className={styles.blockText}>{section.content}</p>
-          </section>
-        ))}
-      </div>
-
       {item.liveUrl && (
         <LinkBand
           hook={item.liveHook || labels.liveHook}
@@ -88,6 +73,21 @@ const CaseSheet = ({ item, labels, titleId }) => {
           icon={<SiFigma aria-hidden="true" />}
         />
       )}
+
+      {image && (
+        <figure className={styles.plate}>
+          <img src={image} alt={item.title} className={styles.plateImage} />
+        </figure>
+      )}
+
+      <div className={styles.body}>
+        {item.sections?.map((section, i) => (
+          <section key={i} className={`rail-grid ${styles.block}`}>
+            <h3 className={styles.blockTitle}>{section.title}</h3>
+            <p className={styles.blockText}>{section.content}</p>
+          </section>
+        ))}
+      </div>
 
       {item.pdf && (
         <section className={styles.extra}>

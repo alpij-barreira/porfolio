@@ -52,7 +52,7 @@ const ProjectCard = ({ project, index }) => {
             ))}
           </ul>
 
-          <button type="button" className={styles.action} onClick={() => setOpen(true)}>
+          <button type="button" className={`${styles.action} touch-target`} onClick={() => setOpen(true)}>
             <span>{labels.readCase}</span>
             <TbArrowUpRight aria-hidden="true" />
             <span className="sr-only">: {project.title}</span>

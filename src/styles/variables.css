@@ -40,16 +40,27 @@
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   --font-hand: 'Caveat', cursive;
 
-  /* ── Escala tipográfica ────────────────────── */
-  --t-display: clamp(3.25rem, 11vw, 6rem);
-  --t-h1: clamp(2rem, 5.2vw, 3.25rem);
-  --t-h2: clamp(1.75rem, 3.6vw, 2.5rem);
-  --t-h3: clamp(1.25rem, 2.2vw, 1.5rem);
-  --t-lead: clamp(1.125rem, 1.5vw, 1.3125rem);
-  --t-body: 1.0625rem;
-  --t-sm: 0.9375rem;
-  --t-xs: 0.8125rem;
-  --t-label: 0.6875rem;
+  /* ── Escala tipográfica ──────────────────────
+     Un solo sitio donde se decide el tamaño del texto.
+     Ningún componente inventa el suyo. */
+  --t-display: clamp(3rem, 8.5vw, 6rem);   /* el nombre, y sólo él */
+  --t-h1: clamp(2rem, 4.2vw, 2.75rem);     /* título de ficha y correo */
+  --t-h2: clamp(1.75rem, 3vw, 2.25rem);    /* título de sección y de pliego */
+  --t-h3: clamp(1.375rem, 2vw, 1.625rem);  /* proyecto, empresa, titulación */
+  --t-h4: 1.25rem;                         /* subtítulos y filas de índice */
+  --t-lead: 1.3125rem;                     /* entradilla */
+  --t-body: 1.0625rem;                     /* cuerpo */
+  --t-sm: 0.9375rem;                       /* UI */
+  --t-xs: 0.8125rem;                       /* metadatos */
+  --t-label: 0.6875rem;                    /* versalitas */
+  --t-hand: 1.25rem;                       /* la única medida manuscrita */
+
+  /* ── Interlineado ───────────────────────────── */
+  --lh-tight: 1.1;    /* display y titulares */
+  --lh-snug: 1.25;    /* titulares pequeños */
+  --lh-list: 1.45;    /* elementos de lista */
+  --lh-ui: 1.5;       /* texto de interfaz */
+  --lh-body: 1.65;    /* párrafos */
 
   --track-display: -0.03em;
   --track-tight: -0.015em;
@@ -76,10 +87,12 @@
   --rail: 11rem;
   --nav-h: 4.25rem;
 
-  /* ── Formas ────────────────────────────────── */
+  /* ── Formas y controles ────────────────────── */
   --r-sm: 2px;
   --r-md: 3px;
-  --r-lg: 5px;
+  --r-pill: 99px;
+  --control-h: 2.75rem;        /* 44px: el mínimo que se puede tocar */
+  --control-h-sm: 2.375rem;    /* 38px, sólo en la barra superior */
 
   /* ── Movimiento ────────────────────────────── */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);

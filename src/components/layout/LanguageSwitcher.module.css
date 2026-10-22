@@ -12,6 +12,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  min-height: 1.9rem;
   padding: 0.3rem 0.5rem;
   border-radius: 1px;
   font-family: var(--font-sans);
@@ -46,3 +47,5 @@
   margin-top: var(--space-md);
   align-self: flex-start;
 }
+
+.mobile .btn { min-height: var(--control-h); padding-inline: 0.75rem; }

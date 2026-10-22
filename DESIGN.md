@@ -46,7 +46,11 @@ Modo: *Experience* — manda la obra, la interfaz se retira.
   proyectos y trabajos adicionales. Bloquea el scroll, atrapa el foco, lo
   devuelve al cerrar, cierra con Escape.
 - `.rail-grid` (global.css) — columna de margen para datos reales (periodo,
-  título de bloque) y texto en su medida (66ch) a la derecha.
+  título de bloque) y texto en su medida (66ch) a la derecha. **Todo el
+  contenido de la página arranca en esa columna**: experiencia, estudios y
+  las filas de trabajos adicionales comparten el mismo borde izquierdo, y los
+  títulos de sección y de pliego el suyo. Si añades un bloque, va a la misma
+  rejilla.
 
 ## Tokens
 
@@ -59,7 +63,16 @@ Todo en `src/styles/variables.css`. Nunca valores sueltos en los módulos.
 - Tintas apagadas (rojo, azul, salvia, ocre) como el rotulador de un bullet
   journal: pocas, deliberadas.
 - Tipografía: Crimson Pro (voz principal), Inter (etiquetas y UI), Caveat
-  (anotaciones a mano). Display máx. 6rem, tracking -0.03em.
+  (anotaciones a mano). **Ningún componente inventa su tamaño**: todos salen
+  de la escala `--t-display → --t-label` y del interlineado `--lh-tight`,
+  `--lh-snug`, `--lh-list`, `--lh-ui`, `--lh-body`. Un mismo papel usa un
+  mismo tamaño: el título de sección y el de un pliego son los dos `--t-h2`.
+- **Caveat vive en dos sitios y en una sola medida** (`--t-hand`): la nota al
+  margen de la biografía y la firma del pie. Todo lo demás que parezca una
+  anotación (duraciones, notas de herramienta, pies de polaroid) va en Inter.
+- Controles: `--control-h` (44px) para lo que se toca y `--control-h-sm`
+  (38px) sólo en la barra superior. Los botones de texto suben a 44px bajo
+  `@media (pointer: coarse)` con la clase `touch-target`.
 - Sombras siempre con desplazamiento **y** difuminado. Radios de 2–5px: el
   papel tiene canto, no esquinas blandas.
 

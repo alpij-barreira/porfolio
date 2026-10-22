@@ -12,16 +12,17 @@
   align-items: baseline;
   gap: var(--space-sm);
   width: 100%;
+  min-height: var(--control-h);
   padding-block: var(--space-md);
   text-align: left;
 }
 
 .title {
   font-family: var(--font-serif);
-  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-size: var(--t-h2);
   font-weight: 500;
   letter-spacing: var(--track-tight);
-  line-height: 1.1;
+  line-height: var(--lh-tight);
   color: var(--color-graphite);
   transition: color var(--dur-fast) var(--ease-soft);
 }

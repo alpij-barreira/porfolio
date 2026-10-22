@@ -50,18 +50,24 @@ h1, h2, h3, h4 {
   font-family: var(--font-serif);
   font-weight: 500;
   color: var(--color-graphite);
-  line-height: 1.12;
+  line-height: var(--lh-tight);
   letter-spacing: var(--track-tight);
   text-wrap: balance;
 }
 
 p {
   font-family: var(--font-serif);
-  font-size: var(--t-lead);
-  line-height: 1.68;
+  font-size: var(--t-body);
+  line-height: var(--lh-body);
   color: var(--color-graphite);
   text-wrap: pretty;
   font-variant-numeric: oldstyle-nums;
+}
+
+/* Entradilla: el único cuerpo mayor que el de los párrafos */
+.lead {
+  font-size: var(--t-lead);
+  line-height: var(--lh-body);
 }
 
 a {
@@ -138,14 +144,17 @@ html { scrollbar-color: var(--color-rule-strong) transparent; scrollbar-width: t
   font-weight: 500;
   letter-spacing: var(--track-label);
   text-transform: uppercase;
+  line-height: var(--lh-ui);
   color: var(--color-graphite-muted);
   font-variant-numeric: tabular-nums;
 }
 
+/* Caveat vive en dos sitios y en una sola medida: la nota al margen
+   de la biografía y la firma del pie. En ningún otro. */
 .hand {
   font-family: var(--font-hand);
-  font-size: 1.3rem;
-  line-height: 1.3;
+  font-size: var(--t-hand);
+  line-height: var(--lh-snug);
   color: var(--color-graphite-soft);
 }
 
@@ -159,6 +168,14 @@ html { scrollbar-color: var(--color-rule-strong) transparent; scrollbar-width: t
   clip: rect(0 0 0 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* ── Objetivos táctiles ────────────────────────── */
+@media (pointer: coarse) {
+  .touch-target {
+    min-height: var(--control-h);
+    align-items: center;
+  }
 }
 
 /* ── Movimiento reducido ───────────────────────── */

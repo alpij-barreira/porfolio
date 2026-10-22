@@ -33,7 +33,7 @@ const ExperienceCard = ({ exp }) => {
 
         <button
           type="button"
-          className={styles.toggle}
+          className={`${styles.toggle} touch-target`}
           onClick={() => setOpen((o) => !o)}
           aria-expanded={open}
           aria-controls={panelId}

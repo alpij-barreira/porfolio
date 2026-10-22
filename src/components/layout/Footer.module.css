@@ -11,9 +11,9 @@
 }
 
 .lead {
-  font-family: var(--font-hand);
-  font-size: 1.35rem;
-  line-height: 1.2;
+  font-family: var(--font-sans);
+  font-size: var(--t-sm);
+  line-height: var(--lh-ui);
   color: var(--color-graphite-muted);
 }
 
@@ -21,10 +21,10 @@
   width: fit-content;
   max-width: 100%;
   font-family: var(--font-serif);
-  font-size: clamp(1.75rem, 5.5vw, 3.25rem);
+  font-size: var(--t-h1);
   font-weight: 500;
   letter-spacing: var(--track-tight);
-  line-height: 1.15;
+  line-height: var(--lh-tight);
   color: var(--color-graphite);
   transition: color var(--dur-normal) var(--ease-soft);
   overflow-wrap: anywhere;
@@ -57,14 +57,15 @@
 
 .signature {
   font-family: var(--font-hand);
-  font-size: 1.45rem;
-  line-height: 1.3;
+  font-size: var(--t-hand);
+  line-height: var(--lh-snug);
   color: var(--color-graphite-soft);
 }
 
 .copyright {
   font-family: var(--font-sans);
   font-size: var(--t-xs);
+  line-height: var(--lh-ui);
   color: var(--color-graphite-muted);
   font-variant-numeric: tabular-nums;
 }
