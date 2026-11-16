@@ -50,13 +50,15 @@ const Hero = () => {
               <Action href={`mailto:${personal.contact.email}`} icon={<TbMail />}>
                 {ui.cover.writeMe}
               </Action>
-              <Action
-                href={personal.contact.cv}
-                download="JavierPineda_CV.pdf"
-                icon={<TbFileText />}
-              >
-                {ui.nav.downloadCV}
-              </Action>
+              {personal.contact.cv && (
+                <Action
+                  href={personal.contact.cv}
+                  download="JavierPineda_CV.pdf"
+                  icon={<TbFileText />}
+                >
+                  {ui.nav.downloadCV}
+                </Action>
+              )}
             </div>
           </div>
         </div>

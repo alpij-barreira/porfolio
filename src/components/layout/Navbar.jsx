@@ -65,10 +65,12 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <a href={cv} download="JavierPineda_CV.pdf" className={styles.cvButton}>
-            <TbFileText aria-hidden="true" />
-            <span>{nav.downloadCV}</span>
-          </a>
+          {cv && (
+            <a href={cv} download="JavierPineda_CV.pdf" className={styles.cvButton}>
+              <TbFileText aria-hidden="true" />
+              <span>{nav.downloadCV}</span>
+            </a>
+          )}
           <LanguageSwitcher />
         </nav>
 
@@ -103,15 +105,17 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <a
-                href={cv}
-                download="JavierPineda_CV.pdf"
-                className={styles.mobileCv}
-                onClick={() => setMenuOpen(false)}
-              >
-                <TbFileText aria-hidden="true" />
-                {nav.downloadCV}
-              </a>
+              {cv && (
+                <a
+                  href={cv}
+                  download="JavierPineda_CV.pdf"
+                  className={styles.mobileCv}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <TbFileText aria-hidden="true" />
+                  {nav.downloadCV}
+                </a>
+              )}
               <LanguageSwitcher variant="mobile" />
             </div>
           </motion.div>

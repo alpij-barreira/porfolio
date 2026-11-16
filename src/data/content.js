@@ -473,7 +473,8 @@ const en = {
       email: "pinedaux@gmail.com",
       phone: "+34639418865",
       linkedin: "https://www.linkedin.com/in/javier-pineda-alonso/",
-      cv: "/cv.pdf"
+      // Sin CV en inglés hasta tener el documento: con null no se muestra el botón
+      cv: null
     }
   },
 

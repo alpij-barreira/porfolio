@@ -34,9 +34,11 @@ const Footer = () => {
           <Action href={contact.linkedin} icon={<FaLinkedin />} external>
             {labels.linkedin}
           </Action>
-          <Action href={contact.cv} download="JavierPineda_CV.pdf" icon={<TbFileText />}>
-            {labels.cv}
-          </Action>
+          {contact.cv && (
+            <Action href={contact.cv} download="JavierPineda_CV.pdf" icon={<TbFileText />}>
+              {labels.cv}
+            </Action>
+          )}
         </div>
 
         <div className={styles.sign}>
