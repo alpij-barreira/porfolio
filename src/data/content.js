@@ -409,6 +409,10 @@ const es = {
       moreInfo: "Más información",
       achievements: "Logros & responsabilidades"
     },
+    projects: {
+      showMore: "Ver más proyectos",
+      showLess: "Ver menos proyectos"
+    },
     projectCard: {
       moreInfo: "Más información",
       readCase: "Leer el caso",
@@ -866,6 +870,10 @@ const en = {
     experienceCard: {
       moreInfo: "Learn more",
       achievements: "Achievements & responsibilities"
+    },
+    projects: {
+      showMore: "See more projects",
+      showLess: "See fewer projects"
     },
     projectCard: {
       moreInfo: "Learn more",

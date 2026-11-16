@@ -4,6 +4,37 @@
   gap: var(--space-3xl);
 }
 
+/* El bloque plegado deja entre la última lámina visible y la primera
+   escondida el mismo aire que hay entre dos láminas. */
+.moreInner { padding-top: var(--space-3xl); }
+
+/* Mismo control que «Más información» en experiencia, un punto más grande
+   porque pliega una sección entera y no un asiento. */
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: var(--space-2xl);
+  padding-bottom: 0.2rem;
+  font-family: var(--font-sans);
+  font-size: var(--t-sm);
+  font-weight: 500;
+  line-height: var(--lh-ui);
+  color: var(--color-graphite);
+  transition: color var(--dur-fast) var(--ease-soft);
+}
+
+.toggle:hover {
+  color: var(--color-ink-blue);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+}
+
+.chevron { transition: transform var(--dur-normal) var(--ease-out); }
+.chevronOpen { transform: rotate(180deg); }
+
 @media (max-width: 899px) {
   .plates { gap: var(--space-2xl); }
+  .moreInner { padding-top: var(--space-2xl); }
 }

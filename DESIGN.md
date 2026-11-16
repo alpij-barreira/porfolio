@@ -22,7 +22,11 @@ Modo: *Experience* — manda la obra, la interfaz se retira.
    nunca depende de que corra el JS.
 2. **Proyectos principales** (`projects/`) — una polaroid por proyecto, con
    el año escrito a mano en el canto. Lados alternos; la columna ancha viaja
-   siempre con la imagen para que todas midan igual.
+   siempre con la imagen para que todas midan igual. Sólo las dos primeras
+   llegan abiertas: el resto espera tras «Ver más proyectos», el mismo
+   control de texto con chevron que «Más información» en experiencia. Lo
+   que se deja visible es un número par, porque la alternancia va por
+   `:nth-child` y el bloque plegado vuelve a contar desde 1.
 3. **Experiencia** (`experience/`) — periodo y logo al margen, primer
    párrafo visible, el detalle desplegable.
 4. **Apéndice plegado** (`shared/Fold.jsx`) — Trabajos adicionales, Estudios
