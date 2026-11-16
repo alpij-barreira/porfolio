@@ -8,7 +8,7 @@ const es = {
     tagline: "Diseño de producto · UX/UI · Ingeniero Informático",
     bio: [
       "Soy diseñador de producto digital e ingeniero informático. Investigo qué necesita la gente, prototipo soluciones y las construyo con herramientas de desarrollo asistido por IA. Mi base técnica me ayuda a entenderme con los desarrolladores y a tomar decisiones de diseño que luego se pueden implementar.",
-      "Me interesa ir hacia la gestión de producto digital, juntando la parte estratégica con la técnica y la de llevar una idea desde la investigación hasta algo que funcione. Es la dirección en la que sigo formándome."
+      "Me centro en el diseño de producto digital: llevar una idea desde la investigación hasta algo que funcione, sin perder de vista la estrategia ni la parte técnica. Es donde quiero seguir creciendo y aprendiendo."
     ],
     photo: "/profile.jpg",
     marginNote: "estos párrafos cambian tanto como este sector",
@@ -59,7 +59,7 @@ const es = {
         { status: "done", text: "Arquitectura y prototipos de alta fidelidad de la aplicación interna de gestión de expedientes" },
         { status: "done", text: "Automatización de la generación documental por API con Octopus Energy y Solar360" },
         { status: "done", text: "Traslado de las especificaciones técnicas al equipo de desarrollo (React, AWS)" },
-        { status: "progress", text: "Definición de requisitos y diseño de módulos pendientes de implementación" }
+        { status: "done", text: "Definición de requisitos y diseño de funcionalidades basadas en el feedback" }
       ],
       skills: ["UX/UI Design", "Prototipado", "React / AWS", "Automatización", "API Integration", "Requisitos funcionales"]
     },
@@ -353,20 +353,6 @@ const es = {
 
   education: [
     {
-      institution: "Universidad Politécnica de Valencia",
-      degree: "Máster Universitario en Ingeniería de Computadores y Redes",
-      period: "Desde septiembre de 2026",
-      current: true,
-      description: "Lo curso para reforzar mi base como informático. Busco más contexto sobre las tecnologías que hay por debajo de cada producto, para poder diseñar y a la vez trabajar de cerca con un equipo técnico."
-    },
-    {
-      institution: "CEI: Centro de Estudios de Innovación",
-      degree: "Doble módulo de Cloud Computing y Big Data",
-      period: "Desde julio de 2026",
-      current: true,
-      description: "Formación en tecnologías cloud y procesamiento de grandes volúmenes de datos. Me interesa incorporar la lógica de la infraestructura y los datos a las decisiones de diseño."
-    },
-    {
       institution: "Barreira Arte + Diseño",
       degree: "Máster Intensivo en AI-Native Product Design",
       period: "Enero a septiembre de 2026",
@@ -479,7 +465,7 @@ const en = {
     tagline: "Product Design · UX/UI · Computer Engineer",
     bio: [
       "I'm a digital product designer and a computer engineer. I look into what people need, prototype solutions and build them with AI-assisted development tools. My technical background helps me work with developers and make design decisions that can actually be implemented.",
-      "I want to move towards digital product management, putting the strategic side together with the technical one and with taking an idea from research to something that works. That's the direction I keep training for."
+      "My focus is digital product design: taking an idea from research to something that works, keeping both the strategy and the technical side in view. That's where I want to keep growing and learning."
     ],
     photo: "/profile.jpg",
     marginNote: "these paragraphs change as often as this industry does",
@@ -530,7 +516,7 @@ const en = {
         { status: "done", text: "Architecture and high-fidelity prototypes of the internal case management application" },
         { status: "done", text: "Document generation automated over API with Octopus Energy and Solar360" },
         { status: "done", text: "Technical specifications handed over to the development team (React, AWS)" },
-        { status: "progress", text: "Requirements and design of modules still pending implementation" }
+        { status: "done", text: "Requirements definition and design of features based on feedback" }
       ],
       skills: ["UX/UI Design", "Prototyping", "React / AWS", "Automation", "API Integration", "Functional Requirements"]
     },
@@ -823,20 +809,6 @@ const en = {
   ],
 
   education: [
-    {
-      institution: "Polytechnic University of Valencia",
-      degree: "Master's Degree in Computer and Network Engineering",
-      period: "Since September 2026",
-      current: true,
-      description: "I'm taking it to strengthen my base as an engineer. I want more context on the technologies sitting underneath each product, so I can design and at the same time work closely with a technical team."
-    },
-    {
-      institution: "CEI: Centro de Estudios de Innovación",
-      degree: "Cloud Computing and Big Data double module",
-      period: "Since July 2026",
-      current: true,
-      description: "Training in cloud technologies and large-scale data processing. I'm interested in bringing the logic of infrastructure and data into design decisions."
-    },
     {
       institution: "Barreira Arte + Diseño",
       degree: "Intensive Master's in AI-Native Product Design",
