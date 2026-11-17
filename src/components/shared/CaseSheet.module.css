@@ -89,6 +89,27 @@
   color: var(--color-graphite);
 }
 
+/* Imagen de proceso dentro de un bloque, con su pie debajo */
+.blockFigure { margin-top: var(--space-md); }
+
+.blockFrame {
+  display: block;
+  background: var(--color-paper-plate);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-plate);
+}
+
+.blockCaption {
+  margin-top: var(--space-2xs);
+  font-family: var(--font-sans);
+  font-size: var(--t-xs);
+  line-height: var(--lh-ui);
+  color: var(--color-graphite-muted);
+  max-width: var(--measure);
+}
+
 /* ── Banda de enlace ────────────────────────── */
 .band {
   margin-top: var(--space-xl);
@@ -127,7 +148,7 @@
 }
 
 .bandButton:hover {
-  background: #15130F;
+  background: #111417;
   transform: translateY(-1px);
 }
 
@@ -142,11 +163,10 @@
 }
 
 .extraTitle {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: var(--t-label);
   font-weight: 500;
   letter-spacing: var(--track-label);
-  text-transform: uppercase;
   color: var(--color-graphite-muted);
   margin-bottom: var(--space-md);
 }
@@ -230,12 +250,12 @@
   place-items: center;
   font-size: 1.8rem;
   color: var(--color-paper);
-  background: rgba(32, 30, 26, 0.3);
+  background: rgba(24, 27, 31, 0.3);
   opacity: 0.9;
   transition: background var(--dur-fast) var(--ease-soft);
 }
 
-.video:hover .videoPlay { background: rgba(32, 30, 26, 0.45); }
+.video:hover .videoPlay { background: rgba(24, 27, 31, 0.45); }
 
 .videoLabel {
   display: inline-flex;

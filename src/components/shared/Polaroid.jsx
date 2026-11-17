@@ -10,7 +10,6 @@ const Polaroid = ({
   ratio = '4 / 5',
   rotate = -1.1,
   tape = false,
-  tapeColor = 'amber',
   objectPosition,
   loading = 'lazy',
   className = '',
@@ -21,7 +20,7 @@ const Polaroid = ({
   >
     {tape && (
       <span className={styles.tape} aria-hidden="true">
-        <WashiTape color={tapeColor} rotation={rotate * -2.4} />
+        <WashiTape rotation={rotate * -2.4} />
       </span>
     )}
 

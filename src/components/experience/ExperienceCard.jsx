@@ -27,10 +27,6 @@ const ExperienceCard = ({ exp }) => {
         <p className={styles.role}>{exp.role}</p>
         <p className={styles.summary}>{firstParagraph}</p>
 
-        {exp.logoImage && (
-          <img src={exp.logoImage} alt="" className={styles.logo} loading="lazy" />
-        )}
-
         <button
           type="button"
           className={`${styles.toggle} touch-target`}

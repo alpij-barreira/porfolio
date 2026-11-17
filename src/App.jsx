@@ -22,7 +22,7 @@ function App() {
         <Experience />
 
         {/* Material de apoyo: llega plegado, se abre si interesa */}
-        <Section id="apendice" tone="warm">
+        <Section id="apendice">
           <AdditionalWork />
           <Education />
           <Skills />

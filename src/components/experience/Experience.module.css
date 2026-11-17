@@ -5,3 +5,8 @@
 
 /* Sólo separa un asiento del siguiente: nada abre ni cierra la lista */
 .item + .item { border-top: 1px solid var(--color-rule); }
+
+/* El primer asiento arranca a la misma distancia del título que el primer
+   proyecto, y el último no suma aire al final de la sección. */
+.item:first-child > * { padding-top: 0; }
+.item:last-child > * { padding-bottom: 0; }

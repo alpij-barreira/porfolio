@@ -67,16 +67,15 @@
 }
 
 .tag {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: var(--t-label);
   font-weight: 500;
   line-height: var(--lh-ui);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: var(--track-label);
   color: var(--color-graphite-muted);
-  padding: 0.3rem 0.55rem;
+  padding: 0.2rem 0.5rem;
   border: 1px solid var(--color-rule-strong);
-  border-radius: 99px;
+  border-radius: var(--r-sm);
 }
 
 .action {
@@ -95,7 +94,7 @@
 
 .action:hover {
   gap: 0.65rem;
-  color: var(--color-ink-blue);
+  color: var(--color-accent);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.25em;

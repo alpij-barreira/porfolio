@@ -10,7 +10,7 @@ const Experience = () => {
   const { content } = useLanguage();
 
   return (
-    <Section id="experiencia">
+    <Section id="experiencia" tone="warm">
       <SectionHead title={content.ui.sections.experience} />
 
       <div className={styles.list}>

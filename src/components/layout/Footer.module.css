@@ -31,7 +31,7 @@
 }
 
 .email:hover {
-  color: var(--color-ink-blue);
+  color: var(--color-accent);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.12em;

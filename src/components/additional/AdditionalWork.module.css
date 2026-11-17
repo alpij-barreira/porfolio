@@ -21,7 +21,7 @@
 
 .row:hover {
   transform: translateX(5px);
-  background: linear-gradient(to right, rgba(39, 37, 33, 0.028), transparent 55%);
+  background: linear-gradient(to right, rgba(31, 35, 40, 0.028), transparent 55%);
 }
 
 .thumbFrame {

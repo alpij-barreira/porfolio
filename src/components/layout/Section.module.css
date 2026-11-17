@@ -1,10 +1,12 @@
+/* Entre dos secciones queda el doble de este relleno: con el cambio de
+   papel basta para separarlas, sin tramos vacíos de 200px. */
 .section {
   position: relative;
-  padding-block: var(--space-3xl);
+  padding-block: var(--space-2xl);
 }
 
 @media (max-width: 768px) {
-  .section { padding-block: var(--space-2xl); }
+  .section { padding-block: var(--space-xl); }
 }
 
 /* Un papel ligeramente más cálido para romper el ritmo entre secciones */

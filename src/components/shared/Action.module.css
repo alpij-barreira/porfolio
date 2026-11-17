@@ -38,6 +38,27 @@
   background: var(--color-paper-plate);
 }
 
+/* La acción principal de una zona: grafito lleno, una sola por bloque. */
+.solid {
+  background: var(--color-graphite);
+  border-color: var(--color-graphite);
+}
+
+.solid:hover { border-color: var(--color-graphite); }
+
+.solid .icon {
+  color: var(--color-paper);
+  background: rgba(247, 247, 244, 0.12);
+  border-color: rgba(247, 247, 244, 0.18);
+}
+
+.solid:hover .icon {
+  color: var(--color-paper);
+  background: rgba(247, 247, 244, 0.2);
+}
+
+.solid .label { color: var(--color-paper); }
+
 .label {
   font-family: var(--font-sans);
   font-size: var(--t-sm);
@@ -50,6 +71,8 @@
 }
 
 @media (max-width: 420px) {
-  .action { flex: 1 1 100%; }
+  /* La principal ocupa la fila entera y las demás se reparten la siguiente. */
+  .action { flex: 1 1 auto; }
+  .solid { flex-basis: 100%; }
   .label { white-space: normal; }
 }

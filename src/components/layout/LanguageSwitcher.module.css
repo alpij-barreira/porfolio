@@ -18,8 +18,8 @@
   font-family: var(--font-sans);
   font-size: var(--t-label);
   font-weight: 500;
-  letter-spacing: 0.08em;
-  color: var(--color-graphite-muted);
+  letter-spacing: 0.04em;
+  color: var(--color-graphite-soft); /* el idioma inactivo también se lee: AA */
   transition: color var(--dur-fast) var(--ease-soft), background var(--dur-fast) var(--ease-soft);
 }
 

@@ -7,8 +7,13 @@ import Polaroid from '../shared/Polaroid';
 import styles from './Hero.module.css';
 
 const Hero = () => {
-  const { content } = useLanguage();
+  const { content, lang } = useLanguage();
   const { personal, ui } = content;
+  // Las herramientas a la vista: quien busca «Figma» lo encuentra sin abrir nada.
+  // El inglés del sitio es británico: sin coma antes de «and».
+  const tools = new Intl.ListFormat(lang === 'en' ? 'en-GB' : lang, { type: 'conjunction' }).format(
+    content.skills.tools.map((tool) => tool.name)
+  );
 
   return (
     <section id="portada" className={styles.cover}>
@@ -33,17 +38,19 @@ const Hero = () => {
           <div className={styles.intro}>
             <div className={styles.bio}>
               {personal.bio.map((paragraph, i) => (
-                <p key={i} className={i === 0 ? styles.lead : undefined}>{paragraph}</p>
+                <p key={i}>{paragraph}</p>
               ))}
             </div>
 
             <p className={styles.note}>{personal.marginNote}</p>
 
             <div className={styles.actions}>
+              {/* La acción principal es hablar: el trabajo está justo debajo. */}
               <Action
                 href={`tel:${personal.contact.phone.replace(/\s/g, '')}`}
                 icon={<TbPhone />}
                 ariaLabel={`${ui.cover.callMe}: ${personal.contact.phone}`}
+                variant="solid"
               >
                 {ui.cover.callMe}
               </Action>
@@ -60,6 +67,8 @@ const Hero = () => {
                 </Action>
               )}
             </div>
+
+            <p className={styles.tools}>{ui.cover.toolsLead} {tools}.</p>
           </div>
         </div>
       </div>

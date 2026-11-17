@@ -43,7 +43,12 @@ const CaseSheet = ({ item, labels, titleId }) => {
         </h2>
         {item.summary && <p className={styles.lead}>{item.summary}</p>}
 
+        {/* Lo que un reclutador busca primero: resultado, papel, equipo y plazo. */}
         <dl className={styles.spec}>
+          <Spec term={labels.outcome}>{item.outcome}</Spec>
+          <Spec term={labels.role}>{item.role}</Spec>
+          <Spec term={labels.team}>{item.team}</Spec>
+          <Spec term={labels.duration}>{item.duration}</Spec>
           <Spec term={labels.year}>{item.year}</Spec>
           <Spec term={labels.disciplines}>
             {item.tags && item.tags.length > 0 ? item.tags.join(' · ') : null}
@@ -84,7 +89,25 @@ const CaseSheet = ({ item, labels, titleId }) => {
         {item.sections?.map((section, i) => (
           <section key={i} className={`rail-grid ${styles.block}`}>
             <h3 className={styles.blockTitle}>{section.title}</h3>
-            <p className={styles.blockText}>{section.content}</p>
+            <div className={styles.blockMain}>
+              <p className={styles.blockText}>{section.content}</p>
+              {/* Imagen de proceso opcional: wireframe, flujo, antes y después. */}
+              {section.image && (
+                <figure className={styles.blockFigure}>
+                  <span className={styles.blockFrame}>
+                    <img
+                      src={section.image.src}
+                      alt={section.image.alt || ''}
+                      className={styles.plateImage}
+                      loading="lazy"
+                    />
+                  </span>
+                  {section.image.caption && (
+                    <figcaption className={styles.blockCaption}>{section.image.caption}</figcaption>
+                  )}
+                </figure>
+              )}
+            </div>
           </section>
         ))}
       </div>

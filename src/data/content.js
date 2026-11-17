@@ -5,7 +5,7 @@ const es = {
   personal: {
     name: "Javier Pineda",
     role: "Product Designer",
-    tagline: "Diseño de producto · UX/UI · Ingeniero Informático",
+    tagline: "Diseñador UX/UI de producto digital. Herramientas internas, automatización y e-commerce.",
     bio: [
       "Soy diseñador de producto digital e ingeniero informático. Investigo qué necesita la gente, prototipo soluciones y las construyo con herramientas de desarrollo asistido por IA. Mi base técnica me ayuda a entenderme con los desarrolladores y a tomar decisiones de diseño que luego se pueden implementar.",
       "Me centro en el diseño de producto digital: llevar una idea desde la investigación hasta algo que funcione, sin perder de vista la estrategia ni la parte técnica. Es donde quiero seguir creciendo y aprendiendo."
@@ -14,7 +14,7 @@ const es = {
     marginNote: "estos párrafos cambian tanto como este sector",
     contact: {
       email: "pinedaux@gmail.com",
-      phone: "+34639418865",
+      phone: "+34 639 41 88 65",
       linkedin: "https://www.linkedin.com/in/javier-pineda-alonso/",
       cv: "/cv-es.pdf"
     }
@@ -45,8 +45,6 @@ const es = {
   experience: [
     {
       company: "Tramiting",
-      logo: "Tramiting",
-      logoImage: "/logo-tramiting.png",
       role: "Diseñador UX/UI & Digitalización",
       period: "Enero 2025 a octubre 2025",
       duration: "10 meses",
@@ -65,8 +63,6 @@ const es = {
     },
     {
       company: "Sexplace",
-      logo: "Sexplace",
-      logoImage: "/logo-sexplace.png",
       role: "Diseño web, redes sociales & e-commerce",
       period: "Marzo 2024 a noviembre 2024",
       duration: "9 meses",
@@ -89,9 +85,11 @@ const es = {
     {
       title: "Tramiting: CRM con generación documental",
       year: "2026",
-      image: "/crm-tramiting.png",
-      summary: "Recreación del concepto de la plataforma interna que ayudé a diseñar en Tramiting. Es un CRM que acompaña cada trámite energético de principio a fin (pedido, datos, documentos, firma y entrega) y cuyo núcleo es la generación de documentos a partir de una sola estructura de formulario.",
-      tags: ["UX/UI Design", "Prototipado", "Claude Code"],
+      kind: "Recreación de un trabajo real",
+      role: "Diseño UX/UI de la vista del técnico",
+      image: "/portadas/crm-documental.jpg",
+      summary: "En Tramiting buena parte de los trámites energéticos se hacía a mano. Trabajé en el diseño de un CRM que sigue cada trámite de principio a fin y genera todos sus documentos desde un solo formulario, sobre todo en la vista del técnico. Esta demo recrea el concepto, porque la plataforma real es interna.",
+      tags: ["Arquitectura de información", "Diseño UX/UI", "Prototipado"],
       tools: ["Claude Code", "React", "TypeScript", "Tailwind CSS", "Vercel"],
       liveUrl: "https://crm-documental.vercel.app",
       sections: [
@@ -116,9 +114,12 @@ const es = {
     {
       title: "Reviu: Recomendador fallero por presupuesto",
       year: "2026",
-      image: "/reviu/reviu-cover.png",
-      summary: "Trabajo de fin de máster en Barreira, todavía en desarrollo. Es una web-app que recomienda indumentaria y servicios falleros dentro del presupuesto que marca la usuaria, con el mismo planteamiento que un buscador de vuelos.",
-      tags: ["UX Research", "UX/UI Design", "Claude Code"],
+      kind: "Trabajo de fin de máster",
+      role: "Investigación, diseño UX/UI y desarrollo",
+      team: "Una compañera de clase y yo",
+      image: "/portadas/reviu-flax.jpg",
+      summary: "Vestirse de fallera supone sumar presupuestos sueltos de muchos proveedores sin saber el total hasta el final. Reviu le da la vuelta: la usuaria marca cuánto puede gastar y la web-app compone paquetes completos dentro de ese límite. Es mi trabajo de fin de máster en Barreira, todavía en desarrollo.",
+      tags: ["Investigación UX", "Diseño UX/UI", "Prototipado"],
       tools: ["Figma", "Claude Code", "Next.js", "GitHub", "Vercel"],
       liveUrl: "https://reviu-flax.vercel.app",
       liveHook: "El proyecto sigue en desarrollo. En este enlace puedes ver en qué estado está en cada momento:",
@@ -144,9 +145,13 @@ const es = {
     {
       title: "FC Barcelona: Plataforma para aficionados",
       year: "2026",
-      image: "/FCBCover.png",
-      summary: "Proyecto troncal del Máster de UX/UI & AI-Native de Diseño de Producto en Barreira Arte + Diseño. Seis meses aplicando Design Sprint a un briefing ficticio del FC Barcelona, con el reto de acercar el club a sus aficionados en el extranjero. Cerramos con una demo funcional hecha entre Figma y Claude Code.",
-      tags: ["Design Sprint", "UX Research", "UX/UI Design", "Claude Code"],
+      kind: "Proyecto de máster",
+      role: "Investigación con usuarios, diseño UX/UI y prototipo",
+      team: "En equipo, dentro del máster",
+      duration: "Seis meses",
+      image: "/portadas/fcb-buddies-prototype.jpg",
+      summary: "Los aficionados del FC Barcelona que viven fuera echan de menos con quién ver los partidos. Tras investigar con aficionados, diseñamos una plataforma que los conecta con bares y con otros aficionados que organizan encuentros cerca. Fue el proyecto troncal del máster en Barreira: seis meses de Design Sprint sobre un briefing ficticio, con una demo funcional al final.",
+      tags: ["Design Sprint", "Investigación UX", "Diseño UX/UI"],
       tools: ["Figma", "Claude Code", "Maze"],
       liveUrl: "https://fcb-buddies-prototype.vercel.app",
       sections: [
@@ -175,9 +180,11 @@ const es = {
     {
       title: "Reimagine: Landing page",
       year: "2026",
-      image: "/ReimagineCover.png",
-      summary: "Diseño y desarrollo de la landing de Reimagine, una marca de moda deportiva dirigida a corredores que entienden el entrenamiento como algo personal. Fue la primera web que diseñé y construí entera con Claude Code.",
-      tags: ["Claude Code", "Figma", "Design Sprint"],
+      role: "Diseño y desarrollo",
+      team: "Proyecto individual",
+      image: "/portadas/reimagine-landing.jpg",
+      summary: "Reimagine es una marca de moda deportiva para corredores que viven el entrenamiento como algo personal, no como una competición. Diseñé y publiqué su landing con el reto de transmitir esa idea desde la primera pantalla, con un Design Sprint corto y un sistema visual propio en Figma.",
+      tags: ["Design Sprint", "Diseño UI", "Arquitectura de información"],
       tools: ["Claude Code", "Figma", "Vercel"],
       liveUrl: "https://reimagine-landing.vercel.app",
       sections: [
@@ -381,7 +388,6 @@ const es = {
       about: "Sobre mí",
       experience: "Experiencia",
       projects: "Proyectos",
-      work: "Trabajo",
       studies: "Estudios",
       contact: "Contacto",
       openMenu: "Abrir menú",
@@ -398,7 +404,8 @@ const es = {
     },
     cover: {
       callMe: "Llámame",
-      writeMe: "Escríbeme"
+      writeMe: "Escríbeme",
+      toolsLead: "Trabajo con"
     },
     skills: {
       competencias: "Competencias",
@@ -417,6 +424,10 @@ const es = {
       moreInfo: "Más información",
       readCase: "Leer el caso",
       year: "Año",
+      role: "Rol",
+      team: "Equipo",
+      duration: "Duración",
+      outcome: "Resultado",
       disciplines: "Disciplinas",
       tools: "Herramientas",
       close: "Cerrar",
@@ -466,7 +477,7 @@ const en = {
   personal: {
     name: "Javier Pineda",
     role: "Product Designer",
-    tagline: "Product Design · UX/UI · Computer Engineer",
+    tagline: "UX/UI designer for digital products. Internal tools, automation and e-commerce.",
     bio: [
       "I'm a digital product designer and a computer engineer. I look into what people need, prototype solutions and build them with AI-assisted development tools. My technical background helps me work with developers and make design decisions that can actually be implemented.",
       "My focus is digital product design: taking an idea from research to something that works, keeping both the strategy and the technical side in view. That's where I want to keep growing and learning."
@@ -475,7 +486,7 @@ const en = {
     marginNote: "these paragraphs change as often as this industry does",
     contact: {
       email: "pinedaux@gmail.com",
-      phone: "+34639418865",
+      phone: "+34 639 41 88 65",
       linkedin: "https://www.linkedin.com/in/javier-pineda-alonso/",
       // Sin CV en inglés hasta tener el documento: con null no se muestra el botón
       cv: null
@@ -507,8 +518,6 @@ const en = {
   experience: [
     {
       company: "Tramiting",
-      logo: "Tramiting",
-      logoImage: "/logo-tramiting.png",
       role: "UX/UI Designer & Digitalisation",
       period: "January 2025 to October 2025",
       duration: "10 months",
@@ -527,8 +536,6 @@ const en = {
     },
     {
       company: "Sexplace",
-      logo: "Sexplace",
-      logoImage: "/logo-sexplace.png",
       role: "Web design, social media & e-commerce",
       period: "March 2024 to November 2024",
       duration: "9 months",
@@ -551,9 +558,11 @@ const en = {
     {
       title: "Tramiting: CRM with document generation",
       year: "2026",
-      image: "/crm-tramiting.png",
-      summary: "A recreation of the concept behind the internal platform I helped design at Tramiting. It is a CRM that follows every energy procedure from start to finish (order, data, documents, signature and delivery), built around generating documents from a single form structure.",
-      tags: ["UX/UI Design", "Prototyping", "Claude Code"],
+      kind: "Recreation of real work",
+      role: "UX/UI design of the case officer view",
+      image: "/portadas/crm-documental.jpg",
+      summary: "At Tramiting, much of the energy paperwork was done by hand. I worked on the design of a CRM that follows each procedure from start to finish and generates every document from a single form, mainly on the case officer view. This demo recreates the concept, because the real platform is internal.",
+      tags: ["Information architecture", "UX/UI design", "Prototyping"],
       tools: ["Claude Code", "React", "TypeScript", "Tailwind CSS", "Vercel"],
       liveUrl: "https://crm-documental.vercel.app",
       sections: [
@@ -578,9 +587,12 @@ const en = {
     {
       title: "Reviu: Budget-led fallera outfit recommender",
       year: "2026",
-      image: "/reviu/reviu-cover.png",
-      summary: "My final master's project at Barreira, still in progress. It is a web app that recommends fallera clothing and services within the budget the user sets, with the same approach as a flight search engine.",
-      tags: ["UX Research", "UX/UI Design", "Claude Code"],
+      kind: "Final master's project",
+      role: "Research, UX/UI design and development",
+      team: "A classmate and me",
+      image: "/portadas/reviu-flax.jpg",
+      summary: "Dressing as a fallera means adding up loose quotes from many suppliers without knowing the total until the end. Reviu turns that around: the user sets how much she can spend and the web app builds complete packages within that limit. It is my final master's project at Barreira, still in progress.",
+      tags: ["UX research", "UX/UI design", "Prototyping"],
       tools: ["Figma", "Claude Code", "Next.js", "GitHub", "Vercel"],
       liveUrl: "https://reviu-flax.vercel.app",
       liveHook: "The project is still in progress. This link shows where it stands at any given time:",
@@ -606,9 +618,13 @@ const en = {
     {
       title: "FC Barcelona: Fan platform",
       year: "2026",
-      image: "/FCBCover.png",
-      summary: "The core project of the Master's in UX/UI & AI-Native Product Design at Barreira Arte + Diseño. Six months applying Design Sprint to a fictional FC Barcelona brief, with the challenge of bringing the club closer to its fans abroad. We closed with a working demo built between Figma and Claude Code.",
-      tags: ["Design Sprint", "UX Research", "UX/UI Design", "Claude Code"],
+      kind: "Master's project",
+      role: "User research, UX/UI design and prototype",
+      team: "As a team, within the master's",
+      duration: "Six months",
+      image: "/portadas/fcb-buddies-prototype.jpg",
+      summary: "FC Barcelona fans living abroad miss having someone to watch matches with. After research with fans, we designed a platform that connects them with bars and with other fans hosting watch parties nearby. It was the core project of the master's at Barreira: six months of Design Sprint on a fictional brief, ending with a working demo.",
+      tags: ["Design Sprint", "UX research", "UX/UI design"],
       tools: ["Figma", "Claude Code", "Maze"],
       liveUrl: "https://fcb-buddies-prototype.vercel.app",
       sections: [
@@ -637,9 +653,11 @@ const en = {
     {
       title: "Reimagine: Landing page",
       year: "2026",
-      image: "/ReimagineCover.png",
-      summary: "Design and development of the Reimagine landing page, a sportswear brand aimed at runners who treat training as something personal. It was the first site I designed and built entirely with Claude Code.",
-      tags: ["Claude Code", "Figma", "Design Sprint"],
+      role: "Design and development",
+      team: "Solo project",
+      image: "/portadas/reimagine-landing.jpg",
+      summary: "Reimagine is a sportswear brand for runners who see training as something personal rather than a competition. I designed and published its landing page with the challenge of getting that idea across from the first screen, using a short Design Sprint and its own visual system in Figma.",
+      tags: ["Design Sprint", "UI design", "Information architecture"],
       tools: ["Claude Code", "Figma", "Vercel"],
       liveUrl: "https://reimagine-landing.vercel.app",
       sections: [
@@ -843,7 +861,6 @@ const en = {
       about: "About",
       experience: "Experience",
       projects: "Projects",
-      work: "Work",
       studies: "Education",
       contact: "Contact",
       openMenu: "Open menu",
@@ -860,7 +877,8 @@ const en = {
     },
     cover: {
       callMe: "Call me",
-      writeMe: "Email me"
+      writeMe: "Email me",
+      toolsLead: "I work with"
     },
     skills: {
       competencias: "Skills",
@@ -879,6 +897,10 @@ const en = {
       moreInfo: "Learn more",
       readCase: "Read the case",
       year: "Year",
+      role: "Role",
+      team: "Team",
+      duration: "Duration",
+      outcome: "Outcome",
       disciplines: "Disciplines",
       tools: "Tools",
       close: "Close",

@@ -43,12 +43,11 @@
   display: block;
   padding-top: 0.7rem;
   padding-bottom: 0.1rem;
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: var(--t-label);
   font-weight: 500;
   letter-spacing: var(--track-label);
   line-height: var(--lh-ui);
-  text-transform: uppercase;
   font-variant-numeric: tabular-nums;
   color: var(--color-graphite-muted);
   text-align: center;

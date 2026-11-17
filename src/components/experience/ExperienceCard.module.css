@@ -13,7 +13,7 @@
 .period { line-height: 1.5; }
 
 .duration {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: var(--t-xs);
   line-height: var(--lh-ui);
   font-variant-numeric: tabular-nums;
@@ -41,19 +41,6 @@
   color: var(--color-graphite-soft);
 }
 
-/* La marca, exactamente a lo ancho del texto que la describe.
-   La medida va en `ch`, así que sólo coincide si la imagen hereda la misma
-   tipografía y cuerpo que el párrafo. */
-.logo {
-  width: 100%;
-  max-width: var(--measure);
-  font-family: var(--font-serif);
-  font-size: var(--t-lead);
-  height: auto;
-  margin-top: var(--space-md);
-  border-radius: var(--r-sm);
-}
-
 .toggle {
   display: inline-flex;
   align-items: center;
@@ -69,7 +56,7 @@
 }
 
 .toggle:hover {
-  color: var(--color-ink-blue);
+  color: var(--color-accent);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.25em;
@@ -124,13 +111,13 @@
 }
 
 .bulletDone {
-  color: var(--color-ink-green);
-  border: 1px solid var(--color-ink-green);
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
 }
 
 .bulletProgress {
-  color: var(--color-ink-amber);
-  border: 1px dashed var(--color-ink-amber);
+  color: var(--color-graphite-muted);
+  border: 1px dashed var(--color-graphite-muted);
 }
 
 .achievementText {
@@ -148,16 +135,15 @@
 }
 
 .skill {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: var(--t-label);
   font-weight: 500;
   line-height: var(--lh-ui);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: var(--track-label);
   color: var(--color-graphite-muted);
-  padding: 0.3rem 0.55rem;
+  padding: 0.2rem 0.5rem;
   border: 1px solid var(--color-rule-strong);
-  border-radius: 99px;
+  border-radius: var(--r-sm);
 }
 
 @media (max-width: 899px) {

@@ -1,43 +1,42 @@
 /* ══════════════════════════════════════════════════
    DESIGN TOKENS — Craft Journal Portfolio
-   Grafito sobre papel. Un dossier, no una web de plantilla.
+   Tinta sobre papel de plano. Un dossier, no una web de plantilla.
    ══════════════════════════════════════════════════ */
 
 :root {
-  /* ── Papel ─────────────────────────────────── */
-  --color-paper: #FAF8F5;
-  --color-paper-warm: #F4EFE6;
-  --color-paper-plate: #EFE9DE;   /* fondo de láminas e imágenes */
-  --color-paper-raised: #FDFCFA;  /* cards que flotan sobre el papel */
+  /* ── Papel de plano ─────────────────────────
+     Neutro y algo frío: el papel de un plano técnico, no la crema
+     por defecto de las webs hechas con IA. */
+  --color-paper: #F7F7F4;
+  --color-paper-warm: #EFEFEA;    /* secciones alternas y pie */
+  --color-paper-plate: #E7E8E3;   /* fondo de láminas e imágenes */
+  --color-paper-raised: #FCFCFA;  /* lo que flota sobre el papel */
 
-  /* ── Grafito (jerarquía de texto) ──────────── */
-  --color-graphite: #272521;       /* 2B presionado fuerte */
-  --color-graphite-soft: #605B54;  /* HB — texto secundario, AA sobre papel */
-  --color-graphite-muted: #6F6A61; /* 2H — metadatos cortos */
-  --color-graphite-faint: #A9A299; /* solo decoración, nunca texto */
+  /* ── Tinta (jerarquía de texto) ────────────── */
+  --color-graphite: #1F2328;       /* tinta principal */
+  --color-graphite-soft: #4F555D;  /* texto secundario, 6.5:1 sobre papel */
+  --color-graphite-muted: #5F656D; /* metadatos, AA sobre todos los papeles */
+  --color-graphite-faint: #A2A7AD; /* solo decoración, nunca texto */
 
   /* ── Líneas ────────────────────────────────── */
-  --color-rule: #E3DCD0;           /* filete de cuadrícula */
-  --color-rule-strong: #CDC5B6;    /* filete marcado */
-  --color-pencil-line: rgba(39, 37, 33, 0.07);
+  --color-rule: #DEDFD9;
+  --color-rule-strong: #C6C8C1;
+  --color-pencil-line: rgba(31, 35, 40, 0.07);
 
-  /* ── Tintas de papelería ───────────────────── */
-  --color-ink-red: #B0463C;
-  --color-ink-blue: #3D6B8E;
-  --color-ink-green: #56805E;
-  --color-ink-amber: #9C7628;
-  --color-ink-amber-wash: #EBDCB8;
-  --color-ink-blue-wash: #D7E2EC;
+  /* ── Un solo acento: el azul de las anotaciones del plano ── */
+  --color-accent: #2C5D8A;
+  --color-accent-wash: #DCE6EF;
 
   /* ── Sombras: siempre con desplazamiento y difuminado ── */
-  --shadow-plate: 0 1px 2px rgba(39, 37, 33, 0.05), 0 10px 28px -16px rgba(39, 37, 33, 0.22);
-  --shadow-lift: 0 2px 5px rgba(39, 37, 33, 0.07), 0 22px 48px -22px rgba(39, 37, 33, 0.30);
-  --shadow-sheet: 0 4px 10px rgba(39, 37, 33, 0.08), 0 40px 90px -30px rgba(39, 37, 33, 0.38);
-  --color-overlay: rgba(32, 30, 26, 0.58);
+  --shadow-plate: 0 1px 2px rgba(31, 35, 40, 0.05), 0 10px 28px -16px rgba(31, 35, 40, 0.22);
+  --shadow-lift: 0 2px 5px rgba(31, 35, 40, 0.07), 0 22px 48px -22px rgba(31, 35, 40, 0.30);
+  --shadow-sheet: 0 4px 10px rgba(31, 35, 40, 0.08), 0 40px 90px -30px rgba(31, 35, 40, 0.38);
+  --color-overlay: rgba(24, 27, 31, 0.58);
 
   /* ── Tipografías ───────────────────────────── */
   --font-serif: 'Crimson Pro', Georgia, 'Times New Roman', serif;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace; /* metadatos de ficha */
   --font-hand: 'Caveat', cursive;
 
   /* ── Escala tipográfica ──────────────────────
@@ -52,7 +51,7 @@
   --t-body: 1.0625rem;                     /* cuerpo */
   --t-sm: 0.9375rem;                       /* UI */
   --t-xs: 0.8125rem;                       /* metadatos */
-  --t-label: 0.6875rem;                    /* versalitas */
+  --t-label: 0.75rem;                      /* rótulos de ficha, en minúscula */
   --t-hand: 1.25rem;                       /* la única medida manuscrita */
 
   /* ── Interlineado ───────────────────────────── */
@@ -64,7 +63,7 @@
 
   --track-display: -0.03em;
   --track-tight: -0.015em;
-  --track-label: 0.14em;
+  --track-label: 0.01em;
 
   --measure: 66ch;
   --measure-narrow: 54ch;

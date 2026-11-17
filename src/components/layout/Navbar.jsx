@@ -36,7 +36,7 @@ const Navbar = () => {
   }, []);
 
   const links = [
-    { href: '#trabajo', label: nav.work },
+    { href: '#trabajo', label: nav.projects },
     { href: '#experiencia', label: nav.experience },
     { href: '#contacto', label: nav.contact },
   ];

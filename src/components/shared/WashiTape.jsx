@@ -1,19 +1,13 @@
 // FRAMER-READY
 import styles from './WashiTape.module.css';
 
-const WashiTape = ({ color = 'blue', rotation = -2, style = {} }) => {
-  const colorMap = {
-    blue: 'var(--color-ink-blue)',
-    red: 'var(--color-ink-red)',
-    green: 'var(--color-ink-green)',
-    amber: 'var(--color-ink-amber)',
-  };
-
+// Un solo acento en todo el sitio: la cinta también es azul de plano.
+const WashiTape = ({ rotation = -2, style = {} }) => {
   return (
     <div
       className={styles.tape}
       style={{
-        '--tape-color': colorMap[color] || colorMap.blue,
+        '--tape-color': 'var(--color-accent)',
         '--tape-rotation': `${rotation}deg`,
         ...style
       }}

@@ -21,7 +21,7 @@
   width: 0.45rem;
   height: 0.45rem;
   border-radius: 50%;
-  background: var(--color-ink-green);
+  background: var(--color-accent);
   flex-shrink: 0;
 }
 

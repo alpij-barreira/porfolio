@@ -33,7 +33,7 @@ const ProjectCard = ({ project, index }) => {
             src={project.image}
             ratio="16 / 9"
             rotate={index % 2 === 0 ? -1 : 0.9}
-            caption={project.year}
+            caption={project.kind}
             loading={index === 0 ? 'eager' : 'lazy'}
           />
         </button>
